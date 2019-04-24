@@ -7,13 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89BC8B7FCE4AC357863A02B9 /* Pods_RoadcareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607CBEA2C6E1B78820D9303 /* Pods_RoadcareUITests.framework */; };
+		B1A358F81577239CD71A7318 /* Pods_Roadcare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A65C46F54D46A038291B5AB /* Pods_Roadcare.framework */; };
+		BC3573D719799C4403CC2559 /* Pods_RoadcareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */; };
+		FA040565225E28E30037E700 /* PotholeDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */; };
+		FA040569225E48720037E700 /* PotholeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA040567225E48720037E700 /* PotholeDetailsViewController.swift */; };
+		FA04056A225E48720037E700 /* PotholeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA040568225E48720037E700 /* PotholeDetailsViewController.xib */; };
+		FA11F5D9225F0BB700F31984 /* ReportPotholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F5D7225F0BB700F31984 /* ReportPotholeViewController.swift */; };
+		FA11F5DA225F0BB700F31984 /* ReportPotholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA11F5D8225F0BB700F31984 /* ReportPotholeViewController.xib */; };
+		FA11F5DD225F0F2800F31984 /* PhotoPotholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */; };
+		FA11F5DE225F0F2800F31984 /* PhotoPotholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */; };
+		FA15DA7922678E07001B5C59 /* MappingPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */; };
+		FA15DA7A22678E07001B5C59 /* MappingPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA15DA7822678E07001B5C59 /* MappingPotholesViewController.xib */; };
+		FA15DA7D2268191B001B5C59 /* ThanksReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */; };
+		FA15DA7E2268191B001B5C59 /* ThanksReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA15DA7C2268191B001B5C59 /* ThanksReportViewController.xib */; };
+		FA1CA2D1225B7108004D44F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D0225B7108004D44F1 /* Extensions.swift */; };
+		FA1CA2D3225B7206004D44F1 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D2225B7206004D44F1 /* LocalStorage.swift */; };
+		FA1CA2D6225B76C5004D44F1 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D5225B76C5004D44F1 /* AppUser.swift */; };
+		FA1CA2D9225B8760004D44F1 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */; };
+		FA1CA2DA225B8760004D44F1 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */; };
+		FA59F737225DF6D900CDD383 /* ListPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */; };
+		FA59F738225DF6D900CDD383 /* ListPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA59F736225DF6D900CDD383 /* ListPotholesViewController.xib */; };
+		FA59F73B225E263100CDD383 /* PotholeDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */; };
 		FA8048172258E78000DE5E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048162258E78000DE5E9B /* AppDelegate.swift */; };
-		FA8048192258E78000DE5E9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048182258E78000DE5E9B /* ViewController.swift */; };
-		FA80481C2258E78000DE5E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA80481A2258E78000DE5E9B /* Main.storyboard */; };
-		FA80481E2258E79200DE5E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA80481D2258E79200DE5E9B /* Assets.xcassets */; };
 		FA8048212258E79200DE5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */; };
 		FA80482C2258E79200DE5E9B /* RoadcareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80482B2258E79200DE5E9B /* RoadcareTests.swift */; };
 		FA8048372258E79200DE5E9B /* RoadcareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048362258E79200DE5E9B /* RoadcareUITests.swift */; };
+		FA8048492259DBB000DE5E9B /* StartupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8048482259DBB000DE5E9B /* StartupViewController.xib */; };
+		FA80484B2259DC7B00DE5E9B /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80484A2259DC7B00DE5E9B /* StartupViewController.swift */; };
+		FA80484E2259F12700DE5E9B /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80484C2259F12700DE5E9B /* TermsConditionsViewController.swift */; };
+		FA80484F2259F12700DE5E9B /* TermsConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA80484D2259F12700DE5E9B /* TermsConditionsViewController.xib */; };
+		FA8048522259F2D300DE5E9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048512259F2D300DE5E9B /* Constants.swift */; };
+		FA8048552259F4B200DE5E9B /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048542259F4B200DE5E9B /* SimpleButton.swift */; };
+		FA804858225B0A5B00DE5E9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804856225B0A5B00DE5E9B /* HomeViewController.swift */; };
+		FA804859225B0A5B00DE5E9B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA804857225B0A5B00DE5E9B /* HomeViewController.xib */; };
+		FA80485B225B0EA900DE5E9B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80485A225B0EA900DE5E9B /* MainNavigationController.swift */; };
+		FA804862225B243100DE5E9B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804860225B243100DE5E9B /* MenuViewController.swift */; };
+		FA804863225B243100DE5E9B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA804861225B243100DE5E9B /* MenuViewController.xib */; };
+		FA804866225B261500DE5E9B /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA804865225B261500DE5E9B /* MenuTableViewCell.xib */; };
+		FA804868225B267100DE5E9B /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804867225B267100DE5E9B /* TableViewCells.swift */; };
+		FA94C1AE225BA6F60043390D /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1AC225BA6F60043390D /* SigninViewController.swift */; };
+		FA94C1AF225BA6F60043390D /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1AD225BA6F60043390D /* SigninViewController.xib */; };
+		FA94C1B2225BA9670043390D /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1B0225BA9670043390D /* PaymentViewController.swift */; };
+		FA94C1B3225BA9670043390D /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1B1225BA9670043390D /* PaymentViewController.xib */; };
+		FA94C1B5225BAB160043390D /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1B4225BAB160043390D /* CustomView.swift */; };
+		FA94C1B8225BCD6D0043390D /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1B6225BCD6D0043390D /* AddUserViewController.swift */; };
+		FA94C1B9225BCD6D0043390D /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1B7225BCD6D0043390D /* AddUserViewController.xib */; };
+		FA94C1BB225C5AD90043390D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1BA225C5AD80043390D /* Assets.xcassets */; };
+		FA984BBA226DEE3B00DE529D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA984BB9226DEE3B00DE529D /* APIService.swift */; };
+		FA984BBC226E16EE00DE529D /* APIDomains.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA984BBB226E16EE00DE529D /* APIDomains.swift */; };
+		FA984BBE226EFCFF00DE529D /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA984BBD226EFCFF00DE529D /* DateUtils.swift */; };
+		FA984BC0226F3D4A00DE529D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA984BBF226F3D4A00DE529D /* MapKit.framework */; };
+		FA984BC2226F3D8E00DE529D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA984BC1226F3D8E00DE529D /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +79,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2607CBEA2C6E1B78820D9303 /* Pods_RoadcareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadcareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D65DB4C6BDA2E71FD7EF586 /* Pods-Roadcare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roadcare.release.xcconfig"; path = "Target Support Files/Pods-Roadcare/Pods-Roadcare.release.xcconfig"; sourceTree = "<group>"; };
+		54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadcareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A65C46F54D46A038291B5AB /* Pods_Roadcare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roadcare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6682DFD13F04BAE149FBF7 /* Pods-RoadcareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareUITests.debug.xcconfig"; path = "Target Support Files/Pods-RoadcareUITests/Pods-RoadcareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B78F32A0E28E14364C47CDA0 /* Pods-RoadcareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareTests.release.xcconfig"; path = "Target Support Files/Pods-RoadcareTests/Pods-RoadcareTests.release.xcconfig"; sourceTree = "<group>"; };
+		C5F380F6CA42E466F395A7E9 /* Pods-RoadcareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareTests.debug.xcconfig"; path = "Target Support Files/Pods-RoadcareTests/Pods-RoadcareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9D4C54FE851DE41F3FCAB3F /* Pods-RoadcareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareUITests.release.xcconfig"; path = "Target Support Files/Pods-RoadcareUITests/Pods-RoadcareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E395559D6B427A93D68A03C1 /* Pods-Roadcare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roadcare.debug.xcconfig"; path = "Target Support Files/Pods-Roadcare/Pods-Roadcare.debug.xcconfig"; sourceTree = "<group>"; };
+		FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PotholeDetailViewCell.xib; sourceTree = "<group>"; };
+		FA040567225E48720037E700 /* PotholeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailsViewController.swift; sourceTree = "<group>"; };
+		FA040568225E48720037E700 /* PotholeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PotholeDetailsViewController.xib; sourceTree = "<group>"; };
+		FA11F5D7225F0BB700F31984 /* ReportPotholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPotholeViewController.swift; sourceTree = "<group>"; };
+		FA11F5D8225F0BB700F31984 /* ReportPotholeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportPotholeViewController.xib; sourceTree = "<group>"; };
+		FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPotholeViewController.swift; sourceTree = "<group>"; };
+		FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPotholeViewController.xib; sourceTree = "<group>"; };
+		FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingPotholesViewController.swift; sourceTree = "<group>"; };
+		FA15DA7822678E07001B5C59 /* MappingPotholesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MappingPotholesViewController.xib; path = ../../../ViewControllers/MappingPotholesViewController.xib; sourceTree = "<group>"; };
+		FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksReportViewController.swift; sourceTree = "<group>"; };
+		FA15DA7C2268191B001B5C59 /* ThanksReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ThanksReportViewController.xib; path = ../../../ViewControllers/ThanksReportViewController.xib; sourceTree = "<group>"; };
+		FA1CA2D0225B7108004D44F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA1CA2D2225B7206004D44F1 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		FA1CA2D5225B76C5004D44F1 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPotholesViewController.swift; sourceTree = "<group>"; };
+		FA59F736225DF6D900CDD383 /* ListPotholesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ListPotholesViewController.xib; path = ../../../ViewControllers/ListPotholesViewController.xib; sourceTree = "<group>"; };
+		FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailViewCell.swift; sourceTree = "<group>"; };
 		FA8048132258E78000DE5E9B /* Roadcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roadcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8048162258E78000DE5E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA8048182258E78000DE5E9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA80481B2258E78000DE5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA80481D2258E79200DE5E9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8048202258E79200DE5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8048222258E79200DE5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8048272258E79200DE5E9B /* RoadcareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadcareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +117,32 @@
 		FA8048322258E79200DE5E9B /* RoadcareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadcareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8048362258E79200DE5E9B /* RoadcareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadcareUITests.swift; sourceTree = "<group>"; };
 		FA8048382258E79200DE5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA8048482259DBB000DE5E9B /* StartupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartupViewController.xib; sourceTree = "<group>"; };
+		FA80484A2259DC7B00DE5E9B /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		FA80484C2259F12700DE5E9B /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
+		FA80484D2259F12700DE5E9B /* TermsConditionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsConditionsViewController.xib; sourceTree = "<group>"; };
+		FA8048512259F2D300DE5E9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA8048542259F4B200DE5E9B /* SimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		FA804856225B0A5B00DE5E9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA804857225B0A5B00DE5E9B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FA80485A225B0EA900DE5E9B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		FA804860225B243100DE5E9B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FA804861225B243100DE5E9B /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		FA804865225B261500DE5E9B /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		FA804867225B267100DE5E9B /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
+		FA94C1AC225BA6F60043390D /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		FA94C1AD225BA6F60043390D /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
+		FA94C1B0225BA9670043390D /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		FA94C1B1225BA9670043390D /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		FA94C1B4225BAB160043390D /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		FA94C1B6225BCD6D0043390D /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		FA94C1B7225BCD6D0043390D /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
+		FA94C1BA225C5AD80043390D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA984BB9226DEE3B00DE529D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FA984BBB226E16EE00DE529D /* APIDomains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDomains.swift; sourceTree = "<group>"; };
+		FA984BBD226EFCFF00DE529D /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		FA984BBF226F3D4A00DE529D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA984BC1226F3D8E00DE529D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +150,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA984BC2226F3D8E00DE529D /* CoreLocation.framework in Frameworks */,
+				FA984BC0226F3D4A00DE529D /* MapKit.framework in Frameworks */,
+				B1A358F81577239CD71A7318 /* Pods_Roadcare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3573D719799C4403CC2559 /* Pods_RoadcareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +168,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BC8B7FCE4AC357863A02B9 /* Pods_RoadcareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		752D28ACE9ABF78503E4739A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E395559D6B427A93D68A03C1 /* Pods-Roadcare.debug.xcconfig */,
+				2D65DB4C6BDA2E71FD7EF586 /* Pods-Roadcare.release.xcconfig */,
+				C5F380F6CA42E466F395A7E9 /* Pods-RoadcareTests.debug.xcconfig */,
+				B78F32A0E28E14364C47CDA0 /* Pods-RoadcareTests.release.xcconfig */,
+				8C6682DFD13F04BAE149FBF7 /* Pods-RoadcareUITests.debug.xcconfig */,
+				D9D4C54FE851DE41F3FCAB3F /* Pods-RoadcareUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD488B5556DCADFFD93E7E7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA984BC1226F3D8E00DE529D /* CoreLocation.framework */,
+				FA984BBF226F3D4A00DE529D /* MapKit.framework */,
+				7A65C46F54D46A038291B5AB /* Pods_Roadcare.framework */,
+				54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */,
+				2607CBEA2C6E1B78820D9303 /* Pods_RoadcareUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA1CA2D4225B76AF004D44F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CA2D5225B76C5004D44F1 /* AppUser.swift */,
+				FA984BBB226E16EE00DE529D /* APIDomains.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FA80480A2258E78000DE5E9B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +216,8 @@
 				FA80482A2258E79200DE5E9B /* RoadcareTests */,
 				FA8048352258E79200DE5E9B /* RoadcareUITests */,
 				FA8048142258E78000DE5E9B /* Products */,
+				752D28ACE9ABF78503E4739A /* Pods */,
+				BD488B5556DCADFFD93E7E7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +235,11 @@
 			isa = PBXGroup;
 			children = (
 				FA8048162258E78000DE5E9B /* AppDelegate.swift */,
-				FA8048182258E78000DE5E9B /* ViewController.swift */,
-				FA80481A2258E78000DE5E9B /* Main.storyboard */,
-				FA80481D2258E79200DE5E9B /* Assets.xcassets */,
-				FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */,
-				FA8048222258E79200DE5E9B /* Info.plist */,
+				FA8048532259F49D00DE5E9B /* Views */,
+				FA8048442259DB3200DE5E9B /* ViewControllers */,
+				FA1CA2D4225B76AF004D44F1 /* Models */,
+				FA8048502259F2B700DE5E9B /* Utils */,
+				FA8048452259DB5900DE5E9B /* Supporting Files */,
 			);
 			path = Roadcare;
 			sourceTree = "<group>";
@@ -125,6 +262,101 @@
 			path = RoadcareUITests;
 			sourceTree = "<group>";
 		};
+		FA8048442259DB3200DE5E9B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA80484A2259DC7B00DE5E9B /* StartupViewController.swift */,
+				FA80484C2259F12700DE5E9B /* TermsConditionsViewController.swift */,
+				FA804856225B0A5B00DE5E9B /* HomeViewController.swift */,
+				FA80485A225B0EA900DE5E9B /* MainNavigationController.swift */,
+				FA804860225B243100DE5E9B /* MenuViewController.swift */,
+				FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */,
+				FA94C1AC225BA6F60043390D /* SigninViewController.swift */,
+				FA94C1B0225BA9670043390D /* PaymentViewController.swift */,
+				FA94C1B6225BCD6D0043390D /* AddUserViewController.swift */,
+				FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */,
+				FA040567225E48720037E700 /* PotholeDetailsViewController.swift */,
+				FA11F5D7225F0BB700F31984 /* ReportPotholeViewController.swift */,
+				FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */,
+				FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */,
+				FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA8048452259DB5900DE5E9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA8048462259DB6C00DE5E9B /* Nib Files */,
+				FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */,
+				FA8048222258E79200DE5E9B /* Info.plist */,
+				FA94C1BA225C5AD80043390D /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA8048462259DB6C00DE5E9B /* Nib Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA804864225B260700DE5E9B /* TableViewCells */,
+				FA8048472259DB7500DE5E9B /* ViewControllers */,
+			);
+			path = "Nib Files";
+			sourceTree = "<group>";
+		};
+		FA8048472259DB7500DE5E9B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */,
+				FA94C1AD225BA6F60043390D /* SigninViewController.xib */,
+				FA8048482259DBB000DE5E9B /* StartupViewController.xib */,
+				FA80484D2259F12700DE5E9B /* TermsConditionsViewController.xib */,
+				FA804857225B0A5B00DE5E9B /* HomeViewController.xib */,
+				FA804861225B243100DE5E9B /* MenuViewController.xib */,
+				FA94C1B1225BA9670043390D /* PaymentViewController.xib */,
+				FA94C1B7225BCD6D0043390D /* AddUserViewController.xib */,
+				FA59F736225DF6D900CDD383 /* ListPotholesViewController.xib */,
+				FA040568225E48720037E700 /* PotholeDetailsViewController.xib */,
+				FA11F5D8225F0BB700F31984 /* ReportPotholeViewController.xib */,
+				FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */,
+				FA15DA7822678E07001B5C59 /* MappingPotholesViewController.xib */,
+				FA15DA7C2268191B001B5C59 /* ThanksReportViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA8048502259F2B700DE5E9B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA8048512259F2D300DE5E9B /* Constants.swift */,
+				FA984BBD226EFCFF00DE529D /* DateUtils.swift */,
+				FA1CA2D0225B7108004D44F1 /* Extensions.swift */,
+				FA1CA2D2225B7206004D44F1 /* LocalStorage.swift */,
+				FA984BB9226DEE3B00DE529D /* APIService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA8048532259F49D00DE5E9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA8048542259F4B200DE5E9B /* SimpleButton.swift */,
+				FA804867225B267100DE5E9B /* TableViewCells.swift */,
+				FA94C1B4225BAB160043390D /* CustomView.swift */,
+				FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA804864225B260700DE5E9B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA804865225B261500DE5E9B /* MenuTableViewCell.xib */,
+				FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA80483B2258E79200DE5E9B /* Build configuration list for PBXNativeTarget "Roadcare" */;
 			buildPhases = (
+				965554DE6EC570F6D5C9E654 /* [CP] Check Pods Manifest.lock */,
 				FA80480F2258E78000DE5E9B /* Sources */,
 				FA8048102258E78000DE5E9B /* Frameworks */,
 				FA8048112258E78000DE5E9B /* Resources */,
+				A851DBCFC25C91F85F76539E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +383,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA80483E2258E79200DE5E9B /* Build configuration list for PBXNativeTarget "RoadcareTests" */;
 			buildPhases = (
+				C3321FE4ABB5B1A38648AD11 /* [CP] Check Pods Manifest.lock */,
 				FA8048232258E79200DE5E9B /* Sources */,
 				FA8048242258E79200DE5E9B /* Frameworks */,
 				FA8048252258E79200DE5E9B /* Resources */,
@@ -167,6 +402,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA8048412258E79200DE5E9B /* Build configuration list for PBXNativeTarget "RoadcareUITests" */;
 			buildPhases = (
+				B674D315F5D7080E0634CBA4 /* [CP] Check Pods Manifest.lock */,
 				FA80482E2258E79200DE5E9B /* Sources */,
 				FA80482F2258E79200DE5E9B /* Frameworks */,
 				FA8048302258E79200DE5E9B /* Resources */,
@@ -193,6 +429,11 @@
 				TargetAttributes = {
 					FA8048122258E78000DE5E9B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FA8048262258E79200DE5E9B = {
 						CreatedOnToolsVersion = 10.1;
@@ -229,9 +470,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA94C1AF225BA6F60043390D /* SigninViewController.xib in Resources */,
+				FA11F5DA225F0BB700F31984 /* ReportPotholeViewController.xib in Resources */,
+				FA8048492259DBB000DE5E9B /* StartupViewController.xib in Resources */,
+				FA11F5DE225F0F2800F31984 /* PhotoPotholeViewController.xib in Resources */,
+				FA94C1BB225C5AD90043390D /* Assets.xcassets in Resources */,
+				FA804866225B261500DE5E9B /* MenuTableViewCell.xib in Resources */,
+				FA94C1B9225BCD6D0043390D /* AddUserViewController.xib in Resources */,
+				FA04056A225E48720037E700 /* PotholeDetailsViewController.xib in Resources */,
+				FA94C1B3225BA9670043390D /* PaymentViewController.xib in Resources */,
+				FA804863225B243100DE5E9B /* MenuViewController.xib in Resources */,
+				FA15DA7A22678E07001B5C59 /* MappingPotholesViewController.xib in Resources */,
 				FA8048212258E79200DE5E9B /* LaunchScreen.storyboard in Resources */,
-				FA80481E2258E79200DE5E9B /* Assets.xcassets in Resources */,
-				FA80481C2258E78000DE5E9B /* Main.storyboard in Resources */,
+				FA040565225E28E30037E700 /* PotholeDetailViewCell.xib in Resources */,
+				FA59F738225DF6D900CDD383 /* ListPotholesViewController.xib in Resources */,
+				FA804859225B0A5B00DE5E9B /* HomeViewController.xib in Resources */,
+				FA15DA7E2268191B001B5C59 /* ThanksReportViewController.xib in Resources */,
+				FA1CA2DA225B8760004D44F1 /* SignupViewController.xib in Resources */,
+				FA80484F2259F12700DE5E9B /* TermsConditionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +507,137 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		965554DE6EC570F6D5C9E654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Roadcare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A851DBCFC25C91F85F76539E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Roadcare/Pods-Roadcare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/YNExpandableCell/YNExpandableCell.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNExpandableCell.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Roadcare/Pods-Roadcare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B674D315F5D7080E0634CBA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoadcareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3321FE4ABB5B1A38648AD11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoadcareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA80480F2258E78000DE5E9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8048192258E78000DE5E9B /* ViewController.swift in Sources */,
+				FA59F73B225E263100CDD383 /* PotholeDetailViewCell.swift in Sources */,
+				FA984BBA226DEE3B00DE529D /* APIService.swift in Sources */,
+				FA040569225E48720037E700 /* PotholeDetailsViewController.swift in Sources */,
+				FA94C1B8225BCD6D0043390D /* AddUserViewController.swift in Sources */,
+				FA984BBE226EFCFF00DE529D /* DateUtils.swift in Sources */,
+				FA94C1AE225BA6F60043390D /* SigninViewController.swift in Sources */,
+				FA94C1B5225BAB160043390D /* CustomView.swift in Sources */,
+				FA1CA2D3225B7206004D44F1 /* LocalStorage.swift in Sources */,
+				FA15DA7D2268191B001B5C59 /* ThanksReportViewController.swift in Sources */,
+				FA15DA7922678E07001B5C59 /* MappingPotholesViewController.swift in Sources */,
+				FA8048522259F2D300DE5E9B /* Constants.swift in Sources */,
+				FA80484B2259DC7B00DE5E9B /* StartupViewController.swift in Sources */,
+				FA80484E2259F12700DE5E9B /* TermsConditionsViewController.swift in Sources */,
+				FA1CA2D6225B76C5004D44F1 /* AppUser.swift in Sources */,
 				FA8048172258E78000DE5E9B /* AppDelegate.swift in Sources */,
+				FA94C1B2225BA9670043390D /* PaymentViewController.swift in Sources */,
+				FA80485B225B0EA900DE5E9B /* MainNavigationController.swift in Sources */,
+				FA1CA2D1225B7108004D44F1 /* Extensions.swift in Sources */,
+				FA8048552259F4B200DE5E9B /* SimpleButton.swift in Sources */,
+				FA984BBC226E16EE00DE529D /* APIDomains.swift in Sources */,
+				FA1CA2D9225B8760004D44F1 /* SignupViewController.swift in Sources */,
+				FA11F5D9225F0BB700F31984 /* ReportPotholeViewController.swift in Sources */,
+				FA804858225B0A5B00DE5E9B /* HomeViewController.swift in Sources */,
+				FA804868225B267100DE5E9B /* TableViewCells.swift in Sources */,
+				FA59F737225DF6D900CDD383 /* ListPotholesViewController.swift in Sources */,
+				FA11F5DD225F0F2800F31984 /* PhotoPotholeViewController.swift in Sources */,
+				FA804862225B243100DE5E9B /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +673,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA80481A2258E78000DE5E9B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA80481B2258E78000DE5E9B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,15 +802,16 @@
 		};
 		FA80483C2258E79200DE5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E395559D6B427A93D68A03C1 /* Pods-Roadcare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Roadcare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Roadcare/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.Roadcare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,15 +820,16 @@
 		};
 		FA80483D2258E79200DE5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D65DB4C6BDA2E71FD7EF586 /* Pods-Roadcare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Roadcare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Roadcare/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.Roadcare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,6 +838,7 @@
 		};
 		FA80483F2258E79200DE5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5F380F6CA42E466F395A7E9 /* Pods-RoadcareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +859,7 @@
 		};
 		FA8048402258E79200DE5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B78F32A0E28E14364C47CDA0 /* Pods-RoadcareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +880,7 @@
 		};
 		FA8048422258E79200DE5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6682DFD13F04BAE149FBF7 /* Pods-RoadcareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +900,7 @@
 		};
 		FA8048432258E79200DE5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D4C54FE851DE41F3FCAB3F /* Pods-RoadcareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

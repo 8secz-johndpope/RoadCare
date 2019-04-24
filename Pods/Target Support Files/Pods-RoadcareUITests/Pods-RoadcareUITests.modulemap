@@ -1,0 +1,6 @@
+framework module Pods_RoadcareUITests {
+  umbrella header "Pods-RoadcareUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

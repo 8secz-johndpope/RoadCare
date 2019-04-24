@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in SignupViewController.submitRegister(username:city:country:phone:email:password:):SignupViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "a.code">
+            </PersistentString>
+            <PersistentString
+               value = "(data as? [String: Any])[&quot;message&quot;] as? [String: Any]">
+            </PersistentString>
+            <PersistentString
+               value = "RegisterResponse(data as? [String: Any])">
+            </PersistentString>
+            <PersistentString
+               value = "JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ">
+            </PersistentString>
+            <PersistentString
+               value = "json[&quot;code&quot;] as? String">
+            </PersistentString>
+            <PersistentString
+               value = "(JSONSerialization.jsonObject(with: data, options: []) as? [String: Any])">
+            </PersistentString>
+            <PersistentString
+               value = "data as? [RegisterResponse]">
+            </PersistentString>
+            <PersistentString
+               value = "a[&quot;message&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "(data as? [String: Any]).objectForKey(&quot;code&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "JSONSerialization.jsonObject(with: a, options: [])&#10;JSONSerialization.jsonObject(with: data, options: [])JSONSerialization.jsonObject(with: data, options: [])&#10;JSONSerialization.jsonObject(with: data, options: [])&#10;JSONSerialization.jsonObject(with: data, options: [])">
+            </PersistentString>
+            <PersistentString
+               value = "a[&quot;message&quot;] as? String">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LoginResponse.init(_:):APIDomains.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;user&quot;] as? [String: Any] ?? [:]">
+            </PersistentString>
+            <PersistentString
+               value = "json[&quot;user&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppConstants.language">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AddUserViewController.dontBtnTapped(_:):AddUserViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "DateUtils.getTimeStampe()">
+            </PersistentString>
+            <PersistentString
+               value = "Date.timeIntervalBetween1970AndReferenceDate">
+            </PersistentString>
+            <PersistentString
+               value = "DateUtils.getCurrentTimeStampWOMiliseconds(dateToConvert: DateUtils.getCurrentScheduleTime()! as NSDate)">
+            </PersistentString>
+            <PersistentString
+               value = "Int64(TimeInterval(NSDate().timeIntervalSince1970))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

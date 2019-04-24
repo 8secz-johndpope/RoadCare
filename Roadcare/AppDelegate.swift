@@ -13,9 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        UINavigationBar.appearance().barTintColor = ColorPalette.primary
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+
+        let viewController = StartupViewController(nibName: "StartupViewController", bundle: nil)
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
@@ -41,6 +51,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    // MARK: Show dashboard
+    
+    func showDashboard() {
+        let home = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        home.tabBarItem.title = "Home"
+        home.tabBarItem.image = UIImage(named: "ic_tab_home")
 
+        let potholes = ListPotholesViewController(nibName: "ListPotholesViewController", bundle: nil)
+        potholes.tabBarItem.title = "Report a Pothole"
+        potholes.tabBarItem.image = UIImage(named: "ic_contact")
+
+        let login = AddUserViewController(nibName: "AddUserViewController", bundle: nil)
+        login.tabBarItem.title = "Login"
+        login.tabBarItem.image = UIImage(named: "ic_login")
+
+        let tabbarController = UITabBarController()
+        tabbarController.viewControllers = [home, potholes, login]
+        tabbarController.tabBar.barTintColor = UIColor.white
+        tabbarController.tabBar.tintColor = ColorPalette.primary
+
+        let navController = MainNavigationController()
+        navController.viewControllers = [tabbarController]
+
+        self.window?.rootViewController = navController
+        self.window?.makeKeyAndVisible()
+    }
 }
-
