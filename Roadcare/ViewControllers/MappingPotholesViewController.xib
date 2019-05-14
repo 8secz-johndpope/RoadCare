@@ -100,6 +100,9 @@
                 </view>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-rh-3EA">
                     <rect key="frame" x="0.0" y="88" width="414" height="637"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="KVk-iT-Wca"/>
+                    </connections>
                 </mapView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

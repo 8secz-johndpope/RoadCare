@@ -3,19 +3,110 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in StatisticsViewController.setupChat():StatisticsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "GroupedPotholes(city: report.metaBox!.city, country: report.metaBox!.country ?? &quot;&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static DateUtils.getDateDistance(s1:s2:):DateUtils.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "convertStrToDate(string: s1, format: &quot;yyyy-MM-dd&apos;T&apos;hh:mm:ss&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "Double(day!) + Double(hour!)/24">
+            </PersistentString>
+            <PersistentString
+               value = "calendar.dateComponents([.calendar], from: date1!, to: date2!).day">
+            </PersistentString>
+            <PersistentString
+               value = "Double(4)/24">
+            </PersistentString>
+            <PersistentString
+               value = "Float(hour!/24)">
+            </PersistentString>
+            <PersistentString
+               value = "components.day">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in APIService.get(path:params:handler:):APIService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.response?.allHeaderFields as? [String: String]">
+            </PersistentString>
+            <PersistentString
+               value = "response.response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PhotoPotholeViewController.confirmBtnTapped(_:):PhotoPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ivPothole.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportPotholeViewController.viewWillAppear(_:):ReportPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController?.visibleViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PhotoPotholeViewController.getBase64Code():PhotoPotholeViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SubmitFixedPotholesViewController.confirmTapped(_:):SubmitFixedPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "POTHOLE_ID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PotholeDetailsViewController.setupViews():PotholeDetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selPothole">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FixPotholesViewController.hotBtnTapped(_:):FixPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "materials">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in SignupViewController.submitRegister(username:city:country:phone:email:password:):SignupViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "a.code">
             </PersistentString>
             <PersistentString
-               value = "(data as? [String: Any])[&quot;message&quot;] as? [String: Any]">
-            </PersistentString>
-            <PersistentString
-               value = "RegisterResponse(data as? [String: Any])">
-            </PersistentString>
-            <PersistentString
                value = "JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ">
+            </PersistentString>
+            <PersistentString
+               value = "(data as? [String: Any])[&quot;message&quot;] as? [String: Any]">
             </PersistentString>
             <PersistentString
                value = "json[&quot;code&quot;] as? String">
@@ -38,10 +129,147 @@
             <PersistentString
                value = "a[&quot;message&quot;] as? String">
             </PersistentString>
+            <PersistentString
+               value = "RegisterResponse(data as? [String: Any])">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
+         contextName = "PotholeDetailsViewController.setupMapLocation():PotholeDetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selPothole?.metaBox?.lat">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.displayLocationInfo(_:):HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Location">
+            </PersistentString>
+            <PersistentString
+               value = "Location.city">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MediaDetails.init(_:):MediaDetails.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;data&quot;] as [String: Any]">
+            </PersistentString>
+            <PersistentString
+               value = "json[&quot;message&quot;] as String?">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.runTimedCode():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Date()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.reportPothole(_:):HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController?.visibleViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image?.jpegData(compressionQuality: 0)">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(500/imageData.count)">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(Float(300000)/Float(imageData.count)!)">
+            </PersistentString>
+            <PersistentString
+               value = "Double(500)/Double(imageData.count)">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(Double(500000)/Double(imageData.count))">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(500000)/CGFloat(imageData.count)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(imageData.count) / 1000.0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppConstants.language">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ReportPotholeViewController.nextButtonTapped(_:):ReportPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;id&quot;] as int">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.reportAgain(notification:):HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tabBarController.selectedIndex">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController?.topViewController as? UITabBarController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ListPotholesViewController.seeDetails(sender:):ListPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sender.tag">
+            </PersistentString>
+            <PersistentString
+               value = "viewController.selPothole">
+            </PersistentString>
+            <PersistentString
+               value = "POTHOLE_ID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportPotholeViewController.nextButtonTapped(_:):ReportPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "details.toDictionary()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PhotoPotholeViewController.saveFilePath(path:):PhotoPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.id">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "LoginResponse.init(_:):APIDomains.swift">
@@ -55,10 +283,62 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
+         contextName = "ListPotholesViewController.setCurrentLocation():ListPotholesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "AppConstants.language">
+               value = "self.locationManager.exposedLocation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ListPotholesViewController.displayLocationInfo(_:):ListPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "containsPlacemark.administrativeArea">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ListPotholesViewController.setupPotholeList():ListPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "allPotholes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SigninViewController.getNonce(email:password:):SigninViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MappingPotholesViewController.nextBtnTapped(_:):MappingPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lng">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " upload.responseJSON { response in }">
+            </PersistentString>
+            <PersistentString
+               value = "data.result.value as? [String: Any]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation.coordinate.latitude">
+            </PersistentString>
+            <PersistentString
+               value = "lat">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -80,10 +360,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
+         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "json">
+               value = "self.allPotholes">
+            </PersistentString>
+            <PersistentString
+               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MappingPotholesViewController.locationManager(_:didUpdateLocations:):MappingPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lat">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

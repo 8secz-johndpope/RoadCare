@@ -75,7 +75,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-wp-VZc">
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bzv-wp-VZc">
                                         <rect key="frame" x="0.0" y="23" width="355" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="7Nk-XW-BIu"/>
@@ -104,7 +104,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Today at 9:15 AMe" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-nP-eIm">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Today at 9:15 AMe" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-nP-eIm">
                                         <rect key="frame" x="0.0" y="23" width="355" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ikm-GU-8LO"/>
@@ -133,7 +133,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-Pz-FnU">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-Pz-FnU">
                                         <rect key="frame" x="0.0" y="23" width="355" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="901-zh-28D"/>
@@ -240,6 +240,8 @@
                 <outlet property="bodyView" destination="yig-rv-X34" id="Rgs-ha-cck"/>
                 <outlet property="constraintContentHeight" destination="dwU-Re-8gj" id="Cke-0A-aVu"/>
                 <outlet property="detailsButton" destination="IL9-i9-Xrp" id="up4-eA-hsZ"/>
+                <outlet property="ivRepairedStatus" destination="YeH-it-nPU" id="di9-5x-hoT"/>
+                <outlet property="lblRepairedStatus" destination="orF-FW-8tC" id="hJC-kV-3eP"/>
                 <outlet property="reportButton" destination="PMn-8i-5zy" id="GFY-A8-E7A"/>
                 <outlet property="tfAddress" destination="bzv-wp-VZc" id="8UM-E2-Rn1"/>
                 <outlet property="tfDate" destination="yoj-nP-eIm" id="O5X-CZ-OAS"/>

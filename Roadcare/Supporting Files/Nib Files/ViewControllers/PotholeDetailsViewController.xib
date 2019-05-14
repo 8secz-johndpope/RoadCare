@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PotholeDetailsViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
+                <outlet property="fixPotholeConstraint" destination="SUF-JY-x2h" id="4cq-tA-lRK"/>
                 <outlet property="imgPhoto" destination="BiC-XF-wSR" id="1Qx-u9-Lgw"/>
                 <outlet property="imgStatus" destination="5a7-r2-dFc" id="fnW-22-DGK"/>
                 <outlet property="lblAddress" destination="2rE-wj-W4q" id="Gf6-gs-c8h"/>
@@ -19,6 +20,7 @@
                 <outlet property="lblPhoneNumber" destination="kRp-bi-Ap2" id="oMw-OK-Suo"/>
                 <outlet property="lblReportName" destination="2kM-Q9-f0v" id="pni-ul-HSt"/>
                 <outlet property="lblStatus" destination="Ail-ZC-tKR" id="arj-cp-kFQ"/>
+                <outlet property="mapView" destination="27d-c9-k6L" id="vSj-va-REx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,10 +30,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="27d-c9-k6L">
-                    <rect key="frame" x="0.0" y="88" width="414" height="864"/>
+                    <rect key="frame" x="0.0" y="88" width="414" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="KnU-DO-GPu"/>
+                    </constraints>
                 </mapView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoO-XN-mqK">
-                    <rect key="frame" x="10" y="318" width="394" height="634"/>
+                    <rect key="frame" x="10" y="348" width="394" height="604"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2y-Se-SaH" customClass="CustomView" customModule="Roadcare" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="394" height="650"/>
@@ -45,7 +50,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2kM-Q9-f0v">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2kM-Q9-f0v">
                                             <rect key="frame" x="0.0" y="30" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="x7t-kW-8fh"/>
@@ -54,11 +59,11 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_minus" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-r2-dFc">
-                                            <rect key="frame" x="275" y="5.5" width="16" height="16"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_plus" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-r2-dFc">
+                                            <rect key="frame" x="299.5" y="5.5" width="16" height="16"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Repaired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ail-ZC-tKR">
-                                            <rect key="frame" x="297" y="6" width="77" height="14.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repaired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ail-ZC-tKR">
+                                            <rect key="frame" x="321.5" y="6" width="52.5" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -87,7 +92,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2rE-wj-W4q">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2rE-wj-W4q">
                                             <rect key="frame" x="0.0" y="30" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="3gv-Or-IwK"/>
@@ -116,7 +121,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="neu-ec-Y7w">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="neu-ec-Y7w">
                                             <rect key="frame" x="0.0" y="30" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="yDO-gN-Mpt"/>
@@ -145,7 +150,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-bi-Ap2">
+                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="An-Najah St., Nablus, Palestine" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-bi-Ap2">
                                             <rect key="frame" x="0.0" y="30" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="gUu-GK-7PR"/>
@@ -304,9 +309,8 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="27d-c9-k6L" secondAttribute="trailing" id="0OI-K6-8t3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DoO-XN-mqK" secondAttribute="trailing" constant="10" id="94v-nv-GV3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="27d-c9-k6L" secondAttribute="bottom" id="Dkc-FA-uZo"/>
                 <constraint firstItem="DoO-XN-mqK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="SO6-4F-pr7"/>
-                <constraint firstItem="DoO-XN-mqK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="230" id="XEf-PB-qfi"/>
+                <constraint firstItem="DoO-XN-mqK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="260" id="XEf-PB-qfi"/>
                 <constraint firstItem="27d-c9-k6L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YKE-Dc-Iba"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DoO-XN-mqK" secondAttribute="bottom" id="tIb-mT-kHp"/>
                 <constraint firstItem="27d-c9-k6L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yQm-rV-JCv"/>
@@ -318,8 +322,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_minus" width="16" height="16"/>
         <image name="ic_play_button" width="23" height="23"/>
+        <image name="ic_plus" width="16" height="16"/>
         <image name="img_advertising_01" width="352" height="111"/>
     </resources>
 </document>

@@ -47,3 +47,74 @@ class LoginResponse {
         user = json["user"] as? [String: Any] ?? [:]
     }
 }
+
+class FileUpload {
+    var file: String?
+    
+    init() {
+        file = nil
+    }
+}
+
+class MetaBox {
+    var address: String!
+    var street_name: String!
+    var city: String!
+    var country: String!
+    var nearby_places: String!
+    var reporter_name: String!
+    var phone_number: String!
+    var reported_number: String!
+    var repaired_status: String!
+    var repaired_name: String!
+    var pothole_photo: String!
+    var lat: String!
+    var lng: String!
+    
+    init() {
+        
+    }
+    
+    init(_ json: [String: Any]) {
+        address = json["address"] as? String
+        street_name = json["street_name"] as? String
+        city = json["city"] as? String
+        country = json["country"] as? String
+        nearby_places = json["nearby_places"] as? String
+        reporter_name = json["reporter_name"] as? String
+        phone_number = json["phone_number"] as? String
+        reported_number = json["reported_number"] as? String
+        repaired_status = json["repaired_status"] as? String
+        repaired_name = json["repaired_name"] as? String
+        pothole_photo = json["pothole_photo"] as? String
+        lat = json["lat"] as? String
+        lng = json["lng"] as? String
+    }
+    
+    func toDictionary() -> [String: Any] {
+        var dict = [String: Any]()
+        dict["address"] = address
+        dict["street_name"] = street_name
+        dict["city"] = city
+        dict["country"] = country
+        dict["nearby_places"] = nearby_places
+        dict["reporter_name"] = reporter_name
+        dict["phone_number"] = phone_number
+        dict["reported_number"] = reported_number
+        dict["repaired_status"] = repaired_status
+        return dict
+    }
+}
+
+class GroupedPotholes{
+    var city: String
+    var country: String
+    var report_array: [PotholeDetails]
+    
+    init(city: String, country: String){
+        self.city = city
+        self.country = country
+        report_array = []
+    }
+}
+

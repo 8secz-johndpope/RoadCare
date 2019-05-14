@@ -1,6 +1,6 @@
 //
 //  Extensions.swift
-//  EZSportsRP
+//  RoadCare
 //
 //  Created by admin_user on 2/7/18.
 //  Copyright © 2018 admin_user. All rights reserved.
@@ -16,6 +16,13 @@ extension String {
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
+    }
+    
+    func contains(find: String) -> Bool{
+        return self.range(of: find) != nil
+    }
+    func containsIgnoringCase(find: String) -> Bool{
+        return self.range(of: find, options: .caseInsensitive) != nil
     }
 }
 
@@ -39,7 +46,7 @@ extension UIViewController {
     }
 
     func showSimpleAlert(message: String!) {
-        let alertController = UIAlertController(title: "EZSportsRP", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "RoadCare", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }

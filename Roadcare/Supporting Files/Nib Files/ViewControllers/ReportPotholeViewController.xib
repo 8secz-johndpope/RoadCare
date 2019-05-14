@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportPotholeViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
+                <outlet property="tfCity" destination="eXa-XX-J9N" id="Nba-o0-V3J"/>
+                <outlet property="tfNearby" destination="kzH-tM-L20" id="paE-ke-vey"/>
+                <outlet property="tfPhoneNum" destination="D8s-9g-mma" id="lYC-tB-pSs"/>
+                <outlet property="tfReporterName" destination="vVH-xv-Cg7" id="aSh-Il-23L"/>
+                <outlet property="tfStreedName" destination="GPZ-Nl-QQ1" id="KUl-5q-6m5"/>
+                <outlet property="topConstraint" destination="fyj-Lq-cGe" id="nI8-TK-bzG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,8 +29,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orf-gL-bBm">
                     <rect key="frame" x="28" y="74" width="358" height="70"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leW-j9-wvb">
-                            <rect key="frame" x="0.0" y="6" width="58" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STREET NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leW-j9-wvb">
+                            <rect key="frame" x="0.0" y="6" width="85.5" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -37,6 +43,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="topEditingBegin:" destination="-1" eventType="editingDidBegin" id="fJ8-2V-SZO"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +75,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="topEditingBegin:" destination="-1" eventType="editingDidBegin" id="xY6-Fl-Qi6"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,6 +107,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="nearbyEditingBegin:" destination="-1" eventType="editingDidBegin" id="IBV-6T-2Al"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +139,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="reporterEditingBegin:" destination="-1" eventType="editingDidBegin" id="hxi-ew-390"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -152,7 +170,10 @@
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            <connections>
+                                <action selector="phoneEditingBegin:" destination="-1" eventType="editingDidBegin" id="GOb-tW-4WV"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

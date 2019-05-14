@@ -15,11 +15,17 @@ class MappingPotholesViewController: UIViewController, MKMapViewDelegate, CLLoca
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager: CLLocationManager!
+    var id: Int! = 0
+    var lat: String?
+    var lng: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        mapView.addGestureRecognizer(recognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +36,22 @@ class MappingPotholesViewController: UIViewController, MKMapViewDelegate, CLLoca
         super.viewDidAppear(animated)
         
         determineCurrentLocation()
+    }
+    
+    
+    @objc func handleTap(gestureReconizer: UILongPressGestureRecognizer) {
+        
+        let location = gestureReconizer.location(in: mapView)
+        let coordinate = mapView.convert(location,toCoordinateFrom: mapView)
+        
+        // Add annotation:
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(annotation)
+        
+        lat = String(annotation.coordinate.latitude)
+        lng = String(annotation.coordinate.longitude)
     }
     
     func determineCurrentLocation()
@@ -60,22 +82,51 @@ class MappingPotholesViewController: UIViewController, MKMapViewDelegate, CLLoca
         // Drop a pin at user's Current Location
         let myAnnotation: MKPointAnnotation = MKPointAnnotation()
         myAnnotation.coordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude);
+        lat = String(userLocation.coordinate.latitude)
+        lng = String(userLocation.coordinate.longitude)
         myAnnotation.title = "Current location"
         mapView.addAnnotation(myAnnotation)
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("Marker Selected")
+    }
+    
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
     {
         print("Error \(error)")
     }
 
     @IBAction func nextBtnTapped(_ sender: SimpleButton) {
-        let viewController = PhotoPotholeViewController(nibName: "PhotoPotholeViewController", bundle: nil)
-        navigationController!.pushViewController(viewController, animated: true)
+        if lat == nil || lng == nil {
+            return
+        }
+        showProgress(message: "")
+        
+        _ = APIClient.updatePotholeLocation(id: id, lat: lat!, lng: lng!, handler: { (success, error, data) in
+            guard success, data != nil, let json = data as? [String: Any] else {
+                self.showSimpleAlert(message: "Request failed. Please try again")
+                return
+            }
+
+            let response = PotholeDetails(json)
+            
+            if response.id == nil {
+                self.showSimpleAlert(message: "Request failed. Please try again")
+                return
+            } else {
+                self.gotoNextPage()
+            }
+        })
     }
     
     @IBAction func skipBtnTapped(_ sender: SimpleButton) {
+        gotoNextPage()
+    }
+    
+    private func gotoNextPage() {
         let viewController = PhotoPotholeViewController(nibName: "PhotoPotholeViewController", bundle: nil)
+        viewController.id = self.id
         navigationController!.pushViewController(viewController, animated: true)
     }
 }

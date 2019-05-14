@@ -67,6 +67,8 @@ class SigninViewController: UIViewController {
             let response = LoginResponse(json)
             if response.status == "ok" {
                 let user = AppUser(response.user)
+                user.email = email
+                user.password = password
                 user.saveToStorage()
                 AppConstants.authUser = user
                 self.navigationController?.popViewController(animated: true)

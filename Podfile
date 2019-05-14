@@ -8,9 +8,10 @@ target 'Roadcare' do
   # Pods for Roadcare
   pod 'SideMenu'
   pod 'MBProgressHUD'
-  pod 'SDWebImage'
+  pod 'SDWebImage', '4.2.3'
   pod 'YNExpandableCell'
   pod 'Alamofire'
+  pod 'ChartsRealm'
   
   target 'RoadcareTests' do
     inherit! :search_paths

@@ -13,3 +13,8 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var ivIcon: UIImageView!
     @IBOutlet weak var lblText: UILabel!
 }
+
+class StatisticPRRTCell: UITableViewCell {
+    @IBOutlet weak var lblCity: UILabel!
+    @IBOutlet weak var lblAverage: UILabel!
+}

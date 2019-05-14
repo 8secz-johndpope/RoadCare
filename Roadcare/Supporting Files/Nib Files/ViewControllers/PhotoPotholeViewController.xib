@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPotholeViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
+                <outlet property="ivPothole" destination="EWZ-5T-GYY" id="s14-gN-kr1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,6 +30,9 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4s-DH-dDY">
                     <rect key="frame" x="78" y="160" width="258" height="258"/>
+                    <connections>
+                        <action selector="didCamButtonTapped:" destination="-1" eventType="touchUpInside" id="y7X-ml-VNs"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6N-1x-EEg" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
                     <rect key="frame" x="32" y="493" width="350" height="50"/>
@@ -57,6 +61,9 @@
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="confirmBtnTapped:" destination="-1" eventType="touchUpInside" id="Kvi-At-FE4"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwB-Rs-uGM" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
                     <rect key="frame" x="32" y="553" width="350" height="50"/>
@@ -85,6 +92,9 @@
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapGallery:" destination="-1" eventType="touchUpInside" id="uYT-3p-1Q6"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvU-sE-9Qb" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
                     <rect key="frame" x="32" y="613" width="350" height="50"/>
@@ -113,6 +123,9 @@
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="skipBtnTapped:" destination="-1" eventType="touchUpInside" id="Ian-4S-Fbg"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

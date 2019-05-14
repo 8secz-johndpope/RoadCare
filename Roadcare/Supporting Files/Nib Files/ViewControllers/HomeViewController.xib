@@ -14,6 +14,12 @@
             <connections>
                 <outlet property="lblDate" destination="ebL-9D-XdR" id="hPt-sc-vn2"/>
                 <outlet property="lblLocation" destination="KYI-c8-sbd" id="sAl-Mw-Mpv"/>
+                <outlet property="lblReactionTimer" destination="TnX-Gj-kY9" id="GNC-Ef-fJ1"/>
+                <outlet property="lblRepairedCount" destination="Is1-WI-ebM" id="2wG-JE-aAc"/>
+                <outlet property="lblReportedCount" destination="xO4-o4-caA" id="vcK-qH-zAa"/>
+                <outlet property="lblReportedStatus" destination="4K7-Of-Ltg" id="Z7N-sy-efw"/>
+                <outlet property="repairedLoading" destination="dmm-8k-AKV" id="5dF-5e-oqN"/>
+                <outlet property="reportedLoading" destination="Tst-md-hQt" id="pkQ-5K-CJv"/>
                 <outlet property="titleView" destination="nAY-oS-EGn" id="pVB-1b-dMA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -56,12 +62,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXW-mG-WGd">
                     <rect key="frame" x="16" y="65" width="382" height="85"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO4-o4-caA">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO4-o4-caA">
                             <rect key="frame" x="176" y="18" width="30" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Tst-md-hQt">
+                            <rect key="frame" x="181" y="22.666666666666671" width="20" height="20"/>
+                            <color key="color" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Potholes Reported in Nablus in 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-Of-Ltg">
                             <rect key="frame" x="52" y="47" width="278" height="20.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -77,12 +87,14 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="Tst-md-hQt" firstAttribute="centerY" secondItem="xO4-o4-caA" secondAttribute="centerY" id="EoI-Gs-FNz"/>
                         <constraint firstItem="rVq-sB-3ZK" firstAttribute="leading" secondItem="JXW-mG-WGd" secondAttribute="leading" id="LLL-7q-dB4"/>
                         <constraint firstItem="xO4-o4-caA" firstAttribute="centerX" secondItem="JXW-mG-WGd" secondAttribute="centerX" id="TXf-8b-qCh"/>
                         <constraint firstItem="4K7-Of-Ltg" firstAttribute="centerX" secondItem="JXW-mG-WGd" secondAttribute="centerX" id="d4W-Hq-aau"/>
                         <constraint firstItem="xO4-o4-caA" firstAttribute="top" secondItem="JXW-mG-WGd" secondAttribute="top" constant="18" id="fOl-jG-zE0"/>
                         <constraint firstAttribute="bottom" secondItem="rVq-sB-3ZK" secondAttribute="bottom" id="gRH-KE-IbN"/>
                         <constraint firstAttribute="height" constant="85" id="gyj-cf-vNR"/>
+                        <constraint firstItem="Tst-md-hQt" firstAttribute="centerX" secondItem="xO4-o4-caA" secondAttribute="centerX" id="inV-Pk-BDz"/>
                         <constraint firstItem="rVq-sB-3ZK" firstAttribute="top" secondItem="JXW-mG-WGd" secondAttribute="top" id="ouo-w4-pFG"/>
                         <constraint firstItem="4K7-Of-Ltg" firstAttribute="top" secondItem="xO4-o4-caA" secondAttribute="bottom" id="wgE-hj-z6a"/>
                     </constraints>
@@ -90,12 +102,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-gm-bqS">
                     <rect key="frame" x="16" y="162" width="382" height="85"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is1-WI-ebM">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is1-WI-ebM">
                             <rect key="frame" x="176" y="18" width="30" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-8k-AKV">
+                            <rect key="frame" x="181" y="22.666666666666657" width="20" height="20"/>
+                            <color key="color" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Potholes Repaired" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWM-ez-koc">
                             <rect key="frame" x="121.66666666666666" y="47" width="138.99999999999997" height="20.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,9 +128,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="u5U-xP-drV" secondAttribute="bottom" id="6H6-XO-PEs"/>
+                        <constraint firstItem="dmm-8k-AKV" firstAttribute="centerY" secondItem="Is1-WI-ebM" secondAttribute="centerY" id="LPX-VY-19U"/>
                         <constraint firstAttribute="height" constant="85" id="U28-It-ekD"/>
                         <constraint firstItem="u5U-xP-drV" firstAttribute="top" secondItem="O8F-gm-bqS" secondAttribute="top" id="Y5C-s7-ViX"/>
                         <constraint firstItem="Is1-WI-ebM" firstAttribute="centerX" secondItem="O8F-gm-bqS" secondAttribute="centerX" id="bcn-G3-nbm"/>
+                        <constraint firstItem="dmm-8k-AKV" firstAttribute="centerX" secondItem="Is1-WI-ebM" secondAttribute="centerX" id="bue-Tn-V36"/>
                         <constraint firstItem="Is1-WI-ebM" firstAttribute="top" secondItem="O8F-gm-bqS" secondAttribute="top" constant="18" id="fWN-lX-OBa"/>
                         <constraint firstItem="MWM-ez-koc" firstAttribute="top" secondItem="Is1-WI-ebM" secondAttribute="bottom" id="ltY-dG-jXB"/>
                         <constraint firstItem="MWM-ez-koc" firstAttribute="centerX" secondItem="O8F-gm-bqS" secondAttribute="centerX" id="tUG-5Q-tVf"/>

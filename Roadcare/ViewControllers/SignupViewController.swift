@@ -16,11 +16,10 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var tvPhone: UITextField!
     @IBOutlet weak var tvEmail: UITextField!
     @IBOutlet weak var tvPassword: UITextField!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func signupTapped(_ sender: UIButton) {
@@ -89,5 +88,21 @@ class SignupViewController: UIViewController {
     
     private func handleError(error: String?) {
         showSimpleAlert(message: "Register failed. Please try again")
+    }
+    
+    @IBAction func topEditingBegin(_ sender: Any) {
+        topConstraint.constant = 16
+    }
+    
+    @IBAction func phoneEditingBegin(_ sender: Any) {
+        topConstraint.constant = -50
+    }
+    
+    @IBAction func emailEditingBegin(_ sender: Any) {
+        topConstraint.constant = -130
+    }
+    
+    @IBAction func passwordEditingBegin(_ sender: Any) {
+        topConstraint.constant = -200
     }
 }

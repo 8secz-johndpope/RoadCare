@@ -26,9 +26,15 @@
 		FA1CA2D6225B76C5004D44F1 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D5225B76C5004D44F1 /* AppUser.swift */; };
 		FA1CA2D9225B8760004D44F1 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */; };
 		FA1CA2DA225B8760004D44F1 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */; };
+		FA259D9E228149F60079BB7D /* PotholeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA259D9D228149F60079BB7D /* PotholeDetails.swift */; };
+		FA259DA02281651B0079BB7D /* MediaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA259D9F2281651B0079BB7D /* MediaDetails.swift */; };
 		FA59F737225DF6D900CDD383 /* ListPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */; };
 		FA59F738225DF6D900CDD383 /* ListPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA59F736225DF6D900CDD383 /* ListPotholesViewController.xib */; };
 		FA59F73B225E263100CDD383 /* PotholeDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */; };
+		FA5CF02B2282B1CB00EB3748 /* FixPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */; };
+		FA5CF02C2282B1CB00EB3748 /* FixPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5CF02A2282B1CB00EB3748 /* FixPotholesViewController.xib */; };
+		FA5CF02F2282C40700EB3748 /* SubmitFixedPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */; };
+		FA5CF0302282C40700EB3748 /* SubmitFixedPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5CF02E2282C40700EB3748 /* SubmitFixedPotholesViewController.xib */; };
 		FA8048172258E78000DE5E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048162258E78000DE5E9B /* AppDelegate.swift */; };
 		FA8048212258E79200DE5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */; };
 		FA80482C2258E79200DE5E9B /* RoadcareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80482B2258E79200DE5E9B /* RoadcareTests.swift */; };
@@ -59,6 +65,9 @@
 		FA984BBE226EFCFF00DE529D /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA984BBD226EFCFF00DE529D /* DateUtils.swift */; };
 		FA984BC0226F3D4A00DE529D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA984BBF226F3D4A00DE529D /* MapKit.framework */; };
 		FA984BC2226F3D8E00DE529D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA984BC1226F3D8E00DE529D /* CoreLocation.framework */; };
+		FAC009D5228A7F3B00986C8D /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC009D3228A7F3A00986C8D /* StatisticsViewController.swift */; };
+		FAC009D6228A7F3B00986C8D /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009D4228A7F3A00986C8D /* StatisticsViewController.xib */; };
+		FAC009D8228A852000986C8D /* StatisticPRRTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009D7228A852000986C8D /* StatisticPRRTCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +113,15 @@
 		FA1CA2D5225B76C5004D44F1 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		FA259D9D228149F60079BB7D /* PotholeDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotholeDetails.swift; sourceTree = "<group>"; };
+		FA259D9F2281651B0079BB7D /* MediaDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetails.swift; sourceTree = "<group>"; };
 		FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPotholesViewController.swift; sourceTree = "<group>"; };
 		FA59F736225DF6D900CDD383 /* ListPotholesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ListPotholesViewController.xib; path = ../../../ViewControllers/ListPotholesViewController.xib; sourceTree = "<group>"; };
 		FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailViewCell.swift; sourceTree = "<group>"; };
+		FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixPotholesViewController.swift; sourceTree = "<group>"; };
+		FA5CF02A2282B1CB00EB3748 /* FixPotholesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FixPotholesViewController.xib; path = ../../../ViewControllers/FixPotholesViewController.xib; sourceTree = "<group>"; };
+		FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitFixedPotholesViewController.swift; sourceTree = "<group>"; };
+		FA5CF02E2282C40700EB3748 /* SubmitFixedPotholesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SubmitFixedPotholesViewController.xib; path = ../../../ViewControllers/SubmitFixedPotholesViewController.xib; sourceTree = "<group>"; };
 		FA8048132258E78000DE5E9B /* Roadcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roadcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8048162258E78000DE5E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8048202258E79200DE5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,6 +158,9 @@
 		FA984BBD226EFCFF00DE529D /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		FA984BBF226F3D4A00DE529D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA984BC1226F3D8E00DE529D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAC009D3228A7F3A00986C8D /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		FAC009D4228A7F3A00986C8D /* StatisticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatisticsViewController.xib; path = ../../../ViewControllers/StatisticsViewController.xib; sourceTree = "<group>"; };
+		FAC009D7228A852000986C8D /* StatisticPRRTCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticPRRTCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				FA1CA2D5225B76C5004D44F1 /* AppUser.swift */,
+				FA259D9D228149F60079BB7D /* PotholeDetails.swift */,
 				FA984BBB226E16EE00DE529D /* APIDomains.swift */,
+				FA259D9F2281651B0079BB7D /* MediaDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +300,9 @@
 				FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */,
 				FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */,
 				FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */,
+				FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */,
+				FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */,
+				FAC009D3228A7F3A00986C8D /* StatisticsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -321,6 +344,9 @@
 				FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */,
 				FA15DA7822678E07001B5C59 /* MappingPotholesViewController.xib */,
 				FA15DA7C2268191B001B5C59 /* ThanksReportViewController.xib */,
+				FA5CF02A2282B1CB00EB3748 /* FixPotholesViewController.xib */,
+				FA5CF02E2282C40700EB3748 /* SubmitFixedPotholesViewController.xib */,
+				FAC009D4228A7F3A00986C8D /* StatisticsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -353,6 +379,7 @@
 			children = (
 				FA804865225B261500DE5E9B /* MenuTableViewCell.xib */,
 				FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */,
+				FAC009D7228A852000986C8D /* StatisticPRRTCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -472,6 +499,7 @@
 			files = (
 				FA94C1AF225BA6F60043390D /* SigninViewController.xib in Resources */,
 				FA11F5DA225F0BB700F31984 /* ReportPotholeViewController.xib in Resources */,
+				FA5CF02C2282B1CB00EB3748 /* FixPotholesViewController.xib in Resources */,
 				FA8048492259DBB000DE5E9B /* StartupViewController.xib in Resources */,
 				FA11F5DE225F0F2800F31984 /* PhotoPotholeViewController.xib in Resources */,
 				FA94C1BB225C5AD90043390D /* Assets.xcassets in Resources */,
@@ -484,7 +512,10 @@
 				FA8048212258E79200DE5E9B /* LaunchScreen.storyboard in Resources */,
 				FA040565225E28E30037E700 /* PotholeDetailViewCell.xib in Resources */,
 				FA59F738225DF6D900CDD383 /* ListPotholesViewController.xib in Resources */,
+				FAC009D6228A7F3B00986C8D /* StatisticsViewController.xib in Resources */,
+				FA5CF0302282C40700EB3748 /* SubmitFixedPotholesViewController.xib in Resources */,
 				FA804859225B0A5B00DE5E9B /* HomeViewController.xib in Resources */,
+				FAC009D8228A852000986C8D /* StatisticPRRTCell.xib in Resources */,
 				FA15DA7E2268191B001B5C59 /* ThanksReportViewController.xib in Resources */,
 				FA1CA2DA225B8760004D44F1 /* SignupViewController.xib in Resources */,
 				FA80484F2259F12700DE5E9B /* TermsConditionsViewController.xib in Resources */,
@@ -540,7 +571,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Roadcare/Pods-Roadcare-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/YNExpandableCell/YNExpandableCell.framework",
@@ -550,7 +585,11 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNExpandableCell.framework",
@@ -614,7 +653,9 @@
 				FA59F73B225E263100CDD383 /* PotholeDetailViewCell.swift in Sources */,
 				FA984BBA226DEE3B00DE529D /* APIService.swift in Sources */,
 				FA040569225E48720037E700 /* PotholeDetailsViewController.swift in Sources */,
+				FAC009D5228A7F3B00986C8D /* StatisticsViewController.swift in Sources */,
 				FA94C1B8225BCD6D0043390D /* AddUserViewController.swift in Sources */,
+				FA259D9E228149F60079BB7D /* PotholeDetails.swift in Sources */,
 				FA984BBE226EFCFF00DE529D /* DateUtils.swift in Sources */,
 				FA94C1AE225BA6F60043390D /* SigninViewController.swift in Sources */,
 				FA94C1B5225BAB160043390D /* CustomView.swift in Sources */,
@@ -623,9 +664,12 @@
 				FA15DA7922678E07001B5C59 /* MappingPotholesViewController.swift in Sources */,
 				FA8048522259F2D300DE5E9B /* Constants.swift in Sources */,
 				FA80484B2259DC7B00DE5E9B /* StartupViewController.swift in Sources */,
+				FA5CF02F2282C40700EB3748 /* SubmitFixedPotholesViewController.swift in Sources */,
 				FA80484E2259F12700DE5E9B /* TermsConditionsViewController.swift in Sources */,
 				FA1CA2D6225B76C5004D44F1 /* AppUser.swift in Sources */,
 				FA8048172258E78000DE5E9B /* AppDelegate.swift in Sources */,
+				FA5CF02B2282B1CB00EB3748 /* FixPotholesViewController.swift in Sources */,
+				FA259DA02281651B0079BB7D /* MediaDetails.swift in Sources */,
 				FA94C1B2225BA9670043390D /* PaymentViewController.swift in Sources */,
 				FA80485B225B0EA900DE5E9B /* MainNavigationController.swift in Sources */,
 				FA1CA2D1225B7108004D44F1 /* Extensions.swift in Sources */,
@@ -805,7 +849,9 @@
 			baseConfigurationReference = E395559D6B427A93D68A03C1 /* Pods-Roadcare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ahmad Kanaan (D6DP85Q6H7)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 527FY5PN5Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Roadcare/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -813,6 +859,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RoadCare_Development;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -823,7 +870,9 @@
 			baseConfigurationReference = 2D65DB4C6BDA2E71FD7EF586 /* Pods-Roadcare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ahmad Kanaan (D6DP85Q6H7)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 527FY5PN5Z;
 				INFOPLIST_FILE = "$(SRCROOT)/Roadcare/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -831,6 +880,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RoadCare_Development;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -76,7 +76,8 @@ class MainNavigationController: UINavigationController, MenuViewControllerDelega
     }
     
     private func showPotholesPage() {
-        
+        let viewController = ListPotholesViewController(nibName: "ListPotholesViewController", bundle: nil)
+        pushViewController(viewController, animated: true)
     }
     
     private func showSignupPage() {

@@ -59,7 +59,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         home.tabBarItem.title = "Home"
         home.tabBarItem.image = UIImage(named: "ic_tab_home")
 
-        let potholes = ListPotholesViewController(nibName: "ListPotholesViewController", bundle: nil)
+        let statistics = StatisticsViewController(nibName: "StatisticsViewController", bundle: nil)
+        statistics.tabBarItem.title = "Statistics"
+        statistics.tabBarItem.image = UIImage(named: "ic_shape")
+
+        let potholes = ReportPotholeViewController(nibName: "ReportPotholeViewController", bundle: nil)
         potholes.tabBarItem.title = "Report a Pothole"
         potholes.tabBarItem.image = UIImage(named: "ic_contact")
 
@@ -68,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         login.tabBarItem.image = UIImage(named: "ic_login")
 
         let tabbarController = UITabBarController()
-        tabbarController.viewControllers = [home, potholes, login]
+        tabbarController.viewControllers = [home, statistics, potholes, login]
         tabbarController.tabBar.barTintColor = UIColor.white
         tabbarController.tabBar.tintColor = ColorPalette.primary
 
