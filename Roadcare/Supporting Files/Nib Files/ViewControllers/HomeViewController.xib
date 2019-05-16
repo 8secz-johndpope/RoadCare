@@ -18,6 +18,7 @@
                 <outlet property="lblRepairedCount" destination="Is1-WI-ebM" id="2wG-JE-aAc"/>
                 <outlet property="lblReportedCount" destination="xO4-o4-caA" id="vcK-qH-zAa"/>
                 <outlet property="lblReportedStatus" destination="4K7-Of-Ltg" id="Z7N-sy-efw"/>
+                <outlet property="prrtLoading" destination="11x-cv-TJL" id="759-5t-X9t"/>
                 <outlet property="repairedLoading" destination="dmm-8k-AKV" id="5dF-5e-oqN"/>
                 <outlet property="reportedLoading" destination="Tst-md-hQt" id="pkQ-5K-CJv"/>
                 <outlet property="titleView" destination="nAY-oS-EGn" id="pVB-1b-dMA"/>
@@ -148,6 +149,10 @@
                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="11x-cv-TJL">
+                            <rect key="frame" x="181" y="32" width="20" height="20"/>
+                            <color key="color" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Potholes Repair Reaction Time (PRRT)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5k-MF-2HF">
                             <rect key="frame" x="45" y="47" width="292" height="20.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -167,6 +172,8 @@
                         <constraint firstAttribute="height" constant="85" id="52g-R6-qrO"/>
                         <constraint firstItem="TnX-Gj-kY9" firstAttribute="top" secondItem="EZH-4a-3PL" secondAttribute="top" constant="18" id="GRm-88-1cO"/>
                         <constraint firstItem="Rjg-XW-Rd3" firstAttribute="leading" secondItem="EZH-4a-3PL" secondAttribute="leading" id="JSr-FU-8Xe"/>
+                        <constraint firstItem="11x-cv-TJL" firstAttribute="centerY" secondItem="TnX-Gj-kY9" secondAttribute="centerY" id="Ki2-mf-AtD"/>
+                        <constraint firstItem="11x-cv-TJL" firstAttribute="centerX" secondItem="TnX-Gj-kY9" secondAttribute="centerX" id="MbM-yq-QpD"/>
                         <constraint firstItem="TnX-Gj-kY9" firstAttribute="centerX" secondItem="EZH-4a-3PL" secondAttribute="centerX" id="V8X-or-e9v"/>
                         <constraint firstItem="m5k-MF-2HF" firstAttribute="centerX" secondItem="EZH-4a-3PL" secondAttribute="centerX" id="Xd3-vS-2Nc"/>
                         <constraint firstItem="Rjg-XW-Rd3" firstAttribute="top" secondItem="EZH-4a-3PL" secondAttribute="top" id="ktp-zX-KQy"/>
@@ -206,20 +213,12 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_advertising_01" translatesAutoresizingMaskIntoConstraints="NO" id="MeV-UU-usL">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="146"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertising" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edx-45-2be">
-                                    <rect key="frame" x="12" y="115" width="98.666666666666671" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="MeV-UU-usL" secondAttribute="trailing" id="6P2-v4-n4j"/>
                                 <constraint firstItem="MeV-UU-usL" firstAttribute="top" secondItem="pbN-h7-TFE" secondAttribute="top" id="FEn-fm-5vn"/>
-                                <constraint firstAttribute="bottom" secondItem="Edx-45-2be" secondAttribute="bottom" constant="12" id="bgs-1P-uOd"/>
                                 <constraint firstItem="MeV-UU-usL" firstAttribute="leading" secondItem="pbN-h7-TFE" secondAttribute="leading" id="kXz-Qe-Pyn"/>
-                                <constraint firstItem="Edx-45-2be" firstAttribute="leading" secondItem="pbN-h7-TFE" secondAttribute="leading" constant="12" id="vfj-j7-KWk"/>
                                 <constraint firstAttribute="bottom" secondItem="MeV-UU-usL" secondAttribute="bottom" constant="5" id="yrv-zg-zrZ"/>
                             </constraints>
                         </view>
@@ -229,17 +228,9 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_advertising_02" translatesAutoresizingMaskIntoConstraints="NO" id="Cuf-nF-W0Z">
                                     <rect key="frame" x="0.0" y="5" width="382" height="146"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertising" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBf-Af-9Ju">
-                                    <rect key="frame" x="12" y="115" width="98.666666666666671" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="aBf-Af-9Ju" secondAttribute="bottom" constant="12" id="9ko-ox-sOq"/>
-                                <constraint firstItem="aBf-Af-9Ju" firstAttribute="leading" secondItem="bzG-3Y-JFr" secondAttribute="leading" constant="12" id="Ajc-o8-bHY"/>
                                 <constraint firstAttribute="bottom" secondItem="Cuf-nF-W0Z" secondAttribute="bottom" id="KCM-1e-0mE"/>
                                 <constraint firstItem="Cuf-nF-W0Z" firstAttribute="leading" secondItem="bzG-3Y-JFr" secondAttribute="leading" id="YMQ-Oh-MdU"/>
                                 <constraint firstAttribute="trailing" secondItem="Cuf-nF-W0Z" secondAttribute="trailing" id="i3q-Oj-7FP"/>

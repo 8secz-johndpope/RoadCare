@@ -11,7 +11,8 @@ target 'Roadcare' do
   pod 'SDWebImage', '4.2.3'
   pod 'YNExpandableCell'
   pod 'Alamofire'
-  pod 'ChartsRealm'
+  pod 'Charts'
+  pod 'CountryPickerView'
   
   target 'RoadcareTests' do
     inherit! :search_paths

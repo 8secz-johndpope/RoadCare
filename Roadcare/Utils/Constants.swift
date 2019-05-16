@@ -22,6 +22,8 @@ struct ColorPalette {
 
 struct AppConstants {
     static var language: String = "English"
+    static var country: String = "Palestine"
+    static var city: String = "Nablus"
     static var authUser: AppUser = AppUser.getSavedUser()
     
     static func getLanguage() -> String {
@@ -29,6 +31,18 @@ struct AppConstants {
             return lang
         }
         return "English"
+    }
+    static func getCountry() -> String {
+        if let country = LocalStorage["selected_country"].object as? String {
+            return country
+        }
+        return ""
+    }
+    static func getCity() -> String {
+        if let city = LocalStorage["selected_city"].object as? String {
+            return city
+        }
+        return ""
     }
 }
 

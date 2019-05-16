@@ -21,7 +21,8 @@ class DateUtils {
         
         let day = calendar.dateComponents([.day], from: date1!, to: date2!).day
         let hour = calendar.dateComponents([.hour], from: date1!, to: date2!).hour
-        return Double(day!) + Double(hour!)/24
+        return Double(hour!)
+//        return Double(day!) + Double(hour!)/24
     }
     
     static func convertDateToStr(date: Date, format: String) -> String? {

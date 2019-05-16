@@ -118,3 +118,15 @@ class GroupedPotholes{
     }
 }
 
+class GroupedPRRTPotholes {
+    var city: String
+    var country: String
+    var prrt: Double
+    
+    init(city: String, country: String, prrt: Double) {
+        self.city = city
+        self.country = country
+        self.prrt = prrt
+    }
+}
+

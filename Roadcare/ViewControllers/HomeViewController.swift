@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lblReactionTimer: UILabel!
     @IBOutlet weak var reportedLoading: UIActivityIndicatorView!
     @IBOutlet weak var repairedLoading: UIActivityIndicatorView!
+    @IBOutlet weak var prrtLoading: UIActivityIndicatorView!
     
     let locationManager = CLLocationManager()
     var timer: Timer?
@@ -46,14 +47,30 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        initLocation()
+
+        initViews()
+//        initLocation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         requestPotholes?.cancel()
+    }
+    
+    private func initViews() {
+        Location.city = AppConstants.getCity()
+        Location.country = AppConstants.getCountry()
+        lblLocation.text = Location.city + ", " + Location.country
+        lblReportedStatus.text = "Potholes Reported in " + Location.city + " in 2019"
+        
+        getReportedPotholes(page: "1", request_index: 1)
+        reportedLoading.startAnimating()
+        repairedLoading.startAnimating()
+        prrtLoading.startAnimating()
+        lblReportedCount.isHidden = true
+        lblRepairedCount.isHidden = true
+        lblReactionTimer.isHidden = true
     }
     
     private func getReportedPotholes(page: String, request_index: Int) {
@@ -84,21 +101,28 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     private func setupPotholeList() {
         var repaired_count = 0
+        var sum: Double = 0.0
         potholes.removeAll()
         for child in allPotholes {
             if (child.metaBox?.city.containsIgnoringCase(find: Location.city))! {
                 potholes.append(child)
                 if child.metaBox?.repaired_status.lowercased() == REPAIRED.lowercased() {
+                    sum += DateUtils.getDateDistance(s1: child.date!, s2: child.modified!)
                     repaired_count += 1
                 }
             }
         }
         lblReportedCount.text = String(potholes.count)
         lblRepairedCount.text = String(repaired_count)
+        var prrt = String(format: "%f", sum/Double(repaired_count))
+        if prrt == "nan" { prrt = "0" }
+        lblReactionTimer.text = prrt
         lblReportedCount.isHidden = false
         lblRepairedCount.isHidden = false
+        lblReactionTimer.isHidden = false
         reportedLoading.stopAnimating()
         repairedLoading.stopAnimating()
+        prrtLoading.stopAnimating()
     }
     
     @objc func runTimedCode() {
@@ -169,8 +193,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             getReportedPotholes(page: "1", request_index: 1)
             reportedLoading.startAnimating()
             repairedLoading.startAnimating()
+            prrtLoading.startAnimating()
             lblReportedCount.isHidden = true
             lblRepairedCount.isHidden = true
+            lblReactionTimer.isHidden = true
         }
     }
     

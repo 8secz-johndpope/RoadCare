@@ -62,8 +62,8 @@ class MainNavigationController: UINavigationController, MenuViewControllerDelega
     }
     
     private func showCountryPage() {
-//        let viewController = ReportViewController(nibName: "ReportViewController", bundle: nil)
-//        pushViewController(viewController, animated: true)
+        let viewController = SelectCityViewController(nibName: "SelectCityViewController", bundle: nil)
+        pushViewController(viewController, animated: true)
     }
     
     private func showLanguage() {

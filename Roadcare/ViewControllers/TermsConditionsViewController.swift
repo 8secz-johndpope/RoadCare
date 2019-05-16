@@ -19,6 +19,7 @@ class TermsConditionsViewController: UIViewController {
     }
     
     @IBAction func agreeTapped(_ sender: SimpleButton) {
+        LocalStorage["terms_agrees"] = "agreed"
         self.showDashboard()
     }
     
