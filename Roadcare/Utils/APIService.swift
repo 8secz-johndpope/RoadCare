@@ -274,6 +274,20 @@ class APIService {
         return get(path: "api/get_nonce", params: params, handler: handler)
     }
     
+    func getCategories(handler: @escaping CompletionHandler) -> DataRequest {
+        let params: [String: Any] = [
+            "per_page" : "100"
+        ]
+        return get(path: "wp-json/wp/v2/categories", params: params, handler: handler)
+    }
+    
+    func addCategory(name: String, handler: @escaping CompletionHandler) -> DataRequest {
+        let params: [String: Any] = [
+            "name" : name
+        ]
+        return post(path: "wp-json/wp/v2/categories", params: params, encoding: JSONEncoding.default, responseString: false, handler: handler)
+    }
+
     func reportPothole(params: PotholeDetails, handler: @escaping CompletionHandler) -> DataRequest {
         return post(path: "wp-json/wp/v2/posts", params: params.toDictionary(), encoding: JSONEncoding.default, responseString: false, handler: handler)
     }

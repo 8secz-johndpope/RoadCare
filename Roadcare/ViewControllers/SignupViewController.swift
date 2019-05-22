@@ -17,9 +17,13 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var tvEmail: UITextField!
     @IBOutlet weak var tvPassword: UITextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func signupTapped(_ sender: UIButton) {
@@ -81,8 +85,18 @@ class SignupViewController: UIViewController {
             self.showSimpleAlert(message: response.message)
 
             if response.code == 200 {
-                self.navigationController?.popViewController(animated: true)
+                self.addCityName(city: city)
             }
+        })
+    }
+    
+    private func addCityName(city: String) {
+        showProgress(message: "")
+        
+        _ = APIClient.addCategory(name: city, handler: { (success, error, data) in
+            self.dismissProgress()
+            
+            self.navigationController?.popViewController(animated: true)
         })
     }
     
@@ -91,18 +105,28 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func topEditingBegin(_ sender: Any) {
-        topConstraint.constant = 16
+//        topConstraint.constant = 16
     }
     
     @IBAction func phoneEditingBegin(_ sender: Any) {
-        topConstraint.constant = -50
+//        topConstraint.constant = -50
     }
     
     @IBAction func emailEditingBegin(_ sender: Any) {
-        topConstraint.constant = -130
+//        topConstraint.constant = -130
     }
     
     @IBAction func passwordEditingBegin(_ sender: Any) {
-        topConstraint.constant = -200
+//        topConstraint.constant = -200
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.bottomConstraint.constant = -1 * keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.bottomConstraint.constant = 0
     }
 }

@@ -130,3 +130,13 @@ class GroupedPRRTPotholes {
     }
 }
 
+class City {
+    var id: Int!
+    var name: String
+    
+    init(_ json: [String: Any]) {
+        id = Int("\(json["id"]!)")
+        name = (json["name"] as? String)!
+    }
+}
+

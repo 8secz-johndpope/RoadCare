@@ -8,10 +8,9 @@
 
 import UIKit
 import SideMenu
-import CoreLocation
 import Alamofire
 
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
+class HomeViewController: UIViewController {
 
     @IBOutlet var titleView: UIView!
     @IBOutlet weak var lblDate: UILabel!
@@ -24,12 +23,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var repairedLoading: UIActivityIndicatorView!
     @IBOutlet weak var prrtLoading: UIActivityIndicatorView!
     
-    let locationManager = CLLocationManager()
     var timer: Timer?
     var potholes = [PotholeDetails]()
     var allPotholes = [PotholeDetails]()
 
     var requestPotholes: DataRequest?
+    var requestCities: DataRequest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,19 +48,23 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         super.viewWillAppear(animated)
 
         initViews()
-//        initLocation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         requestPotholes?.cancel()
+        requestCities?.cancel()
     }
     
     private func initViews() {
         Location.city = AppConstants.getCity()
         Location.country = AppConstants.getCountry()
-        lblLocation.text = Location.city + ", " + Location.country
+        if AppUser.isLogin() {
+            lblLocation.text = "Signed in " + Location.city + ", " + Location.country
+        } else {
+            lblLocation.text = Location.city + ", " + Location.country
+        }
         lblReportedStatus.text = "Potholes Reported in " + Location.city + " in 2019"
         
         getReportedPotholes(page: "1", request_index: 1)
@@ -71,6 +74,22 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         lblReportedCount.isHidden = true
         lblRepairedCount.isHidden = true
         lblReactionTimer.isHidden = true
+    }
+    
+    private func getCityList() {
+        showProgress(message: "")
+        
+        requestCities = APIClient.getCategories(handler: { (success, error, data) in
+            self.dismissProgress()
+            guard success, data != nil, let response = data as? [[String: Any]] else {
+                return
+            }
+            AppConstants.cities.removeAll()
+            
+            for json in response {
+                AppConstants.cities.append(City(json))
+            }
+        })
     }
     
     private func getReportedPotholes(page: String, request_index: Int) {
@@ -129,13 +148,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         lblDate.text =  DateUtils.convertDateToStr(date: Date(), format: "dd MMM yyyy · hh:mm a")
     }
     
-    private func initLocation() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
-    
     @objc func reportAgain(notification: NSNotification) {
         if let tabBarController = self.navigationController?.topViewController as? UITabBarController {
             if tabBarController.selectedIndex == 0 {
@@ -157,51 +169,5 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func reportPothole(_ sender: SimpleButton) {
         let viewController = ReportPotholeViewController(nibName: "ReportPotholeViewController", bundle: nil)
         navigationController!.pushViewController(viewController, animated: true)
-    }
-    
-    // MARK: Location Manager delegate
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
-            
-            if (error != nil) {
-                print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
-                return
-            }
-            
-            if (placemarks?.count)! > 0 {
-                let pm = placemarks?[0]
-                self.displayLocationInfo(pm)
-            } else {
-                print("Problem with the data received from geocoder")
-            }
-        })
-    }
-    
-    func displayLocationInfo(_ placemark: CLPlacemark?) {
-        if let containsPlacemark = placemark {
-            //stop updating location to save battery life
-            locationManager.stopUpdatingLocation()
-            let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
-            let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
-            
-            Location.city = locality!
-            Location.country = country!
-            lblLocation.text = Location.city + ", " + Location.country
-            lblReportedStatus.text = "Potholes Reported in " + Location.city + " in 2019"
-            
-            getReportedPotholes(page: "1", request_index: 1)
-            reportedLoading.startAnimating()
-            repairedLoading.startAnimating()
-            prrtLoading.startAnimating()
-            lblReportedCount.isHidden = true
-            lblRepairedCount.isHidden = true
-            lblReactionTimer.isHidden = true
-        }
-    }
-    
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error while updating location " + error.localizedDescription)
     }
 }

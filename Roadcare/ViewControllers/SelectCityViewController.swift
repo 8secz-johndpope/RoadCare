@@ -14,11 +14,17 @@ class SelectCityViewController: UIViewController {
     @IBOutlet weak var tfCountry: UITextField!
     @IBOutlet weak var tfCity: UITextField!
     @IBOutlet weak var tfLanguage: UITextField!
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     let cpvInternal = CountryPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
         self.title = "Set Country"
 
         cpvInternal.delegate = self
@@ -77,6 +83,16 @@ class SelectCityViewController: UIViewController {
             let viewController = TermsConditionsViewController(nibName: "TermsConditionsViewController", bundle: nil)
             present(viewController, animated: true, completion: nil)
         }
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.bottomConstraint.constant = -1 * keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.bottomConstraint.constant = 0
     }
 }
 

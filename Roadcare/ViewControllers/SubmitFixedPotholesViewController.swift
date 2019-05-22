@@ -24,6 +24,11 @@ class SubmitFixedPotholesViewController: UIViewController {
         tfName.text = AppUser.getSavedUser().email
         tfDate.text = DateUtils.convertDateToStr(date: Date(), format: "yyyy-MM-dd")
         thanksView.isHidden = true
+        
+        if SELECTED_POTHOLE_PHOTO != "" {
+            ivPothole.sd_setImage(with: URL(string: SELECTED_POTHOLE_PHOTO),
+                                 placeholderImage: UIImage(named: "img_repaired_pothole"))
+        }
     }
     
     @IBAction func confirmTapped(_ sender: Any) {

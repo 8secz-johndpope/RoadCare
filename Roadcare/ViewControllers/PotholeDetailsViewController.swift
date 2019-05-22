@@ -71,6 +71,7 @@ class PotholeDetailsViewController: UIViewController {
         let url = selPothole?.metaBox?.pothole_photo ?? ""
         imgPhoto.sd_setImage(with: URL(string: url),
                              placeholderImage: UIImage(named: "img_advertising_01"))
+        SELECTED_POTHOLE_PHOTO = url
     }
     
     @IBAction func fixPothole(_ sender: SimpleButton) {

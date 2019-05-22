@@ -11,6 +11,7 @@ import UIKit
 
 var AppVersion = "1.0"
 var POTHOLE_ID: Int = 0
+var SELECTED_POTHOLE_PHOTO = ""
 
 let REPAIRED = "Repaired"
 let NOT_REPAIRED = "Not Repaired"
@@ -25,6 +26,7 @@ struct AppConstants {
     static var country: String = "Palestine"
     static var city: String = "Nablus"
     static var authUser: AppUser = AppUser.getSavedUser()
+    static var cities = [City]()
     
     static func getLanguage() -> String {
         if let lang = LocalStorage["app_language"].object as? String {
@@ -44,6 +46,15 @@ struct AppConstants {
         }
         return ""
     }
+    
+    static func getIdByCity(_ name: String) -> Int? {
+        for city in cities {
+            if city.name == name {
+                return city.id
+            }
+        }
+        return nil
+    }
 }
 
 struct ResponseCode {
@@ -53,4 +64,5 @@ struct ResponseCode {
 struct Location {
     static var city: String = ""
     static var country: String = ""
+    static var detectedCity: String = ""
 }

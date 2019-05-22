@@ -17,15 +17,18 @@ class StartupViewController: UIViewController {
     }
     
     @IBAction func getStartedTapped(_ sender: UIButton) {
-        if AppConstants.getCountry() == "" {
-            let viewController = SelectCityViewController(nibName: "SelectCityViewController", bundle: nil)
-            present(viewController, animated: true, completion: nil)
-        } else if LocalStorage["terms_agrees"].object == nil {
-            let viewController = TermsConditionsViewController(nibName: "TermsConditionsViewController", bundle: nil)
-            present(viewController, animated: true, completion: nil)
-        } else {
-            let appDelegate =  UIApplication.shared.delegate as! AppDelegate
-            appDelegate.showDashboard()
-        }
+        let viewController = ReportPotholeViewController(nibName: "ReportPotholeViewController", bundle: nil)
+        present(viewController, animated: true, completion: nil)
+
+//        if AppConstants.getCountry() == "" {
+//            let viewController = SelectCityViewController(nibName: "SelectCityViewController", bundle: nil)
+//            present(viewController, animated: true, completion: nil)
+//        } else if LocalStorage["terms_agrees"].object == nil {
+//            let viewController = TermsConditionsViewController(nibName: "TermsConditionsViewController", bundle: nil)
+//            present(viewController, animated: true, completion: nil)
+//        } else {
+//            let appDelegate =  UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.showDashboard()
+//        }
     }
 }

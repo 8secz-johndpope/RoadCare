@@ -3,40 +3,41 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "AddUserViewController.dontBtnTapped(_:):AddUserViewController.swift">
+         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "DateUtils.getTimeStampe()">
+               value = "annotation.coordinate.latitude">
             </PersistentString>
-            <PersistentString
-               value = "Date.timeIntervalBetween1970AndReferenceDate">
-            </PersistentString>
-            <PersistentString
-               value = "DateUtils.getCurrentTimeStampWOMiliseconds(dateToConvert: DateUtils.getCurrentScheduleTime()! as NSDate)">
-            </PersistentString>
-            <PersistentString
-               value = "Int64(TimeInterval(NSDate().timeIntervalSince1970))">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.allPotholes">
-            </PersistentString>
-            <PersistentString
-               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "MappingPotholesViewController.locationManager(_:didUpdateLocations:):MappingPotholesViewController.swift">
-         <PersistentStrings>
             <PersistentString
                value = "lat">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static DateUtils.getDateDistance(s1:s2:):DateUtils.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Double(4)/24">
+            </PersistentString>
+            <PersistentString
+               value = "convertStrToDate(string: s1, format: &quot;yyyy-MM-dd&apos;T&apos;hh:mm:ss&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "calendar.dateComponents([.calendar], from: date1!, to: date2!).day">
+            </PersistentString>
+            <PersistentString
+               value = "Double(day!) + Double(hour!)/24">
+            </PersistentString>
+            <PersistentString
+               value = "Float(hour!/24)">
+            </PersistentString>
+            <PersistentString
+               value = "components.day">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in APIService.get(path:params:handler:):APIService.swift">
@@ -156,10 +157,13 @@
          contextName = "HomeViewController.displayLocationInfo(_:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "Location.city">
+               value = "Location">
             </PersistentString>
             <PersistentString
-               value = "Location">
+               value = "containsPlacemark.subLocality">
+            </PersistentString>
+            <PersistentString
+               value = "Location.city">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -247,13 +251,13 @@
          contextName = "ListPotholesViewController.seeDetails(sender:):ListPotholesViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "sender.tag">
+            </PersistentString>
+            <PersistentString
                value = "POTHOLE_ID">
             </PersistentString>
             <PersistentString
                value = "viewController.selPothole">
-            </PersistentString>
-            <PersistentString
-               value = "sender.tag">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -339,7 +343,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.allPotholes">
+            </PersistentString>
+            <PersistentString
+               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AddUserViewController.dontBtnTapped(_:):AddUserViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "DateUtils.getTimeStampe()">
+            </PersistentString>
+            <PersistentString
+               value = "Date.timeIntervalBetween1970AndReferenceDate">
+            </PersistentString>
+            <PersistentString
+               value = "DateUtils.getCurrentTimeStampWOMiliseconds(dateToConvert: DateUtils.getCurrentScheduleTime()! as NSDate)">
+            </PersistentString>
+            <PersistentString
+               value = "Int64(TimeInterval(NSDate().timeIntervalSince1970))">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in StatisticsViewController.setupChat():StatisticsViewController.swift">
@@ -350,41 +382,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
+         contextName = "MappingPotholesViewController.locationManager(_:didUpdateLocations:):MappingPotholesViewController.swift">
          <PersistentStrings>
-            <PersistentString
-               value = "annotation.coordinate.latitude">
-            </PersistentString>
             <PersistentString
                value = "lat">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "static DateUtils.getDateDistance(s1:s2:):DateUtils.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "Float(hour!/24)">
-            </PersistentString>
-            <PersistentString
-               value = "components.day">
-            </PersistentString>
-            <PersistentString
-               value = "calendar.dateComponents([.calendar], from: date1!, to: date2!).day">
-            </PersistentString>
-            <PersistentString
-               value = "Double(day!) + Double(hour!)/24">
-            </PersistentString>
-            <PersistentString
-               value = "Double(4)/24">
-            </PersistentString>
-            <PersistentString
-               value = "convertStrToDate(string: s1, format: &quot;yyyy-MM-dd&apos;T&apos;hh:mm:ss&quot;)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

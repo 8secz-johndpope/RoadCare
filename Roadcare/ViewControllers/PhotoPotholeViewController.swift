@@ -20,6 +20,11 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
     
     var id: Int! = 0
     
+    enum ImageSource {
+        case photoLibrary
+        case camera
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -151,7 +156,7 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBAction func didCamButtonTapped(_ sender: UIButton) {
         imagePicker.allowsEditing = true
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true)
     }
     
@@ -191,4 +196,3 @@ fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [U
 fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
     return input.rawValue
 }
-
