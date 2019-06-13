@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "9fY-f1-hy7"; */
+"9fY-f1-hy7.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "The pothole has been repaired!"; ObjectID = "B8z-PE-a1T"; */
+"B8z-PE-a1T.text" = "The pothole has been repaired!";
+
+/* Class = "UILabel"; text = "DATE AND TIME"; ObjectID = "Kw6-LB-yhb"; */
+"Kw6-LB-yhb.text" = "DATE AND TIME";
+
+/* Class = "UILabel"; text = "Great job."; ObjectID = "PMB-Q6-hnQ"; */
+"PMB-Q6-hnQ.text" = "Great job.";
+
+/* Class = "UIButton"; normalTitle = "Fix Another Pothole"; ObjectID = "XAC-p9-tbk"; */
+"XAC-p9-tbk.normalTitle" = "Fix Another Pothole";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "lWp-Yy-lFP"; */
+"lWp-Yy-lFP.normalTitle" = "Reject";
+
+/* Class = "UILabel"; text = "REPAIRED BY"; ObjectID = "wQe-AO-xBe"; */
+"wQe-AO-xBe.text" = "REPAIRED BY";

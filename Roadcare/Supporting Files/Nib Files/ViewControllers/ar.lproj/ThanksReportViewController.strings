@@ -1,0 +1,6 @@
+
+/* Class = "UIButton"; normalTitle = "Report Another Pothole"; ObjectID = "DUT-hF-Fmw"; */
+"DUT-hF-Fmw.normalTitle" = "أبلغ عن حفرة أخرى";
+
+/* Class = "UILabel"; text = "Thank you, your pothole has been reported \nand you will be notified to confirm as soon \nas it is fixed"; ObjectID = "xYs-oU-8Sp"; */
+"xYs-oU-8Sp.text" = "شكرا لك لقد تم الإبلاغ عن هذه الحفرة";

@@ -281,9 +281,10 @@ class APIService {
         return get(path: "wp-json/wp/v2/categories", params: params, handler: handler)
     }
     
-    func addCategory(name: String, handler: @escaping CompletionHandler) -> DataRequest {
+    func addCategory(name: String, country: String, handler: @escaping CompletionHandler) -> DataRequest {
         let params: [String: Any] = [
-            "name" : name
+            "name" : name,
+            "description" : country
         ]
         return post(path: "wp-json/wp/v2/categories", params: params, encoding: JSONEncoding.default, responseString: false, handler: handler)
     }

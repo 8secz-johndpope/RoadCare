@@ -45,10 +45,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // Setup menu items.
         menuItems = [
-            MenuItem(index: 1, icon: "ic_internet", text: "Country"),
-            MenuItem(index: 2, icon: "ic_flag", text: "Language"),
-            MenuItem(index: 3, icon: "ic_users", text: "Add users"),
-            MenuItem(index: 4, icon: "ic_placeholder", text: "Reported Potholes"),
+            MenuItem(index: 1, icon: "ic_internet", text: "Country".localized),
+            MenuItem(index: 2, icon: "ic_flag", text: "Language".localized),
+            MenuItem(index: 3, icon: "ic_users", text: "Add Users".localized),
+            MenuItem(index: 4, icon: "ic_placeholder", text: "Reported Potholes".localized),
         ]
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuTableViewCell")
         tableView.reloadData()
@@ -74,6 +74,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     private func setupLanguage() {
+        print(AppLanguage.currentAppleLanguage())
         if AppConstants.getLanguage() == "English" {
             englishCheckbox.setImage(UIImage(named: "ic_check_on"), for: .normal)
             arabicCheckbox.setImage(UIImage(named: "ic_check_off"), for: .normal)

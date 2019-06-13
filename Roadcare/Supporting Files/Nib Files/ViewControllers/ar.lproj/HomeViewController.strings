@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Report a Pothole"; ObjectID = "2zn-a6-k13"; */
+"2zn-a6-k13.normalTitle" = "أبلغ عن حفرة";
+
+/* Class = "UILabel"; text = "Potholes Reported in Nablus in 2019"; ObjectID = "4K7-Of-Ltg"; */
+"4K7-Of-Ltg.text" = "أبلغ عن حفرة";
+
+/* Class = "UILabel"; text = "30"; ObjectID = "Is1-WI-ebM"; */
+"Is1-WI-ebM.text" = "30";
+
+/* Class = "UILabel"; text = " Nablus, Palestine"; ObjectID = "KYI-c8-sbd"; */
+"KYI-c8-sbd.text" = " Nablus, Palestine";
+
+/* Class = "UILabel"; text = "Potholes Repaired"; ObjectID = "MWM-ez-koc"; */
+"MWM-ez-koc.text" = "الحفر التي تم اصلاحها";
+
+/* Class = "UILabel"; text = "65 hours"; ObjectID = "TnX-Gj-kY9"; */
+"TnX-Gj-kY9.text" = "65 hours";
+
+/* Class = "UILabel"; text = "29 MAR 2019 · 10:05 AM"; ObjectID = "ebL-9D-XdR"; */
+"ebL-9D-XdR.text" = "29 MAR 2019 · 10:05 AM";
+
+/* Class = "UILabel"; text = "Potholes Repair Reaction Time (PRRT)"; ObjectID = "m5k-MF-2HF"; */
+"m5k-MF-2HF.text" = "معدل وقت التفاعل مع شكوى الحفر";
+
+/* Class = "UILabel"; text = "90"; ObjectID = "xO4-o4-caA"; */
+"xO4-o4-caA.text" = "90";

@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import MapKit
+import AVFoundation
 
 class PotholeDetailsViewController: UIViewController {
 
@@ -25,11 +26,25 @@ class PotholeDetailsViewController: UIViewController {
     var selPothole: PotholeDetails?
     var navTitle: String?
     
+    var player:AVPlayer?
+    var playerItem:AVPlayerItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = navTitle ?? ""
         
+        if selPothole?.metaBox?.audio != "" {
+            let url = URL(string: (selPothole?.metaBox!.audio)!)
+            //        let url = URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")
+            let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
+            player = AVPlayer(playerItem: playerItem)
+            
+            let playerLayer = AVPlayerLayer(player: player!)
+            playerLayer.frame = CGRect(x:0, y:0, width:10, height:50)
+            self.view.layer.addSublayer(playerLayer)
+        }
+
         setupMapLocation()
         setupViews()
     }
@@ -68,6 +83,9 @@ class PotholeDetailsViewController: UIViewController {
             lblStatus.text = NOT_REPAIRED
             imgStatus.image = UIImage(named: "ic_minus")
         }
+        if !AppUser.isLogin() {
+            fixPotholeConstraint.constant = 0
+        }
         let url = selPothole?.metaBox?.pothole_photo ?? ""
         imgPhoto.sd_setImage(with: URL(string: url),
                              placeholderImage: UIImage(named: "img_advertising_01"))
@@ -80,5 +98,14 @@ class PotholeDetailsViewController: UIViewController {
     }
     
     @IBAction func listenComplaint(_ sender: SimpleButton) {
+        if selPothole?.metaBox?.audio == "" {
+            showToast(message: "No recorded audio file.")
+            return
+        }
+        if player?.rate == 0 {
+            player!.play()
+        } else {
+            player!.pause()
+        }
     }
 }

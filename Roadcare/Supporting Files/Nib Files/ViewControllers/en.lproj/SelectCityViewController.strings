@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "1hC-Te-RgM"; */
+"1hC-Te-RgM.normalTitle" = "Continue";
+
+/* Class = "UILabel"; text = "INPUT CITY NAME"; ObjectID = "6Fi-uL-hAH"; */
+"6Fi-uL-hAH.text" = "INPUT CITY NAME";
+
+/* Class = "UILabel"; text = "SELECT A COUNTRY"; ObjectID = "KR6-1C-ykJ"; */
+"KR6-1C-ykJ.text" = "SELECT A COUNTRY";
+
+/* Class = "UILabel"; text = "SELECT A LANGUAGE"; ObjectID = "iQM-lK-nni"; */
+"iQM-lK-nni.text" = "SELECT A LANGUAGE";

@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "ADDRESS"; ObjectID = "0Xx-zv-SSU"; */
+"0Xx-zv-SSU.text" = "عنوان";
+
+/* Class = "UIButton"; normalTitle = "Fix this Pothole"; ObjectID = "1b7-zc-Q9E"; */
+"1b7-zc-Q9E.normalTitle" = "أصلح هذه الحفرة";
+
+/* Class = "UILabel"; text = "THE PHOTO"; ObjectID = "1kN-dZ-ZAN"; */
+"1kN-dZ-ZAN.text" =  "الصورة";
+
+/* Class = "UITextField"; text = "An-Najah St., Nablus, Palestine"; ObjectID = "2kM-Q9-f0v"; */
+"2kM-Q9-f0v.text" = "An-Najah St., Nablus, Palestine";
+
+/* Class = "UITextField"; text = "An-Najah St., Nablus, Palestine"; ObjectID = "2rE-wj-W4q"; */
+"2rE-wj-W4q.text" = "An-Najah St., Nablus, Palestine";
+
+/* Class = "UILabel"; text = "REPORTED BY (NAME)"; ObjectID = "3O7-2K-4j2"; */
+"3O7-2K-4j2.text" = "بلغ عنها من قبل (الإسم)";
+
+/* Class = "UILabel"; text = "DATE AND TIME"; ObjectID = "53D-3T-b8V"; */
+"53D-3T-b8V.text" = "التاريخ والوقت";
+
+/* Class = "UILabel"; text = "PHONE OR MOBILE NUMBER"; ObjectID = "7Rk-Xw-mn3"; */
+"7Rk-Xw-mn3.text" = "رقم الهاتف أو الخلوي";
+
+/* Class = "UIButton"; normalTitle = "    Listen to Complaint"; ObjectID = "7gJ-lk-sw4"; */
+"7gJ-lk-sw4.normalTitle" = "    إستمع إلى الشكوى";
+
+/* Class = "UILabel"; text = "Repaired"; ObjectID = "Ail-ZC-tKR"; */
+"Ail-ZC-tKR.text" = "مصلحة";
+
+/* Class = "UITextField"; text = "An-Najah St., Nablus, Palestine"; ObjectID = "kRp-bi-Ap2"; */
+"kRp-bi-Ap2.text" = "An-Najah St., Nablus, Palestine";
+
+/* Class = "UITextField"; text = "An-Najah St., Nablus, Palestine"; ObjectID = "neu-ec-Y7w"; */
+"neu-ec-Y7w.text" = "An-Najah St., Nablus, Palestine";

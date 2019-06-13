@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Please enter your credentials to proceed."; ObjectID = "MfZ-Dm-iyR"; */
+"MfZ-Dm-iyR.text" = "الرجاء ادخال معلوماتك للمباشرة";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "Qfi-bT-O25"; */
+"Qfi-bT-O25.text" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "Sign in"; ObjectID = "Y22-IA-awl"; */
+"Y22-IA-awl.text" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Dont’ have an account?"; ObjectID = "YNs-vj-7hF"; */
+"YNs-vj-7hF.text" = "ليس لديك حساب؟";
+
+/* Class = "UILabel"; text = "EMAIL ADDRESS"; ObjectID = "dZL-zZ-9HQ"; */
+"dZL-zZ-9HQ.text" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "tQX-ep-obT"; */
+"tQX-ep-obT.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "tnk-ow-U5V"; */
+"tnk-ow-U5V.normalTitle" = "حساب جديد";

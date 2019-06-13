@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "See Potholes Reported in Other Cities Nearby"; ObjectID = "FfV-sk-8vr"; */
+"FfV-sk-8vr.normalTitle" =  "انظر لعدد الحفر المبلغ عنها في مدن أخرى";
+
+/* Class = "UIButton"; normalTitle = "See Chart"; ObjectID = "cHg-h2-Cfa"; */
+"cHg-h2-Cfa.normalTitle" = "إنظر للرسمة البيانية";
+
+/* Class = "UILabel"; text = "AVERAGE PRRT"; ObjectID = "n7v-YP-FHo"; */
+"n7v-YP-FHo.text" = "معدل وقت إصلاح الحفر";
+
+/* Class = "UILabel"; text = "CITY, STATE OR COUNTRY"; ObjectID = "qqE-bx-qxQ"; */
+"qqE-bx-qxQ.text" = "المدينة, الولاية, البلد";

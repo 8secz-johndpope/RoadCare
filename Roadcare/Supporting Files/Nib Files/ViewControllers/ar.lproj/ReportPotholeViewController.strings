@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "NAME OF REPORTER"; ObjectID = "5ba-uL-uax"; */
+"5ba-uL-uax.text" = "بلغ عنها من قبل (الإسم)";
+
+/* Class = "UIButton"; normalTitle = "   Push to Talk"; ObjectID = "B14-zu-yYB"; */
+"B14-zu-yYB.normalTitle" = "   إضغط للتسجيل";
+
+/* Class = "UILabel"; text = "NEARBY PLACES"; ObjectID = "D2d-9C-bhZ"; */
+"D2d-9C-bhZ.text" = "مجاوز";
+
+/* Class = "UILabel"; text = "CITY"; ObjectID = "Gvq-IS-ToA"; */
+"Gvq-IS-ToA.text" = "المدينة";
+
+/* Class = "UILabel"; text = "PHONE NUMBER"; ObjectID = "X34-1s-8y7"; */
+"X34-1s-8y7.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "STREET NAME"; ObjectID = "leW-j9-wvb"; */
+"leW-j9-wvb.text" = "الشارع";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "qaK-Ey-Iix"; */
+"qaK-Ey-Iix.normalTitle" = "التالي";

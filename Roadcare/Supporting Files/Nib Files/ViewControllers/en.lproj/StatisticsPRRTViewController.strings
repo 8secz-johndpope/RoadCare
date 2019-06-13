@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Average PRRT(Hours)*"; ObjectID = "8Xz-kC-pHh"; */
+"8Xz-kC-pHh.text" = "Average PRRT(Hours)*";
+
+/* Class = "UIButton"; normalTitle = "Report a Pothole"; ObjectID = "p4I-e5-jfY"; */
+"p4I-e5-jfY.normalTitle" = "Report a Pothole";
+
+/* Class = "UILabel"; text = " *Average PRRT is the average time it takes an agency \nto fill up reported potholes as an indication of the quality \nof service provided by the agency. "; ObjectID = "yNf-Pm-xls"; */
+"yNf-Pm-xls.text" = " *Average PRRT is the average time it takes an agency \nto fill up reported potholes as an indication of the quality \nof service provided by the agency. ";

@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "9fY-f1-hy7"; */
+"9fY-f1-hy7.normalTitle" = "تأكيد";
+
+/* Class = "UILabel"; text = "The pothole has been repaired!"; ObjectID = "B8z-PE-a1T"; */
+"B8z-PE-a1T.text" = "تم إصلاح الحفرة";
+
+/* Class = "UILabel"; text = "DATE AND TIME"; ObjectID = "Kw6-LB-yhb"; */
+"Kw6-LB-yhb.text" = "التاريخ والوقت";
+
+/* Class = "UILabel"; text = "Great job."; ObjectID = "PMB-Q6-hnQ"; */
+"PMB-Q6-hnQ.text" = "عمل عظيم";
+
+/* Class = "UIButton"; normalTitle = "Fix Another Pothole"; ObjectID = "XAC-p9-tbk"; */
+"XAC-p9-tbk.normalTitle" = "أصلح حفرة أخرى";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "lWp-Yy-lFP"; */
+"lWp-Yy-lFP.normalTitle" = "رفض";
+
+/* Class = "UILabel"; text = "REPAIRED BY"; ObjectID = "wQe-AO-xBe"; */
+"wQe-AO-xBe.text" = "أسم الفني أو المهندس";

@@ -21,6 +21,7 @@ class FixPotholesViewController: UIViewController {
     @IBOutlet weak var sbOther: SimpleButton!
     @IBOutlet weak var sbOtherSel: SimpleButton!
     @IBOutlet weak var tfOther: UITextField!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var materials = ["", "", "", "", ""]
     
@@ -28,6 +29,8 @@ class FixPotholesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func hotBtnTapped(_ sender: Any) {
@@ -55,27 +58,31 @@ class FixPotholesViewController: UIViewController {
     }
     
     @IBAction func plainBtnTapped(_ sender: Any) {
-        if materials[2] == "" {
-            materials[2] = "plain"
-            sbPlain.isHidden = true
-            sbPlainSel.isHidden = false
-        } else {
-            materials[2] = ""
-            sbPlain.isHidden = false
-            sbPlainSel.isHidden = true
-        }
+        self.showSimpleAlert(message: "This Material is inappropriate, please use" +
+            "an appropriate material to fill up this pothole")
+//        if materials[2] == "" {
+//            materials[2] = "plain"
+//            sbPlain.isHidden = true
+//            sbPlainSel.isHidden = false
+//        } else {
+//            materials[2] = ""
+//            sbPlain.isHidden = false
+//            sbPlainSel.isHidden = true
+//        }
     }
     
     @IBAction func stoneBtnTapped(_ sender: Any) {
-        if materials[3] == "" {
-            materials[3] = "stone"
-            sbStone.isHidden = true
-            sbStoneSel.isHidden = false
-        } else {
-            materials[3] = ""
-            sbStone.isHidden = false
-            sbStoneSel.isHidden = true
-        }
+        self.showSimpleAlert(message: "This Material is inappropriate, please use" +
+            "an appropriate material to fill up this pothole")
+//        if materials[3] == "" {
+//            materials[3] = "stone"
+//            sbStone.isHidden = true
+//            sbStoneSel.isHidden = false
+//        } else {
+//            materials[3] = ""
+//            sbStone.isHidden = false
+//            sbStoneSel.isHidden = true
+//        }
     }
     
     @IBAction func otherBtnTapped(_ sender: Any) {
@@ -99,5 +106,16 @@ class FixPotholesViewController: UIViewController {
     }
     
     @IBAction func signoutTapped(_ sender: Any) {
+    }
+    
+    // MARK: Keyboard events.
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            self.bottomConstraint.constant = -1 * keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.bottomConstraint.constant = 0
     }
 }

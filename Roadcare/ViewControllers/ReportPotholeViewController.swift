@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import Alamofire
 import AVFoundation
+import SwiftyPickerPopover
 
 class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -33,23 +34,27 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Report a Pothole"
+        navigationItem.title = "Report a Pothole".localized
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        setSessionPlayback()
+        askForNotifications()
+        checkHeadphones()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tfStreedName.text = ""
-        tfCity.text = Location.detectedCity
         tfNearby.text = ""
         tfReporterName.text = ""
         tfPhoneNum.text = ""
 //        topConstraint.constant = 30
         
-        initLocation()
+//        initLocation()
+        checkCityName()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,8 +76,8 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             showSimpleAlert(message: "Please input city")
             return
         }
-
-        checkCityName()
+        
+        self.submitNewPothole()
     }
     
     @IBAction func pushTalkTouchDown(_ sender: Any) {
@@ -103,8 +108,6 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         
         recorder?.stop()
         player?.stop()
-        
-        meterTimer.invalidate()
         
         let session = AVAudioSession.sharedInstance()
         do {
@@ -215,6 +218,91 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func askForNotifications() {
+        print("\(#function)")
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ReportPotholeViewController.background(_:)),
+                                               name: UIApplication.willResignActiveNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ReportPotholeViewController.foreground(_:)),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ReportPotholeViewController.routeChange(_:)),
+                                               name: AVAudioSession.routeChangeNotification,
+                                               object: nil)
+    }
+    
+    @objc func background(_ notification: Notification) {
+        print("\(#function)")
+    }
+    
+    @objc func foreground(_ notification: Notification) {
+        print("\(#function)")
+        
+    }
+    
+    
+    @objc func routeChange(_ notification: Notification) {
+        print("\(#function)")
+        
+        if let userInfo = (notification as NSNotification).userInfo {
+            print("routeChange \(userInfo)")
+            
+            //print("userInfo \(userInfo)")
+            if let reason = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt {
+                //print("reason \(reason)")
+                switch AVAudioSession.RouteChangeReason(rawValue: reason)! {
+                case AVAudioSessionRouteChangeReason.newDeviceAvailable:
+                    print("NewDeviceAvailable")
+                    print("did you plug in headphones?")
+                    checkHeadphones()
+                case AVAudioSessionRouteChangeReason.oldDeviceUnavailable:
+                    print("OldDeviceUnavailable")
+                    print("did you unplug headphones?")
+                    checkHeadphones()
+                case AVAudioSessionRouteChangeReason.categoryChange:
+                    print("CategoryChange")
+                case AVAudioSessionRouteChangeReason.override:
+                    print("Override")
+                case AVAudioSessionRouteChangeReason.wakeFromSleep:
+                    print("WakeFromSleep")
+                case AVAudioSessionRouteChangeReason.unknown:
+                    print("Unknown")
+                case AVAudioSessionRouteChangeReason.noSuitableRouteForCategory:
+                    print("NoSuitableRouteForCategory")
+                case AVAudioSessionRouteChangeReason.routeConfigurationChange:
+                    print("RouteConfigurationChange")
+                    
+                }
+            }
+        }
+    }
+
+
+    func checkHeadphones() {
+        print("\(#function)")
+        
+        // check NewDeviceAvailable and OldDeviceUnavailable for them being plugged in/unplugged
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute
+        if !currentRoute.outputs.isEmpty {
+            for description in currentRoute.outputs {
+                if description.portType == AVAudioSession.Port.headphones {
+                    print("headphones are plugged in")
+                    break
+                } else {
+                    print("headphones are unplugged")
+                }
+            }
+        } else {
+            print("checking headphones requires a connection to a device")
+        }
+    }
+
     func setSessionPlayAndRecord() {
         print("\(#function)")
         
@@ -319,21 +407,30 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             }
             AppConstants.cities.removeAll()
             
-            var flag = false
             for json in response {
                 let city = City(json)
                 AppConstants.cities.append(city)
-                if city.name.lowercased() == self.tfCity.text?.lowercased() {
-                    flag = true
-                    break
-                }
             }
-            if flag {
-                self.submitNewPothole()
-            } else {
-                self.showSimpleAlert(message: "Sorry, your city is no longer registered with us")
+            if AppConstants.cities.count != 0 {
+                self.tfCity.text = AppConstants.cities[0].name
             }
         })
+    }
+    
+    private func showCitiesPopup() {
+        var items = [String]()
+        for city in AppConstants.cities {
+            items.append(city.name)
+        }
+        if items.count == 0 { return }
+        
+        StringPickerPopover(title: "", choices: items)
+            .setSelectedRow(0)
+            .setDoneButton(action: { (popover, selectedRow, selectedString) in
+                self.tfCity.text = selectedString
+            })
+            .setCancelButton(action: { (_, _, _) in })
+            .appear(originView: self.tfCity, baseViewController: self)
     }
     
     private func submitNewPothole() {
@@ -387,8 +484,12 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         self.bottomConstraint.constant = 0
     }
     
-    // MARK: Location Manager delegate
+    // MARK: Text Field events.
+    @IBAction func cityTapped(_ sender: Any) {
+        showCitiesPopup()
+    }
     
+    // MARK: Location Manager delegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
             
@@ -415,7 +516,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
             
             Location.detectedCity = locality!
-            tfCity.text = locality!
+//            tfCity.text = locality!
         }
     }
     

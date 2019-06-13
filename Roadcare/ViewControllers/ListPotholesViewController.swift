@@ -28,7 +28,7 @@ class ListPotholesViewController: UIViewController, UITableViewDelegate, UITable
         tableView.register(UINib(nibName: "PotholeDetailViewCell", bundle: nil), forCellReuseIdentifier: "PotholeDetailViewCell")
         tableView.reloadData()
         
-        self.navTitle = "Potholes Reported in " + Location.city + ", " + Location.country
+        self.navTitle = "Potholes Reported in".localized + " " + Location.city + ", " + Location.country
         navigationItem.title = self.navTitle
     }
     

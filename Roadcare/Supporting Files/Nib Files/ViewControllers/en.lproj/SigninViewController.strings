@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Please enter your credentials to proceed."; ObjectID = "MfZ-Dm-iyR"; */
+"MfZ-Dm-iyR.text" = "Please enter your credentials to proceed.";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "Qfi-bT-O25"; */
+"Qfi-bT-O25.text" = "PASSWORD";
+
+/* Class = "UILabel"; text = "Sign in"; ObjectID = "Y22-IA-awl"; */
+"Y22-IA-awl.text" = "Sign in";
+
+/* Class = "UILabel"; text = "Dont’ have an account?"; ObjectID = "YNs-vj-7hF"; */
+"YNs-vj-7hF.text" = "Dont’ have an account?";
+
+/* Class = "UILabel"; text = "EMAIL ADDRESS"; ObjectID = "dZL-zZ-9HQ"; */
+"dZL-zZ-9HQ.text" = "EMAIL ADDRESS";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "tQX-ep-obT"; */
+"tQX-ep-obT.normalTitle" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "tnk-ow-U5V"; */
+"tnk-ow-U5V.normalTitle" = "Sign up";

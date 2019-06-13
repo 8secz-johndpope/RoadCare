@@ -8,6 +8,8 @@
 
 import UIKit
 import CountryPickerView
+import Alamofire
+import SwiftyPickerPopover
 
 class SelectCityViewController: UIViewController {
 
@@ -18,6 +20,8 @@ class SelectCityViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     let cpvInternal = CountryPickerView()
+    
+    var requestCities: DataRequest?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +37,63 @@ class SelectCityViewController: UIViewController {
         tfCountry.text = AppConstants.getCountry()
         tfCity.text = AppConstants.getCity()
         tfLanguage.text = AppConstants.getLanguage()
+        
+        checkCityName()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        requestCities?.cancel()
+    }
+    
+    private func checkCityName() {
+        showProgress(message: "")
+        
+        if requestCities == nil { requestCities?.cancel() }
+        
+        requestCities = APIClient.getCategories(handler: { (success, error, data) in
+            self.dismissProgress()
+            guard success, data != nil, let response = data as? [[String: Any]] else {
+                self.showSimpleAlert(message: "Request failed. Please try again")
+                return
+            }
+            AppConstants.cities.removeAll()
+            
+            for json in response {
+                let city = City(json)
+                AppConstants.cities.append(city)
+            }
+            if AppConstants.cities.count != 0 {
+                self.tfCity.text = AppConstants.cities[0].name
+            }
+        })
+    }
+    
+    private func showCitiesPopup() {
+        var items = [String]()
+        for city in AppConstants.cities {
+            if tfCountry.text == city.country {
+                items.append(city.name)
+            }
+        }
+        if items.count == 0 { return }
+        
+        StringPickerPopover(title: "", choices: items)
+            .setSelectedRow(0)
+            .setDoneButton(action: { (popover, selectedRow, selectedString) in
+                self.tfCity.text = selectedString
+            })
+            .setCancelButton(action: { (_, _, _) in })
+            .appear(originView: self.tfCity, baseViewController: self)
     }
 
     @IBAction func countryTapped(_ sender: Any) {
         cpvInternal.showCountriesList(from: self)
+    }
+    
+    @IBAction func cityTapped(_ sender: Any) {
+        self.showCitiesPopup()
     }
     
     @IBAction func langTapped(_ sender: Any) {
@@ -99,6 +156,10 @@ class SelectCityViewController: UIViewController {
 extension SelectCityViewController: CountryPickerViewDelegate {
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         tfCountry.text = country.localizedName
+        if country.localizedName == "Palestinian Territories" {
+            tfCountry.text = "Palestine"
+        }
+        tfCity.text = ""
     }
 }
 

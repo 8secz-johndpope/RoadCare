@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "+ Add New User"; ObjectID = "3Dn-gg-olj"; */
+"3Dn-gg-olj.normalTitle" = "+ Add New User";
+
+/* Class = "UIButton"; normalTitle = "+ Add New User"; ObjectID = "Bb6-jP-tpH"; */
+"Bb6-jP-tpH.normalTitle" = "+ Add New User";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Fuv-mz-hHQ"; */
+"Fuv-mz-hHQ.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "EMAIL"; ObjectID = "Ip0-ko-0UE"; */
+"Ip0-ko-0UE.text" = "EMAIL";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "Vbq-aC-DTM"; */
+"Vbq-aC-DTM.text" = "PASSWORD";
+
+/* Class = "UILabel"; text = "User_1"; ObjectID = "bpZ-ac-QNP"; */
+"bpZ-ac-QNP.text" = "User_1";

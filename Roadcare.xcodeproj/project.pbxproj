@@ -12,51 +12,59 @@
 		BC3573D719799C4403CC2559 /* Pods_RoadcareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */; };
 		FA040565225E28E30037E700 /* PotholeDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */; };
 		FA040569225E48720037E700 /* PotholeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA040567225E48720037E700 /* PotholeDetailsViewController.swift */; };
-		FA04056A225E48720037E700 /* PotholeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA040568225E48720037E700 /* PotholeDetailsViewController.xib */; };
 		FA11F5D9225F0BB700F31984 /* ReportPotholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F5D7225F0BB700F31984 /* ReportPotholeViewController.swift */; };
-		FA11F5DA225F0BB700F31984 /* ReportPotholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA11F5D8225F0BB700F31984 /* ReportPotholeViewController.xib */; };
 		FA11F5DD225F0F2800F31984 /* PhotoPotholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */; };
-		FA11F5DE225F0F2800F31984 /* PhotoPotholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */; };
 		FA15DA7922678E07001B5C59 /* MappingPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */; };
 		FA15DA7D2268191B001B5C59 /* ThanksReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */; };
 		FA1CA2D1225B7108004D44F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D0225B7108004D44F1 /* Extensions.swift */; };
 		FA1CA2D3225B7206004D44F1 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D2225B7206004D44F1 /* LocalStorage.swift */; };
 		FA1CA2D6225B76C5004D44F1 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D5225B76C5004D44F1 /* AppUser.swift */; };
 		FA1CA2D9225B8760004D44F1 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */; };
-		FA1CA2DA225B8760004D44F1 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */; };
 		FA259D9E228149F60079BB7D /* PotholeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA259D9D228149F60079BB7D /* PotholeDetails.swift */; };
 		FA259DA02281651B0079BB7D /* MediaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA259D9F2281651B0079BB7D /* MediaDetails.swift */; };
 		FA25F99F228D577A00432DB6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F99E228D577A00432DB6 /* DayAxisValueFormatter.swift */; };
 		FA25F9A2228D9B8F00432DB6 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F9A0228D9B8F00432DB6 /* SelectCityViewController.swift */; };
-		FA25F9A5228D9C2A00432DB6 /* SelectCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA25F9A4228D9C2A00432DB6 /* SelectCityViewController.xib */; };
+		FA475E1C22A63B8D00C4036B /* StatisticsPRRTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E1E22A63B8D00C4036B /* StatisticsPRRTViewController.xib */; };
+		FA475E2322A643FE00C4036B /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E2522A643FE00C4036B /* SignupViewController.xib */; };
+		FA475E2A22A644C900C4036B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E2C22A644C900C4036B /* SigninViewController.xib */; };
+		FA475E3122A645D800C4036B /* StartupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E3322A645D800C4036B /* StartupViewController.xib */; };
+		FA475E3822A6467500C4036B /* TermsConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E3A22A6467500C4036B /* TermsConditionsViewController.xib */; };
+		FA475E3F22A6471700C4036B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E4122A6471700C4036B /* HomeViewController.xib */; };
+		FA475E4622A6523600C4036B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E4822A6523600C4036B /* MenuViewController.xib */; };
+		FA475E4D22A653DE00C4036B /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E4F22A653DE00C4036B /* PaymentViewController.xib */; };
+		FA475E5422A654FB00C4036B /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E5622A654FB00C4036B /* AddUserViewController.xib */; };
+		FA475E5B22A6559A00C4036B /* FixPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E5D22A6559A00C4036B /* FixPotholesViewController.xib */; };
+		FA475E6222A656AA00C4036B /* MappingPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E6422A656AA00C4036B /* MappingPotholesViewController.xib */; };
+		FA475E6922A6573700C4036B /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E6B22A6573700C4036B /* StatisticsViewController.xib */; };
+		FA475E7022A657F200C4036B /* SubmitFixedPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E7222A657F200C4036B /* SubmitFixedPotholesViewController.xib */; };
+		FA475E7722A658D700C4036B /* ThanksReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E7922A658D700C4036B /* ThanksReportViewController.xib */; };
+		FA475E7E22A6593100C4036B /* PotholeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E8022A6593100C4036B /* PotholeDetailsViewController.xib */; };
+		FA475E8522A659D400C4036B /* ReportPotholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E8722A659D400C4036B /* ReportPotholeViewController.xib */; };
+		FA475E8C22A65AB300C4036B /* PhotoPotholeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E8E22A65AB300C4036B /* PhotoPotholeViewController.xib */; };
+		FA475E9522A663F900C4036B /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA475E9422A663F900C4036B /* Localizable.swift */; };
 		FA59F737225DF6D900CDD383 /* ListPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */; };
 		FA59F73B225E263100CDD383 /* PotholeDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */; };
 		FA5CF02B2282B1CB00EB3748 /* FixPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */; };
 		FA5CF02F2282C40700EB3748 /* SubmitFixedPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */; };
+		FA67ADFC22A50AC400B0E74F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA67ADFE22A50AC400B0E74F /* Localizable.strings */; };
+		FA67AE0122A513CC00B0E74F /* SelectCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67AE0322A513CC00B0E74F /* SelectCityViewController.xib */; };
 		FA8048172258E78000DE5E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048162258E78000DE5E9B /* AppDelegate.swift */; };
 		FA8048212258E79200DE5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */; };
 		FA80482C2258E79200DE5E9B /* RoadcareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80482B2258E79200DE5E9B /* RoadcareTests.swift */; };
 		FA8048372258E79200DE5E9B /* RoadcareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048362258E79200DE5E9B /* RoadcareUITests.swift */; };
-		FA8048492259DBB000DE5E9B /* StartupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8048482259DBB000DE5E9B /* StartupViewController.xib */; };
 		FA80484B2259DC7B00DE5E9B /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80484A2259DC7B00DE5E9B /* StartupViewController.swift */; };
 		FA80484E2259F12700DE5E9B /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80484C2259F12700DE5E9B /* TermsConditionsViewController.swift */; };
-		FA80484F2259F12700DE5E9B /* TermsConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA80484D2259F12700DE5E9B /* TermsConditionsViewController.xib */; };
 		FA8048522259F2D300DE5E9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048512259F2D300DE5E9B /* Constants.swift */; };
 		FA8048552259F4B200DE5E9B /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048542259F4B200DE5E9B /* SimpleButton.swift */; };
 		FA804858225B0A5B00DE5E9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804856225B0A5B00DE5E9B /* HomeViewController.swift */; };
-		FA804859225B0A5B00DE5E9B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA804857225B0A5B00DE5E9B /* HomeViewController.xib */; };
 		FA80485B225B0EA900DE5E9B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA80485A225B0EA900DE5E9B /* MainNavigationController.swift */; };
 		FA804862225B243100DE5E9B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804860225B243100DE5E9B /* MenuViewController.swift */; };
-		FA804863225B243100DE5E9B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA804861225B243100DE5E9B /* MenuViewController.xib */; };
 		FA804866225B261500DE5E9B /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA804865225B261500DE5E9B /* MenuTableViewCell.xib */; };
 		FA804868225B267100DE5E9B /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA804867225B267100DE5E9B /* TableViewCells.swift */; };
 		FA94C1AE225BA6F60043390D /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1AC225BA6F60043390D /* SigninViewController.swift */; };
-		FA94C1AF225BA6F60043390D /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1AD225BA6F60043390D /* SigninViewController.xib */; };
 		FA94C1B2225BA9670043390D /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1B0225BA9670043390D /* PaymentViewController.swift */; };
-		FA94C1B3225BA9670043390D /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1B1225BA9670043390D /* PaymentViewController.xib */; };
 		FA94C1B5225BAB160043390D /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1B4225BAB160043390D /* CustomView.swift */; };
 		FA94C1B8225BCD6D0043390D /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94C1B6225BCD6D0043390D /* AddUserViewController.swift */; };
-		FA94C1B9225BCD6D0043390D /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1B7225BCD6D0043390D /* AddUserViewController.xib */; };
 		FA94C1BB225C5AD90043390D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA94C1BA225C5AD80043390D /* Assets.xcassets */; };
 		FA984BBA226DEE3B00DE529D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA984BB9226DEE3B00DE529D /* APIService.swift */; };
 		FA984BBC226E16EE00DE529D /* APIDomains.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA984BBB226E16EE00DE529D /* APIDomains.swift */; };
@@ -65,18 +73,9 @@
 		FA984BC2226F3D8E00DE529D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA984BC1226F3D8E00DE529D /* CoreLocation.framework */; };
 		FAC009D5228A7F3B00986C8D /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC009D3228A7F3A00986C8D /* StatisticsViewController.swift */; };
 		FAC009D8228A852000986C8D /* StatisticPRRTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009D7228A852000986C8D /* StatisticPRRTCell.xib */; };
-		FAC009E1228B84D500986C8D /* FixPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009DB228B84D300986C8D /* FixPotholesViewController.xib */; };
-		FAC009E2228B84D500986C8D /* ThanksReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009DC228B84D400986C8D /* ThanksReportViewController.xib */; };
-		FAC009E3228B84D500986C8D /* MappingPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009DD228B84D400986C8D /* MappingPotholesViewController.xib */; };
-		FAC009E4228B84D500986C8D /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009DE228B84D400986C8D /* StatisticsViewController.xib */; };
-		FAC009E5228B84D500986C8D /* SubmitFixedPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009DF228B84D400986C8D /* SubmitFixedPotholesViewController.xib */; };
 		FAC009E6228B84D500986C8D /* ListPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009E0228B84D400986C8D /* ListPotholesViewController.xib */; };
 		FAC009E9228B850300986C8D /* StatisticsPRRTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC009E7228B850300986C8D /* StatisticsPRRTViewController.swift */; };
-		FAC009EC228B85E700986C8D /* StatisticsPRRTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009EB228B85E700986C8D /* StatisticsPRRTViewController.xib */; };
-		FAC009EE228B8C5100986C8D /* StatisticsPRRTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009ED228B8C5100986C8D /* StatisticsPRRTViewController.xib */; };
-		FAC009F0228B8C7E00986C8D /* MappingPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009EF228B8C7C00986C8D /* MappingPotholesViewController.xib */; };
 		FAC009F2228B8C9F00986C8D /* ListPotholesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009F1228B8C9E00986C8D /* ListPotholesViewController.xib */; };
-		FAC009F4228B8CD600986C8D /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC009F3228B8CD600986C8D /* StatisticsViewController.xib */; };
 		FAC009F6228B8EAB00986C8D /* DemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC009F5228B8EAA00986C8D /* DemoBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,27 +108,80 @@
 		E395559D6B427A93D68A03C1 /* Pods-Roadcare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roadcare.debug.xcconfig"; path = "Target Support Files/Pods-Roadcare/Pods-Roadcare.debug.xcconfig"; sourceTree = "<group>"; };
 		FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PotholeDetailViewCell.xib; sourceTree = "<group>"; };
 		FA040567225E48720037E700 /* PotholeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailsViewController.swift; sourceTree = "<group>"; };
-		FA040568225E48720037E700 /* PotholeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PotholeDetailsViewController.xib; sourceTree = "<group>"; };
 		FA11F5D7225F0BB700F31984 /* ReportPotholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPotholeViewController.swift; sourceTree = "<group>"; };
-		FA11F5D8225F0BB700F31984 /* ReportPotholeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportPotholeViewController.xib; sourceTree = "<group>"; };
 		FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPotholeViewController.swift; sourceTree = "<group>"; };
-		FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPotholeViewController.xib; sourceTree = "<group>"; };
 		FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingPotholesViewController.swift; sourceTree = "<group>"; };
 		FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksReportViewController.swift; sourceTree = "<group>"; };
 		FA1CA2D0225B7108004D44F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA1CA2D2225B7206004D44F1 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		FA1CA2D5225B76C5004D44F1 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		FA1CA2D7225B8760004D44F1 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		FA259D9D228149F60079BB7D /* PotholeDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotholeDetails.swift; sourceTree = "<group>"; };
 		FA259D9F2281651B0079BB7D /* MediaDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetails.swift; sourceTree = "<group>"; };
 		FA25F99E228D577A00432DB6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		FA25F9A0228D9B8F00432DB6 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
-		FA25F9A4228D9C2A00432DB6 /* SelectCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCityViewController.xib; sourceTree = "<group>"; };
+		FA475E1D22A63B8D00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StatisticsPRRTViewController.xib; sourceTree = "<group>"; };
+		FA475E2022A63BA300C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StatisticsPRRTViewController.strings; sourceTree = "<group>"; };
+		FA475E2222A63BAE00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/StatisticsPRRTViewController.strings; sourceTree = "<group>"; };
+		FA475E2422A643FE00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignupViewController.xib; sourceTree = "<group>"; };
+		FA475E2722A6440A00C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SignupViewController.strings; sourceTree = "<group>"; };
+		FA475E2922A6440E00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SignupViewController.strings; sourceTree = "<group>"; };
+		FA475E2B22A644C900C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SigninViewController.xib; sourceTree = "<group>"; };
+		FA475E2E22A644D500C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SigninViewController.strings; sourceTree = "<group>"; };
+		FA475E3022A644DC00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SigninViewController.strings; sourceTree = "<group>"; };
+		FA475E3222A645D800C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StartupViewController.xib; sourceTree = "<group>"; };
+		FA475E3522A645EC00C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StartupViewController.strings; sourceTree = "<group>"; };
+		FA475E3722A645FB00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/StartupViewController.strings; sourceTree = "<group>"; };
+		FA475E3922A6467500C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TermsConditionsViewController.xib; sourceTree = "<group>"; };
+		FA475E3C22A6469C00C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TermsConditionsViewController.strings; sourceTree = "<group>"; };
+		FA475E3E22A6469E00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TermsConditionsViewController.strings; sourceTree = "<group>"; };
+		FA475E4022A6471700C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeViewController.xib; sourceTree = "<group>"; };
+		FA475E4322A6512B00C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HomeViewController.strings; sourceTree = "<group>"; };
+		FA475E4522A6513200C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeViewController.strings; sourceTree = "<group>"; };
+		FA475E4722A6523600C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MenuViewController.xib; sourceTree = "<group>"; };
+		FA475E4A22A6536400C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MenuViewController.strings; sourceTree = "<group>"; };
+		FA475E4C22A6536800C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MenuViewController.strings; sourceTree = "<group>"; };
+		FA475E4E22A653DE00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PaymentViewController.xib; sourceTree = "<group>"; };
+		FA475E5122A6540700C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PaymentViewController.strings; sourceTree = "<group>"; };
+		FA475E5322A6540C00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PaymentViewController.strings; sourceTree = "<group>"; };
+		FA475E5522A654FB00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddUserViewController.xib; sourceTree = "<group>"; };
+		FA475E5822A6551200C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddUserViewController.strings; sourceTree = "<group>"; };
+		FA475E5A22A6551700C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddUserViewController.strings; sourceTree = "<group>"; };
+		FA475E5C22A6559A00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FixPotholesViewController.xib; sourceTree = "<group>"; };
+		FA475E5F22A655B800C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FixPotholesViewController.strings; sourceTree = "<group>"; };
+		FA475E6122A655BB00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FixPotholesViewController.strings; sourceTree = "<group>"; };
+		FA475E6322A656AA00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MappingPotholesViewController.xib; sourceTree = "<group>"; };
+		FA475E6622A6570200C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MappingPotholesViewController.strings; sourceTree = "<group>"; };
+		FA475E6822A6571200C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MappingPotholesViewController.strings; sourceTree = "<group>"; };
+		FA475E6A22A6573700C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StatisticsViewController.xib; sourceTree = "<group>"; };
+		FA475E6D22A6574B00C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StatisticsViewController.strings; sourceTree = "<group>"; };
+		FA475E6F22A6574D00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/StatisticsViewController.strings; sourceTree = "<group>"; };
+		FA475E7122A657F200C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SubmitFixedPotholesViewController.xib; sourceTree = "<group>"; };
+		FA475E7422A6582600C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SubmitFixedPotholesViewController.strings; sourceTree = "<group>"; };
+		FA475E7622A6582F00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SubmitFixedPotholesViewController.strings; sourceTree = "<group>"; };
+		FA475E7822A658D700C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ThanksReportViewController.xib; sourceTree = "<group>"; };
+		FA475E7B22A658F400C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ThanksReportViewController.strings; sourceTree = "<group>"; };
+		FA475E7D22A658F700C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ThanksReportViewController.strings; sourceTree = "<group>"; };
+		FA475E7F22A6593100C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PotholeDetailsViewController.xib; sourceTree = "<group>"; };
+		FA475E8222A6594300C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PotholeDetailsViewController.strings; sourceTree = "<group>"; };
+		FA475E8422A6594A00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PotholeDetailsViewController.strings; sourceTree = "<group>"; };
+		FA475E8622A659D400C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ReportPotholeViewController.xib; sourceTree = "<group>"; };
+		FA475E8922A659E700C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReportPotholeViewController.strings; sourceTree = "<group>"; };
+		FA475E8B22A659F400C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ReportPotholeViewController.strings; sourceTree = "<group>"; };
+		FA475E8D22A65AB300C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PhotoPotholeViewController.xib; sourceTree = "<group>"; };
+		FA475E9022A65ACE00C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhotoPotholeViewController.strings; sourceTree = "<group>"; };
+		FA475E9222A65AD200C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PhotoPotholeViewController.strings; sourceTree = "<group>"; };
+		FA475E9422A663F900C4036B /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		FA59F735225DF6D900CDD383 /* ListPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPotholesViewController.swift; sourceTree = "<group>"; };
 		FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailViewCell.swift; sourceTree = "<group>"; };
 		FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixPotholesViewController.swift; sourceTree = "<group>"; };
 		FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitFixedPotholesViewController.swift; sourceTree = "<group>"; };
+		FA67ADFD22A50AC400B0E74F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA67ADFF22A50AF700B0E74F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FA67AE0022A50B0700B0E74F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA67AE0222A513CC00B0E74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SelectCityViewController.xib; sourceTree = "<group>"; };
+		FA67AE0522A513D900B0E74F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelectCityViewController.strings; sourceTree = "<group>"; };
+		FA67AE0722A5140200B0E74F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SelectCityViewController.strings; sourceTree = "<group>"; };
 		FA8048132258E78000DE5E9B /* Roadcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roadcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8048162258E78000DE5E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8048202258E79200DE5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -140,26 +192,19 @@
 		FA8048322258E79200DE5E9B /* RoadcareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadcareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8048362258E79200DE5E9B /* RoadcareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadcareUITests.swift; sourceTree = "<group>"; };
 		FA8048382258E79200DE5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA8048482259DBB000DE5E9B /* StartupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartupViewController.xib; sourceTree = "<group>"; };
 		FA80484A2259DC7B00DE5E9B /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		FA80484C2259F12700DE5E9B /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
-		FA80484D2259F12700DE5E9B /* TermsConditionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsConditionsViewController.xib; sourceTree = "<group>"; };
 		FA8048512259F2D300DE5E9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA8048542259F4B200DE5E9B /* SimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
 		FA804856225B0A5B00DE5E9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FA804857225B0A5B00DE5E9B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FA80485A225B0EA900DE5E9B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		FA804860225B243100DE5E9B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		FA804861225B243100DE5E9B /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		FA804865225B261500DE5E9B /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		FA804867225B267100DE5E9B /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 		FA94C1AC225BA6F60043390D /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		FA94C1AD225BA6F60043390D /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
 		FA94C1B0225BA9670043390D /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		FA94C1B1225BA9670043390D /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		FA94C1B4225BAB160043390D /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		FA94C1B6225BCD6D0043390D /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
-		FA94C1B7225BCD6D0043390D /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
 		FA94C1BA225C5AD80043390D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA984BB9226DEE3B00DE529D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FA984BBB226E16EE00DE529D /* APIDomains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDomains.swift; sourceTree = "<group>"; };
@@ -168,18 +213,9 @@
 		FA984BC1226F3D8E00DE529D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FAC009D3228A7F3A00986C8D /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		FAC009D7228A852000986C8D /* StatisticPRRTCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticPRRTCell.xib; sourceTree = "<group>"; };
-		FAC009DB228B84D300986C8D /* FixPotholesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FixPotholesViewController.xib; sourceTree = "<group>"; };
-		FAC009DC228B84D400986C8D /* ThanksReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThanksReportViewController.xib; sourceTree = "<group>"; };
-		FAC009DD228B84D400986C8D /* MappingPotholesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MappingPotholesViewController.xib; sourceTree = "<group>"; };
-		FAC009DE228B84D400986C8D /* StatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsViewController.xib; sourceTree = "<group>"; };
-		FAC009DF228B84D400986C8D /* SubmitFixedPotholesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitFixedPotholesViewController.xib; sourceTree = "<group>"; };
 		FAC009E0228B84D400986C8D /* ListPotholesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPotholesViewController.xib; sourceTree = "<group>"; };
 		FAC009E7228B850300986C8D /* StatisticsPRRTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPRRTViewController.swift; sourceTree = "<group>"; };
-		FAC009EB228B85E700986C8D /* StatisticsPRRTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsPRRTViewController.xib; sourceTree = "<group>"; };
-		FAC009ED228B8C5100986C8D /* StatisticsPRRTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsPRRTViewController.xib; sourceTree = "<group>"; };
-		FAC009EF228B8C7C00986C8D /* MappingPotholesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MappingPotholesViewController.xib; sourceTree = "<group>"; };
 		FAC009F1228B8C9E00986C8D /* ListPotholesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPotholesViewController.xib; sourceTree = "<group>"; };
-		FAC009F3228B8CD600986C8D /* StatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsViewController.xib; sourceTree = "<group>"; };
 		FAC009F5228B8EAA00986C8D /* DemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -336,6 +372,7 @@
 				FA8048462259DB6C00DE5E9B /* Nib Files */,
 				FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */,
 				FA8048222258E79200DE5E9B /* Info.plist */,
+				FA67ADFE22A50AC400B0E74F /* Localizable.strings */,
 				FA94C1BA225C5AD80043390D /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -353,29 +390,26 @@
 		FA8048472259DB7500DE5E9B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA25F9A4228D9C2A00432DB6 /* SelectCityViewController.xib */,
-				FAC009EB228B85E700986C8D /* StatisticsPRRTViewController.xib */,
-				FA1CA2D8225B8760004D44F1 /* SignupViewController.xib */,
-				FA94C1AD225BA6F60043390D /* SigninViewController.xib */,
-				FA8048482259DBB000DE5E9B /* StartupViewController.xib */,
-				FA80484D2259F12700DE5E9B /* TermsConditionsViewController.xib */,
-				FA804857225B0A5B00DE5E9B /* HomeViewController.xib */,
-				FA804861225B243100DE5E9B /* MenuViewController.xib */,
-				FA94C1B1225BA9670043390D /* PaymentViewController.xib */,
-				FA94C1B7225BCD6D0043390D /* AddUserViewController.xib */,
+				FA67AE0322A513CC00B0E74F /* SelectCityViewController.xib */,
+				FA475E1E22A63B8D00C4036B /* StatisticsPRRTViewController.xib */,
+				FA475E2522A643FE00C4036B /* SignupViewController.xib */,
+				FA475E2C22A644C900C4036B /* SigninViewController.xib */,
+				FA475E3322A645D800C4036B /* StartupViewController.xib */,
+				FA475E3A22A6467500C4036B /* TermsConditionsViewController.xib */,
+				FA475E4122A6471700C4036B /* HomeViewController.xib */,
+				FA475E4822A6523600C4036B /* MenuViewController.xib */,
+				FA475E4F22A653DE00C4036B /* PaymentViewController.xib */,
+				FA475E5622A654FB00C4036B /* AddUserViewController.xib */,
 				FAC009F1228B8C9E00986C8D /* ListPotholesViewController.xib */,
-				FAC009DB228B84D300986C8D /* FixPotholesViewController.xib */,
+				FA475E5D22A6559A00C4036B /* FixPotholesViewController.xib */,
 				FAC009E0228B84D400986C8D /* ListPotholesViewController.xib */,
-				FAC009ED228B8C5100986C8D /* StatisticsPRRTViewController.xib */,
-				FAC009DD228B84D400986C8D /* MappingPotholesViewController.xib */,
-				FAC009DE228B84D400986C8D /* StatisticsViewController.xib */,
-				FAC009DF228B84D400986C8D /* SubmitFixedPotholesViewController.xib */,
-				FAC009DC228B84D400986C8D /* ThanksReportViewController.xib */,
-				FAC009F3228B8CD600986C8D /* StatisticsViewController.xib */,
-				FA040568225E48720037E700 /* PotholeDetailsViewController.xib */,
-				FA11F5D8225F0BB700F31984 /* ReportPotholeViewController.xib */,
-				FAC009EF228B8C7C00986C8D /* MappingPotholesViewController.xib */,
-				FA11F5DC225F0F2800F31984 /* PhotoPotholeViewController.xib */,
+				FA475E6422A656AA00C4036B /* MappingPotholesViewController.xib */,
+				FA475E6B22A6573700C4036B /* StatisticsViewController.xib */,
+				FA475E7222A657F200C4036B /* SubmitFixedPotholesViewController.xib */,
+				FA475E7922A658D700C4036B /* ThanksReportViewController.xib */,
+				FA475E8022A6593100C4036B /* PotholeDetailsViewController.xib */,
+				FA475E8722A659D400C4036B /* ReportPotholeViewController.xib */,
+				FA475E8E22A65AB300C4036B /* PhotoPotholeViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -383,6 +417,7 @@
 		FA8048502259F2B700DE5E9B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FA475E9422A663F900C4036B /* Localizable.swift */,
 				FA25F99E228D577A00432DB6 /* DayAxisValueFormatter.swift */,
 				FA8048512259F2D300DE5E9B /* Constants.swift */,
 				FA984BBD226EFCFF00DE529D /* DateUtils.swift */,
@@ -509,6 +544,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = FA80480A2258E78000DE5E9B;
 			productRefGroup = FA8048142258E78000DE5E9B /* Products */;
@@ -528,33 +564,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC009F2228B8C9F00986C8D /* ListPotholesViewController.xib in Resources */,
-				FAC009EE228B8C5100986C8D /* StatisticsPRRTViewController.xib in Resources */,
-				FA94C1AF225BA6F60043390D /* SigninViewController.xib in Resources */,
-				FAC009F4228B8CD600986C8D /* StatisticsViewController.xib in Resources */,
-				FA25F9A5228D9C2A00432DB6 /* SelectCityViewController.xib in Resources */,
-				FA11F5DA225F0BB700F31984 /* ReportPotholeViewController.xib in Resources */,
-				FAC009E2228B84D500986C8D /* ThanksReportViewController.xib in Resources */,
-				FA8048492259DBB000DE5E9B /* StartupViewController.xib in Resources */,
-				FA11F5DE225F0F2800F31984 /* PhotoPotholeViewController.xib in Resources */,
+				FA475E2A22A644C900C4036B /* SigninViewController.xib in Resources */,
+				FA67AE0122A513CC00B0E74F /* SelectCityViewController.xib in Resources */,
+				FA475E8522A659D400C4036B /* ReportPotholeViewController.xib in Resources */,
+				FA475E7722A658D700C4036B /* ThanksReportViewController.xib in Resources */,
+				FA475E3122A645D800C4036B /* StartupViewController.xib in Resources */,
+				FA475E8C22A65AB300C4036B /* PhotoPotholeViewController.xib in Resources */,
 				FA94C1BB225C5AD90043390D /* Assets.xcassets in Resources */,
 				FA804866225B261500DE5E9B /* MenuTableViewCell.xib in Resources */,
 				FAC009E6228B84D500986C8D /* ListPotholesViewController.xib in Resources */,
-				FAC009EC228B85E700986C8D /* StatisticsPRRTViewController.xib in Resources */,
-				FA94C1B9225BCD6D0043390D /* AddUserViewController.xib in Resources */,
-				FA04056A225E48720037E700 /* PotholeDetailsViewController.xib in Resources */,
-				FAC009F0228B8C7E00986C8D /* MappingPotholesViewController.xib in Resources */,
-				FA94C1B3225BA9670043390D /* PaymentViewController.xib in Resources */,
-				FAC009E3228B84D500986C8D /* MappingPotholesViewController.xib in Resources */,
-				FA804863225B243100DE5E9B /* MenuViewController.xib in Resources */,
-				FAC009E1228B84D500986C8D /* FixPotholesViewController.xib in Resources */,
-				FAC009E5228B84D500986C8D /* SubmitFixedPotholesViewController.xib in Resources */,
+				FA475E1C22A63B8D00C4036B /* StatisticsPRRTViewController.xib in Resources */,
+				FA475E5422A654FB00C4036B /* AddUserViewController.xib in Resources */,
+				FA475E7E22A6593100C4036B /* PotholeDetailsViewController.xib in Resources */,
+				FA475E4D22A653DE00C4036B /* PaymentViewController.xib in Resources */,
+				FA475E6222A656AA00C4036B /* MappingPotholesViewController.xib in Resources */,
+				FA475E4622A6523600C4036B /* MenuViewController.xib in Resources */,
+				FA475E5B22A6559A00C4036B /* FixPotholesViewController.xib in Resources */,
+				FA475E7022A657F200C4036B /* SubmitFixedPotholesViewController.xib in Resources */,
 				FA8048212258E79200DE5E9B /* LaunchScreen.storyboard in Resources */,
+				FA67ADFC22A50AC400B0E74F /* Localizable.strings in Resources */,
 				FA040565225E28E30037E700 /* PotholeDetailViewCell.xib in Resources */,
-				FAC009E4228B84D500986C8D /* StatisticsViewController.xib in Resources */,
-				FA804859225B0A5B00DE5E9B /* HomeViewController.xib in Resources */,
+				FA475E6922A6573700C4036B /* StatisticsViewController.xib in Resources */,
+				FA475E3F22A6471700C4036B /* HomeViewController.xib in Resources */,
 				FAC009D8228A852000986C8D /* StatisticPRRTCell.xib in Resources */,
-				FA1CA2DA225B8760004D44F1 /* SignupViewController.xib in Resources */,
-				FA80484F2259F12700DE5E9B /* TermsConditionsViewController.xib in Resources */,
+				FA475E2322A643FE00C4036B /* SignupViewController.xib in Resources */,
+				FA475E3822A6467500C4036B /* TermsConditionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +646,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
 				"${BUILT_PRODUCTS_DIR}/YNExpandableCell/YNExpandableCell.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -624,6 +659,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPickerPopover.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNExpandableCell.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +753,7 @@
 				FA804868225B267100DE5E9B /* TableViewCells.swift in Sources */,
 				FA59F737225DF6D900CDD383 /* ListPotholesViewController.swift in Sources */,
 				FA11F5DD225F0F2800F31984 /* PhotoPotholeViewController.swift in Sources */,
+				FA475E9522A663F900C4036B /* Localizable.swift in Sources */,
 				FA804862225B243100DE5E9B /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,10 +790,200 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA475E1E22A63B8D00C4036B /* StatisticsPRRTViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E1D22A63B8D00C4036B /* Base */,
+				FA475E2022A63BA300C4036B /* en */,
+				FA475E2222A63BAE00C4036B /* ar */,
+			);
+			name = StatisticsPRRTViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E2522A643FE00C4036B /* SignupViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E2422A643FE00C4036B /* Base */,
+				FA475E2722A6440A00C4036B /* en */,
+				FA475E2922A6440E00C4036B /* ar */,
+			);
+			name = SignupViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E2C22A644C900C4036B /* SigninViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E2B22A644C900C4036B /* Base */,
+				FA475E2E22A644D500C4036B /* en */,
+				FA475E3022A644DC00C4036B /* ar */,
+			);
+			name = SigninViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E3322A645D800C4036B /* StartupViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E3222A645D800C4036B /* Base */,
+				FA475E3522A645EC00C4036B /* en */,
+				FA475E3722A645FB00C4036B /* ar */,
+			);
+			name = StartupViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E3A22A6467500C4036B /* TermsConditionsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E3922A6467500C4036B /* Base */,
+				FA475E3C22A6469C00C4036B /* en */,
+				FA475E3E22A6469E00C4036B /* ar */,
+			);
+			name = TermsConditionsViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E4122A6471700C4036B /* HomeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E4022A6471700C4036B /* Base */,
+				FA475E4322A6512B00C4036B /* en */,
+				FA475E4522A6513200C4036B /* ar */,
+			);
+			name = HomeViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E4822A6523600C4036B /* MenuViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E4722A6523600C4036B /* Base */,
+				FA475E4A22A6536400C4036B /* en */,
+				FA475E4C22A6536800C4036B /* ar */,
+			);
+			name = MenuViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E4F22A653DE00C4036B /* PaymentViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E4E22A653DE00C4036B /* Base */,
+				FA475E5122A6540700C4036B /* en */,
+				FA475E5322A6540C00C4036B /* ar */,
+			);
+			name = PaymentViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E5622A654FB00C4036B /* AddUserViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E5522A654FB00C4036B /* Base */,
+				FA475E5822A6551200C4036B /* en */,
+				FA475E5A22A6551700C4036B /* ar */,
+			);
+			name = AddUserViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E5D22A6559A00C4036B /* FixPotholesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E5C22A6559A00C4036B /* Base */,
+				FA475E5F22A655B800C4036B /* en */,
+				FA475E6122A655BB00C4036B /* ar */,
+			);
+			name = FixPotholesViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E6422A656AA00C4036B /* MappingPotholesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E6322A656AA00C4036B /* Base */,
+				FA475E6622A6570200C4036B /* en */,
+				FA475E6822A6571200C4036B /* ar */,
+			);
+			name = MappingPotholesViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E6B22A6573700C4036B /* StatisticsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E6A22A6573700C4036B /* Base */,
+				FA475E6D22A6574B00C4036B /* en */,
+				FA475E6F22A6574D00C4036B /* ar */,
+			);
+			name = StatisticsViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E7222A657F200C4036B /* SubmitFixedPotholesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E7122A657F200C4036B /* Base */,
+				FA475E7422A6582600C4036B /* en */,
+				FA475E7622A6582F00C4036B /* ar */,
+			);
+			name = SubmitFixedPotholesViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E7922A658D700C4036B /* ThanksReportViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E7822A658D700C4036B /* Base */,
+				FA475E7B22A658F400C4036B /* en */,
+				FA475E7D22A658F700C4036B /* ar */,
+			);
+			name = ThanksReportViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E8022A6593100C4036B /* PotholeDetailsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E7F22A6593100C4036B /* Base */,
+				FA475E8222A6594300C4036B /* en */,
+				FA475E8422A6594A00C4036B /* ar */,
+			);
+			name = PotholeDetailsViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E8722A659D400C4036B /* ReportPotholeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E8622A659D400C4036B /* Base */,
+				FA475E8922A659E700C4036B /* en */,
+				FA475E8B22A659F400C4036B /* ar */,
+			);
+			name = ReportPotholeViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA475E8E22A65AB300C4036B /* PhotoPotholeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA475E8D22A65AB300C4036B /* Base */,
+				FA475E9022A65ACE00C4036B /* en */,
+				FA475E9222A65AD200C4036B /* ar */,
+			);
+			name = PhotoPotholeViewController.xib;
+			sourceTree = "<group>";
+		};
+		FA67ADFE22A50AC400B0E74F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA67ADFD22A50AC400B0E74F /* en */,
+				FA67AE0022A50B0700B0E74F /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FA67AE0322A513CC00B0E74F /* SelectCityViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA67AE0222A513CC00B0E74F /* Base */,
+				FA67AE0522A513D900B0E74F /* en */,
+				FA67AE0722A5140200B0E74F /* ar */,
+			);
+			name = SelectCityViewController.xib;
+			sourceTree = "<group>";
+		};
 		FA80481F2258E79200DE5E9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FA8048202258E79200DE5E9B /* Base */,
+				FA67ADFF22A50AF700B0E74F /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -768,6 +995,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -829,6 +1057,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

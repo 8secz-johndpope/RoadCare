@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Please enter your credentials to proceed."; ObjectID = "2gB-OA-b7v"; */
+"2gB-OA-b7v.text" = "Please enter your credentials to proceed.";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "4LQ-83-UxN"; */
+"4LQ-83-UxN.normalTitle" = "Sign up";
+
+/* Class = "UILabel"; text = "COUNTRY"; ObjectID = "7iR-Oo-M4d"; */
+"7iR-Oo-M4d.text" = "COUNTRY";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "Mu1-db-O0C"; */
+"Mu1-db-O0C.text" = "Sign up";
+
+/* Class = "UILabel"; text = "CITY STATE"; ObjectID = "TCm-38-bHy"; */
+"TCm-38-bHy.text" = "CITY STATE";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "XEv-2N-mFg"; */
+"XEv-2N-mFg.text" = "PASSWORD";
+
+/* Class = "UILabel"; text = "EMAIL"; ObjectID = "ez5-mR-vKS"; */
+"ez5-mR-vKS.text" = "EMAIL";
+
+/* Class = "UILabel"; text = "PHONE"; ObjectID = "qB5-ib-qMy"; */
+"qB5-ib-qMy.text" = "PHONE";
+
+/* Class = "UILabel"; text = "AGENCY NAME"; ObjectID = "vln-rc-YJ0"; */
+"vln-rc-YJ0.text" = "AGENCY NAME";

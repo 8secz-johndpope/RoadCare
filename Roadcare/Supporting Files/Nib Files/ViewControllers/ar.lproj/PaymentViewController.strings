@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Pay by Visa "; ObjectID = "47x-Fv-NCy"; */
+"47x-Fv-NCy.text" = "إدفع بالفيزا";
+
+/* Class = "UIButton"; normalTitle = "Complete Payment"; ObjectID = "7sV-Bb-dbS"; */
+"7sV-Bb-dbS.normalTitle" = "أكمل الدفعة";
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "Cwp-h5-mUQ"; */
+"Cwp-h5-mUQ.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "The subscription will be automatically renewed \nunless canceled"; ObjectID = "Kc0-Oe-xf9"; */
+"Kc0-Oe-xf9.text" = "سيتم تجديد الإشتراك تلقائيا في حال لم يتم الغاؤه";
+
+/* Class = "UILabel"; text = "30$"; ObjectID = "S0w-Cq-j1O"; */
+"S0w-Cq-j1O.text" = "30$";
+
+/* Class = "UILabel"; text = "350$"; ObjectID = "Zok-jF-hHV"; */
+"Zok-jF-hHV.text" = "350$";
+
+/* Class = "UILabel"; text = "Thank You for Registering with Us!"; ObjectID = "pHQ-F4-Ctf"; */
+"pHQ-F4-Ctf.text" = "شكرا لك لإنضمامك لنا";

@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Please enter your credentials to proceed."; ObjectID = "2gB-OA-b7v"; */
+"2gB-OA-b7v.text" = "الرجاء ادخال معلوماتك للمباشرة";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "4LQ-83-UxN"; */
+"4LQ-83-UxN.normalTitle" = "حساب جديد";
+
+/* Class = "UILabel"; text = "COUNTRY"; ObjectID = "7iR-Oo-M4d"; */
+"7iR-Oo-M4d.text" = "البلد";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "Mu1-db-O0C"; */
+"Mu1-db-O0C.text" = "حساب جديد";
+
+/* Class = "UILabel"; text = "CITY STATE"; ObjectID = "TCm-38-bHy"; */
+"TCm-38-bHy.text" = "الولاية";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "XEv-2N-mFg"; */
+"XEv-2N-mFg.text" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "EMAIL"; ObjectID = "ez5-mR-vKS"; */
+"ez5-mR-vKS.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "PHONE"; ObjectID = "qB5-ib-qMy"; */
+"qB5-ib-qMy.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "AGENCY NAME"; ObjectID = "vln-rc-YJ0"; */
+"vln-rc-YJ0.text" = "إسم المؤسسة";

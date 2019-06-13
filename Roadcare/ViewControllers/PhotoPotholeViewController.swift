@@ -28,7 +28,7 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Photo of the Pothole"
+        navigationItem.title = "Photo of the Pothole".localized
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self

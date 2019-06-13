@@ -13,6 +13,7 @@ target 'Roadcare' do
   pod 'Alamofire'
   pod 'Charts'
   pod 'CountryPickerView'
+  pod 'SwiftyPickerPopover', '5.3.0'
   
   target 'RoadcareTests' do
     inherit! :search_paths

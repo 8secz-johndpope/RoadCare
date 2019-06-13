@@ -15,7 +15,7 @@ class TermsConditionsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-        navigationItem.title = "Contact Us"
+        navigationItem.title = "Contact Us".localized
     }
     
     @IBAction func agreeTapped(_ sender: SimpleButton) {

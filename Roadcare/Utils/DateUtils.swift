@@ -15,11 +15,10 @@ class DateUtils {
     }
     
     static func getDateDistance(s1: String, s2: String) ->Double {
-        let date1 = convertStrToDate(string: s1, format: "yyyy-MM-dd'T'hh:mm:ss")
-        let date2 = convertStrToDate(string: s2, format: "yyyy-MM-dd'T'hh:mm:ss")
+        let date1 = convertStrToDate(string: s1, format: "yyyy-MM-dd'T'HH:mm:ss")
+        let date2 = convertStrToDate(string: s2, format: "yyyy-MM-dd'T'HH:mm:ss")
         let calendar = Calendar.current
         
-        let day = calendar.dateComponents([.day], from: date1!, to: date2!).day
         let hour = calendar.dateComponents([.hour], from: date1!, to: date2!).hour
         return Double(hour!)
 //        return Double(day!) + Double(hour!)/24

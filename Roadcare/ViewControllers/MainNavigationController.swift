@@ -50,10 +50,14 @@ class MainNavigationController: UINavigationController, MenuViewControllerDelega
                 self.showSigninPage()
                 break
             case 9:
-                self.didChangeLanguage(lang: "English")
+                if AppConstants.getLanguage() != "English" {
+                    self.showMessageResetApp(lang: "English")
+                }
                 break
             case 10:
-                self.didChangeLanguage(lang: "Arabic")
+                if AppConstants.getLanguage() != "Arabic" {
+                    self.showMessageResetApp(lang: "Arabic")
+                }
                 break
             default:
                 break
@@ -92,5 +96,38 @@ class MainNavigationController: UINavigationController, MenuViewControllerDelega
     
     private func didChangeLanguage(lang: String) {
         LocalStorage["app_language"] = lang
+    }
+    
+    func showMessageResetApp(lang: String) {
+        let exitAppAlert = UIAlertController(title: "Restart is needed",
+                                             message: "We need to close the app to chagne the language.\n Please reopen the app after this.",
+                                             preferredStyle: .alert)
+        
+        let resetApp = UIAlertAction(title: "Close Now", style: .destructive) {
+            (alert) -> Void in
+            
+            self.didChangeLanguage(lang: lang)
+            if lang == "English" {
+                Language.language = Language.english
+            } else {
+                Language.language = Language.arabic
+            }
+
+            // home button pressed programmatically - to thorw app to background
+            UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+            // terminaing app in background
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                exit(EXIT_SUCCESS)
+            })
+        }
+        
+        let laterAction = UIAlertAction(title: "Later", style: .cancel) {
+            (alert) -> Void in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        exitAppAlert.addAction(resetApp)
+        exitAppAlert.addAction(laterAction)
+        present(exitAppAlert, animated: true, completion: nil)
     }
 }

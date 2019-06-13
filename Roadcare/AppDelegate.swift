@@ -56,19 +56,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func showDashboard() {
         let home = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        home.tabBarItem.title = "Home"
+        home.tabBarItem.title = "Home".localized
         home.tabBarItem.image = UIImage(named: "ic_tab_home")
 
         let statistics = StatisticsViewController(nibName: "StatisticsViewController", bundle: nil)
-        statistics.tabBarItem.title = "Statistics"
+        statistics.tabBarItem.title = "Statistics".localized
         statistics.tabBarItem.image = UIImage(named: "ic_shape")
 
         let potholes = ReportPotholeViewController(nibName: "ReportPotholeViewController", bundle: nil)
-        potholes.tabBarItem.title = "Report a Pothole"
+        potholes.tabBarItem.title = "Report a Pothole".localized
         potholes.tabBarItem.image = UIImage(named: "ic_contact")
 
         let login = AddUserViewController(nibName: "AddUserViewController", bundle: nil)
-        login.tabBarItem.title = "Login"
+        login.tabBarItem.title = "Login".localized
         login.tabBarItem.image = UIImage(named: "ic_login")
 
         let tabbarController = UITabBarController()

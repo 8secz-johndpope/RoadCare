@@ -68,6 +68,7 @@ class MetaBox {
     var repaired_status: String!
     var repaired_name: String!
     var pothole_photo: String!
+    var audio: String!
     var lat: String!
     var lng: String!
     
@@ -87,6 +88,7 @@ class MetaBox {
         repaired_status = json["repaired_status"] as? String
         repaired_name = json["repaired_name"] as? String
         pothole_photo = json["pothole_photo"] as? String
+        audio = json["audio"] as? String
         lat = json["lat"] as? String
         lng = json["lng"] as? String
     }
@@ -133,10 +135,12 @@ class GroupedPRRTPotholes {
 class City {
     var id: Int!
     var name: String
+    var country: String
     
     init(_ json: [String: Any]) {
         id = Int("\(json["id"]!)")
         name = (json["name"] as? String)!
+        country = (json["description"] as? String)!
     }
 }
 

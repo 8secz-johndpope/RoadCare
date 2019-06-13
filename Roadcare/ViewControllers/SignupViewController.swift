@@ -93,7 +93,8 @@ class SignupViewController: UIViewController {
     private func addCityName(city: String) {
         showProgress(message: "")
         
-        _ = APIClient.addCategory(name: city, handler: { (success, error, data) in
+        _ = APIClient.addCategory(name: city, country: tvCountry.text!,
+                                  handler: { (success, error, data) in
             self.dismissProgress()
             
             self.navigationController?.popViewController(animated: true)

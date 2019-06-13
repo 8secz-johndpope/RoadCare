@@ -61,11 +61,11 @@ class HomeViewController: UIViewController {
         Location.city = AppConstants.getCity()
         Location.country = AppConstants.getCountry()
         if AppUser.isLogin() {
-            lblLocation.text = "Signed in " + Location.city + ", " + Location.country
+            lblLocation.text = "Signed in".localized + " " + Location.city + ", " + Location.country
         } else {
             lblLocation.text = Location.city + ", " + Location.country
         }
-        lblReportedStatus.text = "Potholes Reported in " + Location.city + " in 2019"
+        lblReportedStatus.text = "Potholes Reported in".localized + " " + Location.city + " 2019"
         
         getReportedPotholes(page: "1", request_index: 1)
         reportedLoading.startAnimating()
@@ -96,7 +96,6 @@ class HomeViewController: UIViewController {
         
         requestPotholes = APIClient.getPosts(page: page, handler: { (success, pages, data) in
             guard success, data != nil, let response = data as? [[String: Any]] else {
-                self.showSimpleAlert(message: "Request failed. Please try again")
                 return
             }
             
@@ -126,14 +125,16 @@ class HomeViewController: UIViewController {
             if (child.metaBox?.city.containsIgnoringCase(find: Location.city))! {
                 potholes.append(child)
                 if child.metaBox?.repaired_status.lowercased() == REPAIRED.lowercased() {
-                    sum += DateUtils.getDateDistance(s1: child.date!, s2: child.modified!)
-                    repaired_count += 1
+                    if child.date != "" && child.modified != "" {
+                        sum += DateUtils.getDateDistance(s1: child.date!, s2: child.modified!)
+                        repaired_count += 1
+                    }
                 }
             }
         }
         lblReportedCount.text = String(potholes.count)
         lblRepairedCount.text = String(repaired_count)
-        var prrt = String(format: "%f", sum/Double(repaired_count))
+        var prrt = String(format: "%.2f", sum/Double(repaired_count))
         if prrt == "nan" { prrt = "0" }
         lblReactionTimer.text = prrt
         lblReportedCount.isHidden = false
