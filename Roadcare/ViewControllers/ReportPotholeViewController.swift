@@ -21,6 +21,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var tfPhoneNum: UITextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lblTimer: UILabel!
     
     let locationManager = CLLocationManager()
     var requestCities: DataRequest?
@@ -29,7 +30,9 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     var recorder: AVAudioRecorder!
     var player: AVAudioPlayer!
     var meterTimer: Timer!
+    var recordTimer: Timer!
     var soundFileURL: URL!
+    var recordingSeconds: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,21 +84,25 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func pushTalkTouchDown(_ sender: Any) {
+        recordingSeconds = 0
+        lblTimer.isHidden = false
+        recordTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
+        
         if player != nil && player.isPlaying {
             print("stopping")
             player.stop()
         }
-        
+
         if recorder == nil {
             print("recording. recorder nil")
             recordWithPermission(true)
             return
         }
-        
+
         if recorder != nil && recorder.isRecording {
             print("pausing")
             recorder.pause()
-            
+
         } else {
             print("recording")
             //            recorder.record()
@@ -104,11 +111,14 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func pushTalkTouchUpInside(_ sender: Any) {
-        print("1")
+        recordingSeconds = 0
+        lblTimer.isHidden = true
+        lblTimer.text = "00 : 00"
+        recordTimer.invalidate()
         
         recorder?.stop()
         player?.stop()
-        
+
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setActive(false)
@@ -116,6 +126,27 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             print("could not make session inactive")
             print(error.localizedDescription)
         }
+    }
+    
+    @objc func fire()
+    {
+        recordingSeconds += 1
+        let secs = recordingSeconds % 60
+        let mins = recordingSeconds / 60
+        var sec_str: String
+        var min_str: String
+        if secs < 10 {
+            sec_str = "0\(secs)"
+        } else {
+            sec_str = "\(secs)"
+        }
+        if mins < 10 {
+            min_str = "0\(mins)"
+        } else {
+            min_str = "\(mins)"
+        }
+        self.lblTimer.text = "\(min_str) : \(sec_str)"
+        print(self.lblTimer.text)
     }
     
     private func getBase64Code() -> String? {
@@ -367,6 +398,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
                                     self.saveFilePath(path: response.url!, id: id)
                                 }
                             }
+                            self.goToMapPage(id: id)
                         })
                     case .failure(let encodingError):
                         self.dismissProgress()
@@ -466,9 +498,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
                 if self.recorder != nil {
                     self.uploadRecordedAudioFile(id: response.id)
                 } else {
-                    let viewController = MappingPotholesViewController(nibName: "MappingPotholesViewController", bundle: nil)
-                    viewController.id = response.id
-                    self.navigationController!.pushViewController(viewController, animated: true)
+                    self.goToMapPage(id: response.id)
                 }
             }
         })
@@ -523,5 +553,11 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error while updating location " + error.localizedDescription)
+    }
+    
+    private func goToMapPage(id: Int) {
+        let viewController = MappingPotholesViewController(nibName: "MappingPotholesViewController", bundle: nil)
+        viewController.id = id
+        self.navigationController!.pushViewController(viewController, animated: true)
     }
 }

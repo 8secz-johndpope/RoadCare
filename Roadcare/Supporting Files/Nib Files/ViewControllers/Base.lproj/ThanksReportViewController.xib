@@ -20,17 +20,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYs-oU-8Sp">
-                    <rect key="frame" x="27" y="212" width="360" height="61"/>
-                    <string key="text">Thank you, your pothole has been reported 
-and you will be notified to confirm as soon 
-as it is fixed</string>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you, this pothole has been reported." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYs-oU-8Sp">
+                    <rect key="frame" x="27" y="212" width="360" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-hF-Fmw" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
-                    <rect key="frame" x="37" y="318" width="360" height="50"/>
+                    <rect key="frame" x="37" y="277.5" width="360" height="50"/>
                     <color key="backgroundColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="97w-PX-2zK"/>

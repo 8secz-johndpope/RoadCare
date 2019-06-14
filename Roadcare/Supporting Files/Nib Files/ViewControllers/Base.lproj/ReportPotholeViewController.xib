@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportPotholeViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
                 <outlet property="bottomConstraint" destination="uin-O4-hNF" id="s6j-7A-QZ4"/>
+                <outlet property="lblTimer" destination="xQm-4K-YsW" id="4rB-Ww-yOH"/>
                 <outlet property="tfCity" destination="eXa-XX-J9N" id="Nba-o0-V3J"/>
                 <outlet property="tfNearby" destination="kzH-tM-L20" id="paE-ke-vey"/>
                 <outlet property="tfPhoneNum" destination="D8s-9g-mma" id="lYC-tB-pSs"/>
@@ -251,6 +252,12 @@
                                         <action selector="pushTalkTouchUpInside:" destination="-1" eventType="touchUpInside" id="HIr-ng-oXm"/>
                                     </connections>
                                 </button>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQm-4K-YsW">
+                                    <rect key="frame" x="182.5" y="621" width="49.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -261,6 +268,7 @@
                                 <constraint firstItem="ZoE-1a-peM" firstAttribute="top" secondItem="orf-gL-bBm" secondAttribute="bottom" constant="21" id="Fvr-HX-7hY"/>
                                 <constraint firstItem="Z6g-LX-ere" firstAttribute="leading" secondItem="ZoE-1a-peM" secondAttribute="leading" id="HLl-FV-O0i"/>
                                 <constraint firstItem="orf-gL-bBm" firstAttribute="leading" secondItem="xEN-69-SSS" secondAttribute="leading" constant="28" id="HyZ-6z-PaK"/>
+                                <constraint firstItem="xQm-4K-YsW" firstAttribute="centerX" secondItem="B14-zu-yYB" secondAttribute="centerX" id="M8F-Q7-tRj"/>
                                 <constraint firstItem="IPz-EU-PuX" firstAttribute="trailing" secondItem="Z6g-LX-ere" secondAttribute="trailing" id="PIz-Ym-8ka"/>
                                 <constraint firstItem="qaK-Ey-Iix" firstAttribute="top" secondItem="bSO-E1-BEg" secondAttribute="bottom" constant="21" id="PMD-Zr-bjM"/>
                                 <constraint firstItem="bSO-E1-BEg" firstAttribute="top" secondItem="IPz-EU-PuX" secondAttribute="bottom" constant="21" id="QbO-8u-d0O"/>
@@ -269,6 +277,7 @@
                                 <constraint firstAttribute="trailing" secondItem="orf-gL-bBm" secondAttribute="trailing" constant="28" id="UEW-G1-jfQ"/>
                                 <constraint firstItem="IPz-EU-PuX" firstAttribute="leading" secondItem="Z6g-LX-ere" secondAttribute="leading" id="Ute-sS-c1K"/>
                                 <constraint firstItem="B14-zu-yYB" firstAttribute="top" secondItem="qaK-Ey-Iix" secondAttribute="bottom" constant="14" id="V6J-tP-TCN"/>
+                                <constraint firstItem="xQm-4K-YsW" firstAttribute="top" secondItem="B14-zu-yYB" secondAttribute="bottom" constant="22" id="ZxV-me-e6S"/>
                                 <constraint firstItem="bSO-E1-BEg" firstAttribute="trailing" secondItem="IPz-EU-PuX" secondAttribute="trailing" id="aZM-vq-XtX"/>
                                 <constraint firstAttribute="height" constant="640" id="f7s-95-NZi"/>
                                 <constraint firstItem="bSO-E1-BEg" firstAttribute="leading" secondItem="IPz-EU-PuX" secondAttribute="leading" id="l58-0T-Jiw"/>
