@@ -14,10 +14,12 @@ class AppUser {
     var username: String?
     var email: String?
     var password: String?
+    var meta_box: UserMetaBox
     var city: String?
     var country: String?
     var role: String!
     var phone: String?
+    var notification_id: String?
     
     init() {
         id = nil
@@ -28,6 +30,8 @@ class AppUser {
         city = nil
         country = nil
         role = nil
+        notification_id = nil
+        meta_box = UserMetaBox()
     }
     
     init(_ json: [String: Any]) {
@@ -37,9 +41,12 @@ class AppUser {
         password = json["password"] as? String
         username = json["username"] as? String
         role = json["role"] as? String
-        city = json["city"] as? String
-        country = json["country"] as? String
-        phone = json["phone"] as? String
+        let child_json = json["meta_box"] as? [String: Any] ?? [:]
+        meta_box = UserMetaBox(child_json)
+        city = meta_box.city
+        country = meta_box.country
+        phone = meta_box.phone
+        notification_id = meta_box.notification_id
     }
     
     func toDictionary() -> [String: Any] {

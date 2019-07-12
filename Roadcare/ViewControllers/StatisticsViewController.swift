@@ -14,18 +14,27 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sbSeeChart: SimpleButton!
     @IBOutlet weak var sbSeeOtherPotholes: SimpleButton!
+    @IBOutlet weak var sbPrrt: SimpleButton!
+    @IBOutlet weak var prrtHeaderView: UIView!
+    @IBOutlet weak var potholesHeaderView: UIView!
     
     var allPotholes = [PotholeDetails]()
     var groupedReports = [GroupedPotholes]()
     var groupedPrrts = [GroupedPRRTPotholes]()
 
     var requestPotholes: DataRequest?
+    var prrt_view_flag: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "StatisticPRRTCell", bundle: nil),
                            forCellReuseIdentifier: "StatisticPRRTCell")
+        tableView.register(UINib(nibName: "StatisticPotholesCell", bundle: nil),
+                           forCellReuseIdentifier: "StatisticPotholesCell")
+
+        potholesHeaderView.isHidden = true
+        prrtHeaderView.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -89,9 +98,7 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         
         for child in dict {
             self.groupedReports.append(child.value)
-            let group_prrt = GroupedPRRTPotholes(city: child.value.city,
-                                                 country:child.value.country,
-                                                 prrt: self.calculatePRRTAverage(group: child.value))
+            let group_prrt = self.setupPotholesData(group: child.value)
             self.groupedPrrts.append(group_prrt)
         }
 
@@ -104,29 +111,64 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    private func calculatePRRTAverage(group: GroupedPotholes) -> Double {
+    private func setupPotholesData(group: GroupedPotholes) -> GroupedPRRTPotholes {
         var sum: Double = 0.0
         var count = 0
+        var reported_count = 0
+        var repaired_count = 0
+
         for pothole in group.report_array {
             if pothole.metaBox?.repaired_status.lowercased() == REPAIRED.lowercased() {
                 sum += DateUtils.getDateDistance(s1: pothole.date!, s2: pothole.modified!)
                 count += 1
             }
+            reported_count += 1
+            if pothole.metaBox?.repaired_status.lowercased() == REPAIRED.lowercased() {
+                if pothole.date != "" && pothole.modified != "" {
+                    repaired_count += 1
+                }
+            }
         }
-        return sum/Double(count)
+        let data = GroupedPRRTPotholes(city: group.city,
+                                       country: group.country,
+                                       prrt: sum/Double(count),
+                                       reported_count: reported_count,
+                                       filled_count: repaired_count)
+        return data
     }
+    
     
     // MARK: Button actions.
     
     @IBAction func seeChatTapped(_ sender: Any) {
-        let viewController = StatisticsPRRTViewController(nibName: "StatisticsPRRTViewController", bundle: nil)
-        viewController.groupedPrrts = self.groupedPrrts
-        navigationController?.pushViewController(viewController, animated: true)
+        if prrt_view_flag {
+            let viewController = StatisticsPRRTViewController(nibName: "StatisticsPRRTViewController", bundle: nil)
+            viewController.groupedPrrts = self.groupedPrrts
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let viewController = StatisticPotholesChartViewController(nibName: "StatisticPotholesChartViewController", bundle: nil)
+            viewController.groupedPrrts = self.groupedPrrts
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     @IBAction func seeOtherCitiesTapped(_ sender: Any) {
+        prrt_view_flag = false
+        potholesHeaderView.isHidden = false
+        prrtHeaderView.isHidden = true
+        sbSeeOtherPotholes.isHidden = true
+        sbPrrt.isHidden = false
+        self.tableView.reloadData()
     }
     
+    @IBAction func seePrrtTapped(_ sender: Any) {
+        prrt_view_flag = true
+        potholesHeaderView.isHidden = true
+        prrtHeaderView.isHidden = false
+        sbSeeOtherPotholes.isHidden = false
+        sbPrrt.isHidden = true
+        self.tableView.reloadData()
+    }
     // MARK: TableView DataSource and Delegate Methods
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -138,13 +180,26 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticPRRTCell", for: indexPath) as! StatisticPRRTCell
+        if prrt_view_flag {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticPRRTCell", for: indexPath) as! StatisticPRRTCell
+            
+            let city = self.groupedReports[indexPath.row].city
+            let country = self.groupedReports[indexPath.row].country
+            cell.lblCity.text = city + ", " + country
+            cell.lblAverage.text = String(format: "%0.01f", self.groupedPrrts[indexPath.row].prrt)
 
-        let city = self.groupedReports[indexPath.row].city
-        let country = self.groupedReports[indexPath.row].country
-        cell.lblCity.text = city + ", " + country
-        cell.lblAverage.text = String(format: "%0.01f", self.groupedPrrts[indexPath.row].prrt)
-        
-        return cell
+            return cell
+
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticPotholesCell", for: indexPath) as! StatisticPotholesCell
+            
+            let city = self.groupedReports[indexPath.row].city
+            let country = self.groupedReports[indexPath.row].country
+            cell.lblCity.text = city + ", " + country
+            cell.lblReportedCount.text = String(format: "%d", self.groupedPrrts[indexPath.row].reported_count)
+            cell.lblFilledCount.text = String(format: "%d", self.groupedPrrts[indexPath.row].filled_count)
+            
+            return cell
+        }
     }
 }

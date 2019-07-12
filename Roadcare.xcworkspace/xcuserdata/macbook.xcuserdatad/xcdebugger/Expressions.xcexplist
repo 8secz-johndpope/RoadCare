@@ -3,13 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
+         contextName = "MappingPotholesViewController.locationManager(_:didUpdateLocations:):MappingPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lat">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "ReportPotholeViewController.showCitiesPopup():ReportPotholeViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "AppConstants.cities">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in StatisticsViewController.setupChat():StatisticsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "GroupedPotholes(city: report.metaBox!.city, country: report.metaBox!.country ?? &quot;&quot;)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -49,6 +62,9 @@
          contextName = "closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
       </ContextState>
       <ContextState
+         contextName = "StatisticsViewController.seePrrtTapped(_:):StatisticsViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in APIService.get(path:params:handler:):APIService.swift">
          <PersistentStrings>
             <PersistentString
@@ -64,6 +80,20 @@
          <PersistentStrings>
             <PersistentString
                value = "ivPothole.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StatisticsViewController.tableView(_:cellForRowAt:):StatisticsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;\(String(describing: self.groupedPrrts[indexPath.row].reported_count))&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "String(format: &quot;%d&quot;, self.groupedPrrts[indexPath.row].reported_count)">
+            </PersistentString>
+            <PersistentString
+               value = "self.groupedPrrts[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -151,6 +181,14 @@
             </PersistentString>
             <PersistentString
                value = "RegisterResponse(data as? [String: Any])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in StatisticPotholesChartViewController.setChartData(count:range:):StatisticPotholesChartViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "groupedPrrts[i-1].reported_count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -246,21 +284,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
+         contextName = "closure #1 in MainNavigationController.didSelectMenu(index:):MainNavigationController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "AppConstants.language">
+               value = "AppConstants.getLanguage()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "HomeViewController.reportAgain(notification:):HomeViewController.swift">
+         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "tabBarController.selectedIndex">
-            </PersistentString>
-            <PersistentString
-               value = "self.navigationController?.topViewController as? UITabBarController">
+               value = "AppConstants.language">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -271,10 +306,10 @@
                value = "sender.tag">
             </PersistentString>
             <PersistentString
-               value = "viewController.selPothole">
+               value = "POTHOLE_ID">
             </PersistentString>
             <PersistentString
-               value = "POTHOLE_ID">
+               value = "viewController.selPothole">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -287,10 +322,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in MainNavigationController.didSelectMenu(index:):MainNavigationController.swift">
+         contextName = "HomeViewController.reportAgain(notification:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "AppConstants.getLanguage()">
+               value = "tabBarController.selectedIndex">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController?.topViewController as? UITabBarController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -368,21 +406,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.allPotholes">
-            </PersistentString>
-            <PersistentString
-               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "closure #1 in StatisticsViewController.setupChat():StatisticsViewController.swift">
+         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "GroupedPotholes(city: report.metaBox!.city, country: report.metaBox!.country ?? &quot;&quot;)">
+               value = "annotation.coordinate.latitude">
+            </PersistentString>
+            <PersistentString
+               value = "lat">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -404,21 +437,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
+         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "annotation.coordinate.latitude">
+               value = "self.allPotholes">
             </PersistentString>
             <PersistentString
-               value = "lat">
+               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MappingPotholesViewController.locationManager(_:didUpdateLocations:):MappingPotholesViewController.swift">
+         contextName = "SelectCityViewController.showCitiesPopup():SelectCityViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "lat">
+               value = "AppConstants.cities">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

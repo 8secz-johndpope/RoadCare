@@ -15,6 +15,9 @@ var SELECTED_POTHOLE_PHOTO = ""
 
 let REPAIRED = "Repaired"
 let NOT_REPAIRED = "Not Repaired"
+let NOTIFICATION_USER_ID = "notification_user_id"
+let APP_LANGUAGE = "app_language"
+let SELECTED_COUNTRY = "selected_country"
 
 struct ColorPalette {
     static let primary = UIColor(red: 38 / 255.0, green: 125 / 255.0, blue: 250 / 255.0, alpha: 1.0)
@@ -28,14 +31,20 @@ struct AppConstants {
     static var authUser: AppUser = AppUser.getSavedUser()
     static var cities = [City]()
     
+    static func getNotificationId() -> String {
+        if let id = LocalStorage[NOTIFICATION_USER_ID].object as? String {
+            return id
+        }
+        return ""
+    }
     static func getLanguage() -> String {
-        if let lang = LocalStorage["app_language"].object as? String {
+        if let lang = LocalStorage[APP_LANGUAGE].object as? String {
             return lang
         }
         return "English"
     }
     static func getCountry() -> String {
-        if let country = LocalStorage["selected_country"].object as? String {
+        if let country = LocalStorage[SELECTED_COUNTRY].object as? String {
             return country
         }
         return ""

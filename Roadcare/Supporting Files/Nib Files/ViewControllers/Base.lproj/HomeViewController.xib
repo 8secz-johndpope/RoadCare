@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
+                <outlet property="btnReportPothole" destination="2zn-a6-k13" id="DUz-6Z-t7o"/>
                 <outlet property="lblDate" destination="ebL-9D-XdR" id="hPt-sc-vn2"/>
+                <outlet property="lblHours" destination="1mP-ks-VBg" id="EN9-8u-Lc1"/>
                 <outlet property="lblLocation" destination="KYI-c8-sbd" id="sAl-Mw-Mpv"/>
                 <outlet property="lblReactionTimer" destination="TnX-Gj-kY9" id="GNC-Ef-fJ1"/>
                 <outlet property="lblRepairedCount" destination="Is1-WI-ebM" id="2wG-JE-aAc"/>
@@ -64,8 +66,8 @@
                     <rect key="frame" x="16" y="65" width="382" height="85"/>
                     <subviews>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO4-o4-caA">
-                            <rect key="frame" x="176" y="18" width="30" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <rect key="frame" x="175.33333333333334" y="18" width="31.333333333333343" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -104,8 +106,8 @@
                     <rect key="frame" x="16" y="162" width="382" height="85"/>
                     <subviews>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is1-WI-ebM">
-                            <rect key="frame" x="176" y="18" width="30" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <rect key="frame" x="175.66666666666666" y="18" width="31" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -143,9 +145,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-4a-3PL">
                     <rect key="frame" x="16" y="259" width="382" height="85"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-Gj-kY9">
-                            <rect key="frame" x="144.33333333333334" y="18" width="93.333333333333343" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-Gj-kY9">
+                            <rect key="frame" x="175.66666666666666" y="18" width="30.666666666666657" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mP-ks-VBg">
+                            <rect key="frame" x="212.33333333333334" y="24.666666666666686" width="43.333333333333343" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.9933978873" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -177,6 +185,8 @@
                         <constraint firstItem="TnX-Gj-kY9" firstAttribute="centerX" secondItem="EZH-4a-3PL" secondAttribute="centerX" id="V8X-or-e9v"/>
                         <constraint firstItem="m5k-MF-2HF" firstAttribute="centerX" secondItem="EZH-4a-3PL" secondAttribute="centerX" id="Xd3-vS-2Nc"/>
                         <constraint firstItem="Rjg-XW-Rd3" firstAttribute="top" secondItem="EZH-4a-3PL" secondAttribute="top" id="ktp-zX-KQy"/>
+                        <constraint firstItem="1mP-ks-VBg" firstAttribute="bottom" secondItem="TnX-Gj-kY9" secondAttribute="bottom" constant="-2" id="ttj-71-FCb"/>
+                        <constraint firstItem="1mP-ks-VBg" firstAttribute="leading" secondItem="TnX-Gj-kY9" secondAttribute="trailing" constant="6" id="vwA-IO-Sec"/>
                         <constraint firstAttribute="bottom" secondItem="Rjg-XW-Rd3" secondAttribute="bottom" id="wNg-Bo-2fJ"/>
                     </constraints>
                 </view>

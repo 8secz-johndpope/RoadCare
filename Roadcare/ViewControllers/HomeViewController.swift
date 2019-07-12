@@ -19,9 +19,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var lblReportedStatus: UILabel!
     @IBOutlet weak var lblRepairedCount: UILabel!
     @IBOutlet weak var lblReactionTimer: UILabel!
+    @IBOutlet weak var lblHours: UILabel!
     @IBOutlet weak var reportedLoading: UIActivityIndicatorView!
     @IBOutlet weak var repairedLoading: UIActivityIndicatorView!
     @IBOutlet weak var prrtLoading: UIActivityIndicatorView!
+    @IBOutlet weak var btnReportPothole: SimpleButton!
     
     var timer: Timer?
     var potholes = [PotholeDetails]()
@@ -46,6 +48,13 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        if AppUser.isLogin() {
+            tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(askLogout))
+            btnReportPothole.setTitle("See Reported Potholes", for: .normal)
+        } else {
+            btnReportPothole.setTitle("Report a pothole", for: .normal)
+        }
 
         initViews()
     }
@@ -74,6 +83,7 @@ class HomeViewController: UIViewController {
         lblReportedCount.isHidden = true
         lblRepairedCount.isHidden = true
         lblReactionTimer.isHidden = true
+        lblHours.isHidden = true
     }
     
     private func getCityList() {
@@ -140,9 +150,18 @@ class HomeViewController: UIViewController {
         lblReportedCount.isHidden = false
         lblRepairedCount.isHidden = false
         lblReactionTimer.isHidden = false
+        lblHours.isHidden = false
         reportedLoading.stopAnimating()
         repairedLoading.stopAnimating()
         prrtLoading.stopAnimating()
+    }
+    
+    private func performLogout() {
+        AppUser.clearStorage()
+        AppConstants.authUser = AppUser()
+     
+        tabBarController?.navigationItem.rightBarButtonItem = nil
+        btnReportPothole.setTitle("Report a pothole", for: .normal)
     }
     
     @objc func runTimedCode() {
@@ -167,8 +186,23 @@ class HomeViewController: UIViewController {
         present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
     }
 
+    @objc func askLogout() {
+        let alertController = UIAlertController(title: "Log Out", message: "Are you sure want to log out?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "YES", style: .default, handler: { (action) in
+            self.performLogout()
+        }))
+        alertController.addAction(UIAlertAction(title: "NO", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func reportPothole(_ sender: SimpleButton) {
-        let viewController = ReportPotholeViewController(nibName: "ReportPotholeViewController", bundle: nil)
-        navigationController!.pushViewController(viewController, animated: true)
+        if AppUser.isLogin() {
+            let viewController = ListPotholesViewController(nibName: "ListPotholesViewController", bundle: nil)
+            navigationController!.pushViewController(viewController, animated: true)
+
+        } else {
+            let viewController = ReportPotholeViewController(nibName: "ReportPotholeViewController", bundle: nil)
+            navigationController!.pushViewController(viewController, animated: true)
+        }
     }
 }

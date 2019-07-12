@@ -11,6 +11,7 @@ import CoreLocation
 import Alamofire
 import AVFoundation
 import SwiftyPickerPopover
+import OneSignal
 
 class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -26,6 +27,8 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var requestCities: DataRequest?
     var requestAudioUpdate: DataRequest?
+    var requestUsers: DataRequest?
+    var users = [AppUser]()
     
     var recorder: AVAudioRecorder!
     var player: AVAudioPlayer!
@@ -65,6 +68,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         
         requestCities?.cancel()
         requestAudioUpdate?.cancel()
+        requestUsers?.cancel()
     }
     
     private func initLocation() {
@@ -80,7 +84,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             return
         }
         
-        self.submitNewPothole()
+        self.getNotificationUsers()
     }
     
     @IBAction func pushTalkTouchDown(_ sender: Any) {
@@ -502,6 +506,54 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         })
+    }
+    
+    private func getNotificationUsers() {
+        showProgress(message: "")
+        
+        if requestUsers == nil { requestUsers?.cancel() }
+        
+        requestUsers = APIClient.getUsers(handler: { (success, error, data) in
+            self.dismissProgress()
+            guard success, data != nil, let response = data as? [[String: Any]] else {
+                return
+            }
+            
+            self.submitNewPothole()
+
+            self.users.removeAll()
+            for json in response {
+                self.users.append(AppUser(json))
+            }
+            if self.users.count > 0 {
+                self.sendNotification()
+            }
+        })
+    }
+    
+    private func sendNotification() {
+        var ids = [String]()
+        for child in users {
+            if child.city == AppConstants.getCity() {
+                ids.append(child.notification_id!)
+            }
+        }
+    
+        let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+        let pushToken = status.subscriptionStatus.pushToken
+        
+        if pushToken != nil {
+            let message = "Reported a new pothole from \(tfCity.text) \(tfStreedName.text)"
+            let notificationContent = [
+                "include_player_ids": [ids],
+                "contents": ["en": message],
+                "headings": ["en": "Reported a new pothole."],
+                "ios_badgeType": "Increase",
+                "ios_badgeCount": 1
+                ] as [String : Any]
+            
+            OneSignal.postNotification(notificationContent)
+        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

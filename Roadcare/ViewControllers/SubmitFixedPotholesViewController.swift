@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OneSignal
 
 class SubmitFixedPotholesViewController: UIViewController {
 
@@ -31,6 +32,24 @@ class SubmitFixedPotholesViewController: UIViewController {
         }
     }
     
+    private func sendNotification() {
+        let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+        let pushToken = status.subscriptionStatus.pushToken
+        
+        if pushToken != nil {
+            let message = "Fixed the reported potholes by \(tfName.text)"
+            let notificationContent = [
+                "contents": ["en": message],
+                "headings": ["en": "Fixed potholes"],
+                "included_segments": "Subscribed Users",
+                "ios_badgeType": "Increase",
+                "ios_badgeCount": 1
+                ] as [String : Any]
+            
+            OneSignal.postNotification(notificationContent)
+        }
+    }
+    
     @IBAction func confirmTapped(_ sender: Any) {
         showProgress(message: "")
         
@@ -51,6 +70,7 @@ class SubmitFixedPotholesViewController: UIViewController {
                 return
             }
             
+            self.sendNotification()
             self.thanksView.isHidden = false
         })
     }

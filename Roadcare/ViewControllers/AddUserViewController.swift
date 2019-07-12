@@ -28,8 +28,12 @@ class AddUserViewController: UIViewController {
     }
     
     @IBAction func addUserBtnTapped(_ sender: SimpleButton) {
-        self.firstView.isHidden = true
-        self.addUserView.isHidden = false
+        if AppUser.isLogin() {
+            self.firstView.isHidden = true
+            self.addUserView.isHidden = false
+        } else {
+            showSimpleAlert(message: "You can not add a new user.")
+        }
     }
     
     @IBAction func dontBtnTapped(_ sender: SimpleButton) {

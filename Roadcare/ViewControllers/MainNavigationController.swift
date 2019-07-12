@@ -95,7 +95,7 @@ class MainNavigationController: UINavigationController, MenuViewControllerDelega
     }
     
     private func didChangeLanguage(lang: String) {
-        LocalStorage["app_language"] = lang
+        LocalStorage[APP_LANGUAGE] = lang
     }
     
     func showMessageResetApp(lang: String) {

@@ -56,6 +56,33 @@ class FileUpload {
     }
 }
 
+class UserMetaBox {
+    var notification_id: String!
+    var country: String!
+    var city: String!
+    var phone: String!
+    
+    init() {
+        
+    }
+    
+    init(_ json: [String: Any]) {
+        notification_id = json["notification_id"] as? String
+        country = json["country"] as? String
+        city = json["city"] as? String
+        phone = json["phone"] as? String
+    }
+    
+    func toDictionary() -> [String: Any] {
+        var dict = [String: Any]()
+        dict["notification_id"] = notification_id
+        dict["country"] = country
+        dict["city"] = city
+        dict["phone"] = phone
+        return dict
+    }
+}
+
 class MetaBox {
     var address: String!
     var street_name: String!
@@ -124,11 +151,15 @@ class GroupedPRRTPotholes {
     var city: String
     var country: String
     var prrt: Double
+    var reported_count: Int!
+    var filled_count: Int!
     
-    init(city: String, country: String, prrt: Double) {
+    init(city: String, country: String, prrt: Double, reported_count: Int, filled_count: Int) {
         self.city = city
         self.country = country
         self.prrt = prrt
+        self.reported_count = reported_count
+        self.filled_count = filled_count
     }
 }
 
@@ -143,4 +174,3 @@ class City {
         country = (json["description"] as? String)!
     }
 }
-

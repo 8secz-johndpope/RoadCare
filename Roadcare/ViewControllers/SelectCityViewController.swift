@@ -87,7 +87,7 @@ class SelectCityViewController: UIViewController {
             .setCancelButton(action: { (_, _, _) in })
             .appear(originView: self.tfCity, baseViewController: self)
     }
-
+    
     @IBAction func countryTapped(_ sender: Any) {
         cpvInternal.showCountriesList(from: self)
     }
@@ -125,12 +125,12 @@ class SelectCityViewController: UIViewController {
             return
         }
         
-        LocalStorage["selected_country"] = country
+        LocalStorage[SELECTED_COUNTRY] = country
         if country == "Palestinian Territories" {
-            LocalStorage["selected_country"] = "Palestine"
+            LocalStorage[SELECTED_COUNTRY] = "Palestine"
         }
         LocalStorage["selected_city"] = city
-        LocalStorage["app_language"] = lang
+        LocalStorage[APP_LANGUAGE] = lang
         
         if LocalStorage["terms_agrees"].object != nil {
             let appDelegate =  UIApplication.shared.delegate as! AppDelegate

@@ -9,8 +9,8 @@
 import Alamofire
 
 private let baseURL = "http://dev.skyconst.com/"
-private let base_user = "admin"
-private let base_password = "pass"
+private let base_user = "ahmad"
+private let base_password = "I$@hxuN4iVoWTGK9g&AHo*bG"
 
 let APIClient = APIService(baseURL: baseURL)
 
@@ -243,7 +243,8 @@ class APIService {
             "role"      : role,
             "city"      : city,
             "country"   : country,
-            "phone"     : phone
+            "phone"     : phone,
+            "notification_id" : AppConstants.getNotificationId()
         ]
         return post(path: "wp-json/wp/v2/users/register", params: params, encoding: JSONEncoding.default, responseString: false, handler: handler)
     }
@@ -257,6 +258,13 @@ class APIService {
         return post(path: "wp-json/wp/v2/users/register", params: params, encoding: JSONEncoding.default, responseString: false, handler: handler)
     }
     
+    func getUsers(handler: @escaping CompletionHandler) -> DataRequest {
+        let params: [String: Any] = [
+            "per_page" : "100"
+        ]
+        return get(path: "wp-json/wp/v2/users", params: params, handler: handler)
+    }
+
     func login(nonce: String, username: String, password: String, handler: @escaping CompletionHandler) -> DataRequest {
         let params: [String: Any] = [
             "nonce"     : nonce,

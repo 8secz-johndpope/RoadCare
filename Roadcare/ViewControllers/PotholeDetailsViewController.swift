@@ -22,6 +22,7 @@ class PotholeDetailsViewController: UIViewController {
     @IBOutlet weak var imgPhoto: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var fixPotholeConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lblPlayerTimer: UILabel!
     
     var selPothole: PotholeDetails?
     var navTitle: String?
@@ -35,8 +36,8 @@ class PotholeDetailsViewController: UIViewController {
         navigationItem.title = navTitle ?? ""
         
         if selPothole?.metaBox?.audio != "" {
-            let url = URL(string: (selPothole?.metaBox!.audio)!)
-            //        let url = URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")
+//            let url = URL(string: (selPothole?.metaBox!.audio)!)
+                    let url = URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")
             let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
             player = AVPlayer(playerItem: playerItem)
             
@@ -90,6 +91,8 @@ class PotholeDetailsViewController: UIViewController {
         imgPhoto.sd_setImage(with: URL(string: url),
                              placeholderImage: UIImage(named: "img_advertising_01"))
         SELECTED_POTHOLE_PHOTO = url
+        
+        lblPlayerTimer.isHidden = true
     }
     
     @IBAction func fixPothole(_ sender: SimpleButton) {
@@ -104,8 +107,20 @@ class PotholeDetailsViewController: UIViewController {
         }
         if player?.rate == 0 {
             player!.play()
+            lblPlayerTimer.isHidden = false
+            
+            self.player?.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main, using: { (time) in
+                if self.player!.currentItem?.status == .readyToPlay {
+                    let currentTime = CMTimeGetSeconds(self.player!.currentTime())
+                    
+                    let secs = Int(currentTime)
+                    self.lblPlayerTimer.text = NSString(format: "%02d:%02d", secs/60, secs%60) as String
+                }
+            })
+
         } else {
             player!.pause()
+            lblPlayerTimer.isHidden = true
         }
     }
 }

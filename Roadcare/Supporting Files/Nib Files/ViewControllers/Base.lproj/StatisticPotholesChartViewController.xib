@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatisticPotholesChartViewController" customModule="Roadcare" customModuleProvider="target">
+            <connections>
+                <outlet property="chartView" destination="2gI-mr-4uE" id="aXo-E4-3hM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gI-mr-4uE" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="16" y="104" width="382" height="448"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="ZoW-UL-IiR"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y66-7b-rw9">
+                    <rect key="frame" x="20" y="578" width="10" height="10"/>
+                    <color key="backgroundColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.880859375" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="UTs-TA-S1a"/>
+                        <constraint firstAttribute="height" constant="10" id="wPZ-Dc-fGA"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="qeO-hM-hiH"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Potholes Reported in 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-3c-6Z1">
+                    <rect key="frame" x="38" y="575" width="193.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRc-VC-B15">
+                    <rect key="frame" x="20" y="612" width="10" height="10"/>
+                    <color key="backgroundColor" red="0.1764705882352941" green="0.61960784313725492" blue="0.20392156862745098" alpha="0.880859375" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="13H-Nf-yMH"/>
+                        <constraint firstAttribute="width" constant="10" id="tTe-ot-6HL"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="dsd-i3-iFo"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Potholes Filled in 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhx-y0-rcP">
+                    <rect key="frame" x="38" y="609" width="169.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIQ-8g-hKy" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
+                    <rect key="frame" x="28" y="776" width="358" height="50"/>
+                    <color key="backgroundColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="quc-Ne-8Yt"/>
+                    </constraints>
+                    <state key="normal" title="Report a Pothole">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bgNormal">
+                            <color key="value" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bgHighlighted">
+                            <color key="value" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.880859375" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kIQ-8g-hKy" secondAttribute="trailing" constant="28" id="5dK-3w-cwQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kIQ-8g-hKy" secondAttribute="bottom" constant="36" id="9kJ-sz-znz"/>
+                <constraint firstItem="2gI-mr-4uE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="BVL-54-e7G"/>
+                <constraint firstItem="Y66-7b-rw9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EDc-fj-PpT"/>
+                <constraint firstItem="FXD-3c-6Z1" firstAttribute="leading" secondItem="Y66-7b-rw9" secondAttribute="trailing" constant="8" id="InP-3F-1aG"/>
+                <constraint firstItem="2gI-mr-4uE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MY8-rC-N9e"/>
+                <constraint firstItem="kIQ-8g-hKy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="P53-yg-zFs"/>
+                <constraint firstItem="Qhx-y0-rcP" firstAttribute="leading" secondItem="wRc-VC-B15" secondAttribute="trailing" constant="8" id="Qra-nh-lGp"/>
+                <constraint firstItem="wRc-VC-B15" firstAttribute="top" secondItem="Y66-7b-rw9" secondAttribute="bottom" constant="24" id="TfW-36-x9x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2gI-mr-4uE" secondAttribute="trailing" constant="16" id="Yt6-Ub-573"/>
+                <constraint firstItem="Y66-7b-rw9" firstAttribute="top" secondItem="2gI-mr-4uE" secondAttribute="bottom" constant="26" id="hQQ-W9-y4A"/>
+                <constraint firstItem="FXD-3c-6Z1" firstAttribute="centerY" secondItem="Y66-7b-rw9" secondAttribute="centerY" id="kui-1q-nAm"/>
+                <constraint firstItem="wRc-VC-B15" firstAttribute="leading" secondItem="Y66-7b-rw9" secondAttribute="leading" id="uGV-Cz-ABu"/>
+                <constraint firstItem="2gI-mr-4uE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="vEy-uQ-znH"/>
+                <constraint firstItem="Qhx-y0-rcP" firstAttribute="centerY" secondItem="wRc-VC-B15" secondAttribute="centerY" id="wvH-8s-BaH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

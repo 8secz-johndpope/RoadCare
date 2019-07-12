@@ -18,3 +18,9 @@ class StatisticPRRTCell: UITableViewCell {
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblAverage: UILabel!
 }
+
+class StatisticPotholesCell: UITableViewCell {
+    @IBOutlet weak var lblCity: UILabel!
+    @IBOutlet weak var lblReportedCount: UILabel!
+    @IBOutlet weak var lblFilledCount: UILabel!
+}

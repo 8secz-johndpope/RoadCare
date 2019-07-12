@@ -5,6 +5,7 @@ PODS:
   - Charts/Core (3.2.2)
   - CountryPickerView (2.2.4)
   - MBProgressHUD (1.1.0)
+  - OneSignal (2.10.0)
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Charts
   - CountryPickerView
   - MBProgressHUD
+  - OneSignal (< 3.0, >= 2.7.1)
   - SDWebImage (= 4.2.3)
   - SideMenu
   - SwiftyPickerPopover (= 5.3.0)
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Charts
     - CountryPickerView
     - MBProgressHUD
+    - OneSignal
     - SDWebImage
     - SideMenu
     - SwiftyPickerPopover
@@ -38,11 +41,12 @@ SPEC CHECKSUMS:
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
   CountryPickerView: aaa71b692709382e918bd7da5cf6f15d6723df0a
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  OneSignal: 0f5ff711d9f25da54885e4ab06ef0abc221a46ef
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SwiftyPickerPopover: c5d2d3dfeab310612e8ce63356c33149f8fc9a8e
   YNExpandableCell: f71457eddc5f2d607de5a2aef545325b0b7622e4
 
-PODFILE CHECKSUM: f6e8aaab2ee1476d30e8c5c88fda1260014a4c06
+PODFILE CHECKSUM: d204f4c28ae244b20417cd042674b87ea9ab63b1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4

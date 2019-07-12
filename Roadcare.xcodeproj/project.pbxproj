@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		89BC8B7FCE4AC357863A02B9 /* Pods_RoadcareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2607CBEA2C6E1B78820D9303 /* Pods_RoadcareUITests.framework */; };
+		8BDC4FC2E6B1B638B95E165B /* Pods_Roadcare_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35E3843ADD399A8E3A1FEB8 /* Pods_Roadcare_OneSignalNotificationServiceExtension.framework */; };
 		B1A358F81577239CD71A7318 /* Pods_Roadcare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A65C46F54D46A038291B5AB /* Pods_Roadcare.framework */; };
 		BC3573D719799C4403CC2559 /* Pods_RoadcareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */; };
 		FA040565225E28E30037E700 /* PotholeDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */; };
@@ -24,6 +25,8 @@
 		FA259DA02281651B0079BB7D /* MediaDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA259D9F2281651B0079BB7D /* MediaDetails.swift */; };
 		FA25F99F228D577A00432DB6 /* DayAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F99E228D577A00432DB6 /* DayAxisValueFormatter.swift */; };
 		FA25F9A2228D9B8F00432DB6 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25F9A0228D9B8F00432DB6 /* SelectCityViewController.swift */; };
+		FA2B4DB522D5062E00936BBF /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B4DB422D5062E00936BBF /* NotificationService.swift */; };
+		FA2B4DB922D5062E00936BBF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA2B4DB222D5062E00936BBF /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA475E1C22A63B8D00C4036B /* StatisticsPRRTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E1E22A63B8D00C4036B /* StatisticsPRRTViewController.xib */; };
 		FA475E2322A643FE00C4036B /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E2522A643FE00C4036B /* SignupViewController.xib */; };
 		FA475E2A22A644C900C4036B /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA475E2C22A644C900C4036B /* SigninViewController.xib */; };
@@ -46,6 +49,9 @@
 		FA59F73B225E263100CDD383 /* PotholeDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */; };
 		FA5CF02B2282B1CB00EB3748 /* FixPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */; };
 		FA5CF02F2282C40700EB3748 /* SubmitFixedPotholesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */; };
+		FA608AED22D85117002629E5 /* StatisticPotholesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA608AEC22D85117002629E5 /* StatisticPotholesCell.xib */; };
+		FA608AF222D86E23002629E5 /* StatisticPotholesChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA608AF022D86E23002629E5 /* StatisticPotholesChartViewController.swift */; };
+		FA608AF622D86E69002629E5 /* StatisticPotholesChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA608AF422D86E69002629E5 /* StatisticPotholesChartViewController.xib */; };
 		FA67ADFC22A50AC400B0E74F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA67ADFE22A50AC400B0E74F /* Localizable.strings */; };
 		FA67AE0122A513CC00B0E74F /* SelectCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67AE0322A513CC00B0E74F /* SelectCityViewController.xib */; };
 		FA8048172258E78000DE5E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8048162258E78000DE5E9B /* AppDelegate.swift */; };
@@ -80,6 +86,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA2B4DB722D5062E00936BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA80480B2258E78000DE5E9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA2B4DB122D5062E00936BBF;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 		FA8048282258E79200DE5E9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA80480B2258E78000DE5E9B /* Project object */;
@@ -96,12 +109,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FA2B4DBD22D5062F00936BBF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FA2B4DB922D5062E00936BBF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		19C930451BB56D1D3863B67A /* Pods-Roadcare-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roadcare-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-Roadcare-OneSignalNotificationServiceExtension/Pods-Roadcare-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		2607CBEA2C6E1B78820D9303 /* Pods_RoadcareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadcareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D65DB4C6BDA2E71FD7EF586 /* Pods-Roadcare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roadcare.release.xcconfig"; path = "Target Support Files/Pods-Roadcare/Pods-Roadcare.release.xcconfig"; sourceTree = "<group>"; };
 		54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadcareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65C46F54D46A038291B5AB /* Pods_Roadcare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roadcare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4E603613303D6F0095E2FB /* Pods-Roadcare-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roadcare-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-Roadcare-OneSignalNotificationServiceExtension/Pods-Roadcare-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		8C6682DFD13F04BAE149FBF7 /* Pods-RoadcareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareUITests.debug.xcconfig"; path = "Target Support Files/Pods-RoadcareUITests/Pods-RoadcareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A35E3843ADD399A8E3A1FEB8 /* Pods_Roadcare_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roadcare_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78F32A0E28E14364C47CDA0 /* Pods-RoadcareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareTests.release.xcconfig"; path = "Target Support Files/Pods-RoadcareTests/Pods-RoadcareTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5F380F6CA42E466F395A7E9 /* Pods-RoadcareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareTests.debug.xcconfig"; path = "Target Support Files/Pods-RoadcareTests/Pods-RoadcareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9D4C54FE851DE41F3FCAB3F /* Pods-RoadcareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadcareUITests.release.xcconfig"; path = "Target Support Files/Pods-RoadcareUITests/Pods-RoadcareUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +140,7 @@
 		FA040567225E48720037E700 /* PotholeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailsViewController.swift; sourceTree = "<group>"; };
 		FA11F5D7225F0BB700F31984 /* ReportPotholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPotholeViewController.swift; sourceTree = "<group>"; };
 		FA11F5DB225F0F2800F31984 /* PhotoPotholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPotholeViewController.swift; sourceTree = "<group>"; };
+		FA134A9C22D6FD79006E1809 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		FA15DA7722678E07001B5C59 /* MappingPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingPotholesViewController.swift; sourceTree = "<group>"; };
 		FA15DA7B2268191B001B5C59 /* ThanksReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksReportViewController.swift; sourceTree = "<group>"; };
 		FA1CA2D0225B7108004D44F1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -120,6 +151,10 @@
 		FA259D9F2281651B0079BB7D /* MediaDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetails.swift; sourceTree = "<group>"; };
 		FA25F99E228D577A00432DB6 /* DayAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayAxisValueFormatter.swift; sourceTree = "<group>"; };
 		FA25F9A0228D9B8F00432DB6 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
+		FA2B4DB222D5062E00936BBF /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2B4DB422D5062E00936BBF /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		FA2B4DB622D5062E00936BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA2B4DBE22D5AA0D00936BBF /* Roadcare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roadcare.entitlements; sourceTree = "<group>"; };
 		FA475E1D22A63B8D00C4036B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StatisticsPRRTViewController.xib; sourceTree = "<group>"; };
 		FA475E2022A63BA300C4036B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StatisticsPRRTViewController.strings; sourceTree = "<group>"; };
 		FA475E2222A63BAE00C4036B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/StatisticsPRRTViewController.strings; sourceTree = "<group>"; };
@@ -176,6 +211,9 @@
 		FA59F739225E263100CDD383 /* PotholeDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotholeDetailViewCell.swift; sourceTree = "<group>"; };
 		FA5CF0292282B1CB00EB3748 /* FixPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixPotholesViewController.swift; sourceTree = "<group>"; };
 		FA5CF02D2282C40700EB3748 /* SubmitFixedPotholesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitFixedPotholesViewController.swift; sourceTree = "<group>"; };
+		FA608AEC22D85117002629E5 /* StatisticPotholesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticPotholesCell.xib; sourceTree = "<group>"; };
+		FA608AF022D86E23002629E5 /* StatisticPotholesChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticPotholesChartViewController.swift; sourceTree = "<group>"; };
+		FA608AF522D86E69002629E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StatisticPotholesChartViewController.xib; sourceTree = "<group>"; };
 		FA67ADFD22A50AC400B0E74F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA67ADFF22A50AF700B0E74F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FA67AE0022A50B0700B0E74F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -220,6 +258,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA2B4DAF22D5062E00936BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BDC4FC2E6B1B638B95E165B /* Pods_Roadcare_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA8048102258E78000DE5E9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +304,8 @@
 				B78F32A0E28E14364C47CDA0 /* Pods-RoadcareTests.release.xcconfig */,
 				8C6682DFD13F04BAE149FBF7 /* Pods-RoadcareUITests.debug.xcconfig */,
 				D9D4C54FE851DE41F3FCAB3F /* Pods-RoadcareUITests.release.xcconfig */,
+				8A4E603613303D6F0095E2FB /* Pods-Roadcare-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				19C930451BB56D1D3863B67A /* Pods-Roadcare-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -270,6 +318,7 @@
 				7A65C46F54D46A038291B5AB /* Pods_Roadcare.framework */,
 				54C644D3B3EF130093916518 /* Pods_RoadcareTests.framework */,
 				2607CBEA2C6E1B78820D9303 /* Pods_RoadcareUITests.framework */,
+				A35E3843ADD399A8E3A1FEB8 /* Pods_Roadcare_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,12 +334,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FA2B4DB322D5062E00936BBF /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FA134A9C22D6FD79006E1809 /* OneSignalNotificationServiceExtension.entitlements */,
+				FA2B4DB422D5062E00936BBF /* NotificationService.swift */,
+				FA2B4DB622D5062E00936BBF /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		FA80480A2258E78000DE5E9B = {
 			isa = PBXGroup;
 			children = (
 				FA8048152258E78000DE5E9B /* Roadcare */,
 				FA80482A2258E79200DE5E9B /* RoadcareTests */,
 				FA8048352258E79200DE5E9B /* RoadcareUITests */,
+				FA2B4DB322D5062E00936BBF /* OneSignalNotificationServiceExtension */,
 				FA8048142258E78000DE5E9B /* Products */,
 				752D28ACE9ABF78503E4739A /* Pods */,
 				BD488B5556DCADFFD93E7E7E /* Frameworks */,
@@ -303,6 +363,7 @@
 				FA8048132258E78000DE5E9B /* Roadcare.app */,
 				FA8048272258E79200DE5E9B /* RoadcareTests.xctest */,
 				FA8048322258E79200DE5E9B /* RoadcareUITests.xctest */,
+				FA2B4DB222D5062E00936BBF /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,6 +371,7 @@
 		FA8048152258E78000DE5E9B /* Roadcare */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B4DBE22D5AA0D00936BBF /* Roadcare.entitlements */,
 				FA8048162258E78000DE5E9B /* AppDelegate.swift */,
 				FA8048532259F49D00DE5E9B /* Views */,
 				FA8048442259DB3200DE5E9B /* ViewControllers */,
@@ -362,6 +424,7 @@
 				FAC009D3228A7F3A00986C8D /* StatisticsViewController.swift */,
 				FAC009E7228B850300986C8D /* StatisticsPRRTViewController.swift */,
 				FA25F9A0228D9B8F00432DB6 /* SelectCityViewController.swift */,
+				FA608AF022D86E23002629E5 /* StatisticPotholesChartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -410,6 +473,7 @@
 				FA475E8022A6593100C4036B /* PotholeDetailsViewController.xib */,
 				FA475E8722A659D400C4036B /* ReportPotholeViewController.xib */,
 				FA475E8E22A65AB300C4036B /* PhotoPotholeViewController.xib */,
+				FA608AF422D86E69002629E5 /* StatisticPotholesChartViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -445,6 +509,7 @@
 				FA804865225B261500DE5E9B /* MenuTableViewCell.xib */,
 				FA040564225E28E30037E700 /* PotholeDetailViewCell.xib */,
 				FAC009D7228A852000986C8D /* StatisticPRRTCell.xib */,
+				FA608AEC22D85117002629E5 /* StatisticPotholesCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -452,6 +517,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA2B4DB122D5062E00936BBF /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2B4DBC22D5062F00936BBF /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				BC090027138B6B8A3C494DCC /* [CP] Check Pods Manifest.lock */,
+				FA2B4DAE22D5062E00936BBF /* Sources */,
+				FA2B4DAF22D5062E00936BBF /* Frameworks */,
+				FA2B4DB022D5062E00936BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = FA2B4DB222D5062E00936BBF /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FA8048122258E78000DE5E9B /* Roadcare */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA80483B2258E79200DE5E9B /* Build configuration list for PBXNativeTarget "Roadcare" */;
@@ -461,10 +544,12 @@
 				FA8048102258E78000DE5E9B /* Frameworks */,
 				FA8048112258E78000DE5E9B /* Resources */,
 				A851DBCFC25C91F85F76539E /* [CP] Embed Pods Frameworks */,
+				FA2B4DBD22D5062F00936BBF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA2B4DB822D5062E00936BBF /* PBXTargetDependency */,
 			);
 			name = Roadcare;
 			productName = Roadcare;
@@ -515,14 +600,34 @@
 		FA80480B2258E78000DE5E9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = macbook;
 				TargetAttributes = {
+					FA2B4DB122D5062E00936BBF = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
 					FA8048122258E78000DE5E9B = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -554,11 +659,19 @@
 				FA8048122258E78000DE5E9B /* Roadcare */,
 				FA8048262258E79200DE5E9B /* RoadcareTests */,
 				FA8048312258E79200DE5E9B /* RoadcareUITests */,
+				FA2B4DB122D5062E00936BBF /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA2B4DB022D5062E00936BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA8048112258E78000DE5E9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,6 +689,7 @@
 				FA475E1C22A63B8D00C4036B /* StatisticsPRRTViewController.xib in Resources */,
 				FA475E5422A654FB00C4036B /* AddUserViewController.xib in Resources */,
 				FA475E7E22A6593100C4036B /* PotholeDetailsViewController.xib in Resources */,
+				FA608AED22D85117002629E5 /* StatisticPotholesCell.xib in Resources */,
 				FA475E4D22A653DE00C4036B /* PaymentViewController.xib in Resources */,
 				FA475E6222A656AA00C4036B /* MappingPotholesViewController.xib in Resources */,
 				FA475E4622A6523600C4036B /* MenuViewController.xib in Resources */,
@@ -589,6 +703,7 @@
 				FAC009D8228A852000986C8D /* StatisticPRRTCell.xib in Resources */,
 				FA475E2322A643FE00C4036B /* SignupViewController.xib in Resources */,
 				FA475E3822A6467500C4036B /* TermsConditionsViewController.xib in Resources */,
+				FA608AF622D86E69002629E5 /* StatisticPotholesChartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,30 +752,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Roadcare/Pods-Roadcare-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
-				"${BUILT_PRODUCTS_DIR}/YNExpandableCell/YNExpandableCell.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Roadcare/Pods-Roadcare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPickerPopover.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNExpandableCell.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Roadcare/Pods-Roadcare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -683,6 +779,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RoadcareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC090027138B6B8A3C494DCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Roadcare-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -714,6 +832,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA2B4DAE22D5062E00936BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2B4DB522D5062E00936BBF /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA80480F2258E78000DE5E9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,6 +872,7 @@
 				FA1CA2D1225B7108004D44F1 /* Extensions.swift in Sources */,
 				FA8048552259F4B200DE5E9B /* SimpleButton.swift in Sources */,
 				FA984BBC226E16EE00DE529D /* APIDomains.swift in Sources */,
+				FA608AF222D86E23002629E5 /* StatisticPotholesChartViewController.swift in Sources */,
 				FA1CA2D9225B8760004D44F1 /* SignupViewController.swift in Sources */,
 				FA25F9A2228D9B8F00432DB6 /* SelectCityViewController.swift in Sources */,
 				FA11F5D9225F0BB700F31984 /* ReportPotholeViewController.swift in Sources */,
@@ -777,6 +904,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA2B4DB822D5062E00936BBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA2B4DB122D5062E00936BBF /* OneSignalNotificationServiceExtension */;
+			targetProxy = FA2B4DB722D5062E00936BBF /* PBXContainerItemProxy */;
+		};
 		FA8048292258E79200DE5E9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA8048122258E78000DE5E9B /* Roadcare */;
@@ -960,6 +1092,14 @@
 			name = PhotoPotholeViewController.xib;
 			sourceTree = "<group>";
 		};
+		FA608AF422D86E69002629E5 /* StatisticPotholesChartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA608AF522D86E69002629E5 /* Base */,
+			);
+			name = StatisticPotholesChartViewController.xib;
+			sourceTree = "<group>";
+		};
 		FA67ADFE22A50AC400B0E74F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -991,6 +1131,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA2B4DBA22D5062F00936BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A4E603613303D6F0095E2FB /* Pods-Roadcare-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ahmad Kanaan (D6DP85Q6H7)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 527FY5PN5Z;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA2B4DBB22D5062F00936BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19C930451BB56D1D3863B67A /* Pods-Roadcare-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ahmad Kanaan (D6DP85Q6H7)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 527FY5PN5Z;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FA8048392258E79200DE5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1113,7 +1299,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E395559D6B427A93D68A03C1 /* Pods-Roadcare.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Roadcare/Roadcare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ahmad Kanaan (D6DP85Q6H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 527FY5PN5Z;
@@ -1125,7 +1313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = RoadCare_Development;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1134,7 +1322,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D65DB4C6BDA2E71FD7EF586 /* Pods-Roadcare.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Roadcare/Roadcare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ahmad Kanaan (D6DP85Q6H7)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 527FY5PN5Z;
@@ -1146,7 +1336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.akanaan.roadcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = RoadCare_Development;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1236,6 +1426,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA2B4DBC22D5062F00936BBF /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2B4DBA22D5062F00936BBF /* Debug */,
+				FA2B4DBB22D5062F00936BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FA80480E2258E78000DE5E9B /* Build configuration list for PBXProject "Roadcare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
