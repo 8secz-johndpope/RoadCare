@@ -53,6 +53,8 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        tabBarController?.navigationItem.rightBarButtonItem = nil
+        
         tfStreedName.text = ""
         tfNearby.text = ""
         tfReporterName.text = ""
@@ -372,8 +374,8 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             "title": "audio_file"
         ]
         
-        let user = "admin"
-        let password = "pass"
+        let user = "ahmad"
+        let password = "I$@hxuN4iVoWTGK9g&AHo*bG"
         let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
@@ -479,6 +481,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         let metaBox = MetaBox()
         metaBox.street_name = tfStreedName.text
         metaBox.city = tfCity.text
+        metaBox.country = AppConstants.getCountry()
         metaBox.reporter_name = tfReporterName.text
         metaBox.phone_number = tfPhoneNum.text
         metaBox.nearby_places = tfNearby.text

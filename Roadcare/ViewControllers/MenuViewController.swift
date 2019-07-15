@@ -60,7 +60,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.isHidden = false
         self.languageView.isHidden = true
         self.shareView.isHidden = false
-        self.exportView.isHidden = false
+        self.exportView.isHidden = true
 
         self.setupLanguage()
         

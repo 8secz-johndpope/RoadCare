@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import CountryPickerView
 
 class StatisticsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -17,13 +18,20 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var sbPrrt: SimpleButton!
     @IBOutlet weak var prrtHeaderView: UIView!
     @IBOutlet weak var potholesHeaderView: UIView!
+    @IBOutlet weak var filteringView: UIView!
+    @IBOutlet weak var tfFilterCountry: UITextField!
     
     var allPotholes = [PotholeDetails]()
     var groupedReports = [GroupedPotholes]()
     var groupedPrrts = [GroupedPRRTPotholes]()
-
+    
     var requestPotholes: DataRequest?
     var prrt_view_flag: Bool = true
+    var filter_flag: Bool = false
+    var btnFilter: UIBarButtonItem?
+    var btnClose: UIBarButtonItem?
+    
+    let cpvInternal = CountryPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,9 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
 
         potholesHeaderView.isHidden = true
         prrtHeaderView.isHidden = false
+        
+        cpvInternal.delegate = self
+        cpvInternal.dataSource = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,7 +56,16 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if filter_flag {
+           return
+        }
 
+        btnClose = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(didTapClose))
+        btnFilter = UIBarButtonItem(image: UIImage(named: "ic_filter"), style: .plain, target: self, action: #selector(didTapFilter))
+        tabBarController?.navigationItem.rightBarButtonItem = btnFilter
+
+        self.filteringView.isHidden = true
         getReportedPotholes(page: "1", request_index: 1)
     }
     
@@ -72,24 +92,34 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
                 if request_index < count! {
                     self.getReportedPotholes(page: pages!, request_index: request_index+1)
                 } else {
-                    self.setupChart()
+                    self.setupChart(filter: "")
                 }
             }
         })
     }
     
-    private func setupChart() {
+    private func setupChart(filter: String) {
         var dict: [String: GroupedPotholes] = [:]
 
         self.allPotholes.forEach { report in
             let city = report.metaBox!.city ?? ""
             let country = report.metaBox?.country ?? ""
-            if let groupedReport = dict[city] {
-                groupedReport.report_array.append(report)
-            } else {
-                let groupedReport = GroupedPotholes(city: city, country: country)
-                groupedReport.report_array.append(report)
-                dict[city] = groupedReport
+            if filter == "" {
+                if let groupedReport = dict[city] {
+                    groupedReport.report_array.append(report)
+                } else {
+                    let groupedReport = GroupedPotholes(city: city, country: country)
+                    groupedReport.report_array.append(report)
+                    dict[city] = groupedReport
+                }
+            } else if country == filter {
+                if let groupedReport = dict[city] {
+                    groupedReport.report_array.append(report)
+                } else {
+                    let groupedReport = GroupedPotholes(city: city, country: country)
+                    groupedReport.report_array.append(report)
+                    dict[city] = groupedReport
+                }
             }
         }
         
@@ -137,10 +167,21 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         return data
     }
     
+    @objc func didTapFilter() {
+        self.filteringView.isHidden = false
+        tabBarController?.navigationItem.rightBarButtonItem = btnClose
+    }
+    
+    @objc func didTapClose() {
+        self.filteringView.isHidden = true
+        tabBarController?.navigationItem.rightBarButtonItem = btnFilter
+    }
     
     // MARK: Button actions.
     
     @IBAction func seeChatTapped(_ sender: Any) {
+        filter_flag = false
+        
         if prrt_view_flag {
             let viewController = StatisticsPRRTViewController(nibName: "StatisticsPRRTViewController", bundle: nil)
             viewController.groupedPrrts = self.groupedPrrts
@@ -169,6 +210,25 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         sbPrrt.isHidden = true
         self.tableView.reloadData()
     }
+    
+    @IBAction func countryTapped(_ sender: Any) {
+        filter_flag = true
+        cpvInternal.showCountriesList(from: self)
+    }
+    
+    @IBAction func applyFilter(_ sender: Any) {
+        guard let country = tfFilterCountry.text, country.count != 0 else {
+            showSimpleAlert(message: "Please select country for filtering.")
+            tfFilterCountry.becomeFirstResponder()
+            return
+        }
+
+        self.filteringView.isHidden = true
+        tabBarController?.navigationItem.rightBarButtonItem = btnFilter
+        
+        setupChart(filter: self.tfFilterCountry.text!)
+    }
+    
     // MARK: TableView DataSource and Delegate Methods
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -201,5 +261,28 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
             
             return cell
         }
+    }
+}
+
+extension StatisticsViewController: CountryPickerViewDelegate {
+    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
+        tfFilterCountry.text = country.localizedName
+        if country.localizedName == "Palestinian Territories" {
+            tfFilterCountry.text = "Palestine"
+        }
+    }
+}
+
+extension StatisticsViewController: CountryPickerViewDataSource {
+    func navigationTitle(in countryPickerView: CountryPickerView) -> String? {
+        return "Select a Country"
+    }
+    
+    func searchBarPosition(in countryPickerView: CountryPickerView) -> SearchBarPosition {
+        return .tableViewHeader
+    }
+    
+    func showPhoneCodeInList(in countryPickerView: CountryPickerView) -> Bool {
+        return false
     }
 }

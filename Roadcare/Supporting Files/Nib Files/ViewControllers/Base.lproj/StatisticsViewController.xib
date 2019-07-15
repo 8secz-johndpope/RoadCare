@@ -12,12 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatisticsViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
+                <outlet property="filteringView" destination="hbS-vm-Wi5" id="ztL-iK-uPn"/>
                 <outlet property="potholesHeaderView" destination="l4u-8G-ddW" id="mzc-5v-RTR"/>
                 <outlet property="prrtHeaderView" destination="XVJ-8J-6Sd" id="Bhw-cw-tk4"/>
                 <outlet property="sbPrrt" destination="w80-Yt-4Sn" id="Meg-dE-Grd"/>
                 <outlet property="sbSeeChart" destination="cHg-h2-Cfa" id="A46-eB-a0n"/>
                 <outlet property="sbSeeOtherPotholes" destination="FfV-sk-8vr" id="xgk-Gb-TOL"/>
                 <outlet property="tableView" destination="3JN-aW-3oO" id="gZg-LF-Qzr"/>
+                <outlet property="tfFilterCountry" destination="Y50-a5-cxK" id="3Pp-zv-G2Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -189,7 +191,7 @@ REPORTED IN 2019</string>
                         <action selector="seeOtherCitiesTapped:" destination="-1" eventType="touchUpInside" id="42z-uW-k5P"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w80-Yt-4Sn" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w80-Yt-4Sn" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
                     <rect key="frame" x="20" y="772" width="374" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -221,6 +223,89 @@ REPORTED IN 2019</string>
                         <action selector="seePrrtTapped:" destination="-1" eventType="touchUpInside" id="mjM-k4-tG0"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-vm-Wi5">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mx-Ew-SNz">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWa-Tr-X5J">
+                            <rect key="frame" x="183.5" y="44" width="47.5" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-a5-cxK">
+                            <rect key="frame" x="24" y="86.5" width="366" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="foE-nO-DGf"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtL-o6-jLP" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
+                            <rect key="frame" x="24" y="86.5" width="366" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="BuC-cY-ao1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                            <state key="normal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="countryTapped:" destination="-1" eventType="touchUpInside" id="CzM-LI-Ys5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD0-pO-ixd" customClass="SimpleButton" customModule="Roadcare" customModuleProvider="target">
+                            <rect key="frame" x="42.5" y="172.5" width="329" height="50"/>
+                            <color key="backgroundColor" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Ijm-lI-rFL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                            <state key="normal" title="Apply">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="bgNormal">
+                                    <color key="value" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="bgHighlighted">
+                                    <color key="value" red="0.18039215689999999" green="0.35686274509999999" blue="1" alpha="0.880859375" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="applyFilter:" destination="-1" eventType="touchUpInside" id="ylo-EX-xr7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Y50-a5-cxK" firstAttribute="leading" secondItem="hbS-vm-Wi5" secondAttribute="leading" constant="24" id="0xN-7A-aX7"/>
+                        <constraint firstItem="AtL-o6-jLP" firstAttribute="centerY" secondItem="Y50-a5-cxK" secondAttribute="centerY" id="2D4-k7-lSd"/>
+                        <constraint firstItem="jD0-pO-ixd" firstAttribute="width" secondItem="Y50-a5-cxK" secondAttribute="width" multiplier="0.9" id="82m-ym-DP5"/>
+                        <constraint firstAttribute="bottom" secondItem="9mx-Ew-SNz" secondAttribute="bottom" id="ApN-er-B82"/>
+                        <constraint firstItem="Y50-a5-cxK" firstAttribute="top" secondItem="IWa-Tr-X5J" secondAttribute="bottom" constant="16" id="Bar-IX-316"/>
+                        <constraint firstItem="AtL-o6-jLP" firstAttribute="centerX" secondItem="Y50-a5-cxK" secondAttribute="centerX" id="Cu2-zu-qxX"/>
+                        <constraint firstAttribute="trailing" secondItem="9mx-Ew-SNz" secondAttribute="trailing" id="H06-Ff-bfT"/>
+                        <constraint firstItem="IWa-Tr-X5J" firstAttribute="top" secondItem="hbS-vm-Wi5" secondAttribute="top" constant="44" id="Nnu-SO-MFK"/>
+                        <constraint firstItem="AtL-o6-jLP" firstAttribute="height" secondItem="Y50-a5-cxK" secondAttribute="height" id="OED-6m-5ov"/>
+                        <constraint firstItem="jD0-pO-ixd" firstAttribute="centerX" secondItem="hbS-vm-Wi5" secondAttribute="centerX" id="YiP-oI-rHa"/>
+                        <constraint firstItem="9mx-Ew-SNz" firstAttribute="top" secondItem="hbS-vm-Wi5" secondAttribute="top" id="Zde-ZN-rj8"/>
+                        <constraint firstItem="jD0-pO-ixd" firstAttribute="top" secondItem="Y50-a5-cxK" secondAttribute="bottom" constant="36" id="dtm-oR-GyI"/>
+                        <constraint firstItem="IWa-Tr-X5J" firstAttribute="centerX" secondItem="hbS-vm-Wi5" secondAttribute="centerX" id="fkx-eq-QBp"/>
+                        <constraint firstAttribute="trailing" secondItem="Y50-a5-cxK" secondAttribute="trailing" constant="24" id="nCM-1N-eAi"/>
+                        <constraint firstItem="AtL-o6-jLP" firstAttribute="width" secondItem="Y50-a5-cxK" secondAttribute="width" id="pSD-0W-idC"/>
+                        <constraint firstItem="9mx-Ew-SNz" firstAttribute="leading" secondItem="hbS-vm-Wi5" secondAttribute="leading" id="zRY-EM-b2c"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -232,10 +317,13 @@ REPORTED IN 2019</string>
                 <constraint firstItem="w80-Yt-4Sn" firstAttribute="centerX" secondItem="FfV-sk-8vr" secondAttribute="centerX" id="Nca-PV-seZ"/>
                 <constraint firstItem="FfV-sk-8vr" firstAttribute="top" secondItem="cHg-h2-Cfa" secondAttribute="bottom" constant="16" id="Nge-2f-g10"/>
                 <constraint firstItem="FfV-sk-8vr" firstAttribute="leading" secondItem="cHg-h2-Cfa" secondAttribute="leading" id="Oeh-9a-bL0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hbS-vm-Wi5" secondAttribute="trailing" id="PAh-06-wWI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XVJ-8J-6Sd" secondAttribute="trailing" id="PBF-e1-JUd"/>
                 <constraint firstItem="l4u-8G-ddW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="SnM-zo-nVS"/>
+                <constraint firstItem="hbS-vm-Wi5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YYN-2J-d4k"/>
                 <constraint firstItem="XVJ-8J-6Sd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yd2-wk-5Um"/>
                 <constraint firstItem="3JN-aW-3oO" firstAttribute="top" secondItem="XVJ-8J-6Sd" secondAttribute="bottom" constant="8" id="Zpi-VD-QaH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hbS-vm-Wi5" secondAttribute="bottom" id="aYc-gF-yHa"/>
                 <constraint firstItem="XVJ-8J-6Sd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="b0p-J4-uUG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3JN-aW-3oO" secondAttribute="trailing" constant="12" id="b2R-hz-ASy"/>
                 <constraint firstItem="w80-Yt-4Sn" firstAttribute="width" secondItem="FfV-sk-8vr" secondAttribute="width" id="fBq-Eq-fNi"/>
@@ -243,6 +331,7 @@ REPORTED IN 2019</string>
                 <constraint firstItem="w80-Yt-4Sn" firstAttribute="centerY" secondItem="FfV-sk-8vr" secondAttribute="centerY" id="kgr-ye-nVO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FfV-sk-8vr" secondAttribute="bottom" constant="40" id="n1D-im-vTY"/>
                 <constraint firstItem="FfV-sk-8vr" firstAttribute="trailing" secondItem="cHg-h2-Cfa" secondAttribute="trailing" id="o3I-sY-gtf"/>
+                <constraint firstItem="hbS-vm-Wi5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yqu-UP-JSb"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

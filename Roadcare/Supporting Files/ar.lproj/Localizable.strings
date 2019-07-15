@@ -7,7 +7,7 @@
 */
 
 "Potholes Reported in" = "أبلغ عن حفرة";
-"Reported Potholes" = "ذكرت الحفر";
+"Reported Potholes" = "الحفر البلغ عنها";
 "Potholes Repaired" = "الحفر التي تم اصلاحها";
 "Potholes Repair Reaction Time" = "معدل وقت التفاعل مع شكوى الحفر";
 "Report a Pothole" = "أبلغ عن حفرة";
@@ -30,10 +30,10 @@
 "This Material is inappropriate, please use an appropriate material to fill up this pothole" = "هذه المادة غير مناسبة لإصلاح الحفر نرجو منك استخدام مواد أخرة لإصلاح الحفر";
 "Fix a Pothole" = "أصلح حفرة أخرى";
 "Material Used to fill up the pothole" = "المادة المستخدمة في إغلاق الحفرة";
-"Hot Mix Asphalt" = "الأسفلت الساخن";
-"Cold Mix Asphalt" = "الأسفلت البارد";
+"Hot Mix Asphalt" = "الساخن السفلت";
+"Cold Mix Asphalt" = "البارد السفلت";
 "Plain Concrete" = "باطون غير مسلح";
-"Aggregates, Stone or Base Coarse" = "حصمة، بيسكورس أو صخور";
+"Aggregates, Stone or Base Coarse" = "حصمة أو حجارة أو بيسكورس";
 "Other" = "غير ذلك";
 "Choose" = "إختر";
 "Type Something" = "اكتب";
@@ -48,14 +48,14 @@
 "Fix this Pothole" = "أصلح هذه الحفرة";
 "Listen to Complaint" = "إستمع إلى الشكوى";
 "Not Repaired" = "غير مصلحة";
-"Repaired" = "مصلحة";
+"Repaired" = "تم إصلحها";
 "Reported Number of Times" = "عدد مرات التبليغ عنها";
 "Street" = "الشارع";
 "City" = "المدينة";
 "Date and Time of Complaint" = "تاريخ ووقت الشكوى";
 "Number of Times Reported" = "عدد مرات الشكوى";
-"See Details" = "انظر الى التفاصيل";
-"Report Again" = "بلغ مرة أخرى";
+"See Details" = "إنظر إلى التفاصل";
+"Report Again" = "أبلغ مرة أخرى";
 "Add a user email" = "أضافة البريد الإلكتروني للمستخدم";
 "Potholes Reporting Application" = "تطبيق الإبلاغ عن حفر الشوارع";
 "Report Street Potholes to your agency in Seconds" = "أبلغ بلديتك عن حفر الشوارع بسهولة وفي لحظات";

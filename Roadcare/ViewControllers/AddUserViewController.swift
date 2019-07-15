@@ -23,6 +23,8 @@ class AddUserViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        tabBarController?.navigationItem.rightBarButtonItem = nil
+        
         self.firstView.isHidden = false
         self.addUserView.isHidden = true
     }

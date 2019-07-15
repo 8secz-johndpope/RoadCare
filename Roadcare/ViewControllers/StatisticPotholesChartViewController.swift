@@ -16,8 +16,8 @@ class StatisticPotholesChartViewController: DemoBaseViewController {
     lazy var formatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 1
-        formatter.negativeSuffix = " $"
-        formatter.positiveSuffix = " $"
+        formatter.negativeSuffix = " "
+        formatter.positiveSuffix = " "
         
         return formatter
     }()
@@ -28,7 +28,7 @@ class StatisticPotholesChartViewController: DemoBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Stacked Bar Chart"
+        self.title = "Statistics"
         self.options = [.toggleValues,
                         .toggleIcons,
                         .toggleHighlight,
@@ -97,7 +97,7 @@ class StatisticPotholesChartViewController: DemoBaseViewController {
             return BarChartDataEntry(x: Double(i), yValues: [val1, val2])
         }
         
-        let set = BarChartDataSet(values: yVals, label: "Statistics Vienna 2014")
+        let set = BarChartDataSet(values: yVals, label: "Statistics 2019")
         set.drawIconsEnabled = false
         set.colors = [NSUIColor(red: 46/255.0, green: 91/255.0, blue: 255/255.0, alpha: 1.0),
                       NSUIColor(red: 45/255.0, green: 158/255.0, blue: 52/255.0, alpha: 1.0)]

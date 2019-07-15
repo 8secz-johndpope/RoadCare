@@ -60,8 +60,8 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
             "title": "file" + String(self.id)
         ]
         
-        let user = "admin"
-        let password = "pass"
+        let user = "ahmad"
+        let password = "I$@hxuN4iVoWTGK9g&AHo*bG"
         let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]

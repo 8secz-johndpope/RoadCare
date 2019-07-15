@@ -54,6 +54,7 @@ class HomeViewController: UIViewController {
             btnReportPothole.setTitle("See Reported Potholes", for: .normal)
         } else {
             btnReportPothole.setTitle("Report a pothole", for: .normal)
+            tabBarController?.navigationItem.rightBarButtonItem = nil
         }
 
         initViews()
