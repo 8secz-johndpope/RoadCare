@@ -21,7 +21,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var tfReporterName: UITextField!
     @IBOutlet weak var tfPhoneNum: UITextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!	
     @IBOutlet weak var lblTimer: UILabel!
     
     let locationManager = CLLocationManager()
@@ -394,7 +394,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
                             self.dismissProgress()
                             if let error = data.error {
                                 print(error)
-                                self.showSimpleAlert(message: "Request failed. Please try again")
+                                self.showSimpleAlert(message: "File uploading failed. Please try again")
                                 return
                             }
                             if let jsonResponse = data.result.value as? [String: Any] {
@@ -426,7 +426,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
             self.dismissProgress()
             
             guard success, data != nil, let _ = data as? [String: Any] else {
-                self.showSimpleAlert(message: "Request failed. Please try again")
+                self.showSimpleAlert(message: path + "\n \(id) \nPlease try again")
                 return
             }
         })
@@ -440,7 +440,7 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         requestCities = APIClient.getCategories(handler: { (success, error, data) in
             self.dismissProgress()
             guard success, data != nil, let response = data as? [[String: Any]] else {
-                self.showSimpleAlert(message: "Request failed. Please try again")
+                self.showSimpleAlert(message: "Failed to get city name. Please try again")
                 return
             }
             AppConstants.cities.removeAll()
@@ -449,9 +449,10 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
                 let city = City(json)
                 AppConstants.cities.append(city)
             }
-            if AppConstants.cities.count != 0 {
-                self.tfCity.text = AppConstants.cities[0].name
-            }
+            self.tfCity.text = AppConstants.getCity()
+//            if AppConstants.cities.count != 0 {
+//                self.tfCity.text = AppConstants.cities[0].name
+//            }
         })
     }
     
@@ -492,14 +493,14 @@ class ReportPotholeViewController: UIViewController, CLLocationManagerDelegate {
         _ = APIClient.reportPothole(params: details, handler: { (success, error, data) in
             self.dismissProgress()
             guard success, data != nil, let json = data as? [String: Any] else {
-                self.showSimpleAlert(message: "Request failed. Please try again")
+                self.showSimpleAlert(message: "Request failed(1). Please try again")
                 return
             }
             
             let response = PotholeDetails(json)
             
             if response.id == nil {
-                self.showSimpleAlert(message: "Request failed. Please try again")
+                self.showSimpleAlert(message: "Request failed(2). Please try again")
                 return
             } else {
                 if self.recorder != nil {

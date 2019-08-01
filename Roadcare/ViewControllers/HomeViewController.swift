@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
             tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(askLogout))
             btnReportPothole.setTitle("See Reported Potholes", for: .normal)
         } else {
-            btnReportPothole.setTitle("Report a pothole", for: .normal)
+            btnReportPothole.setTitle("Report a Pothole", for: .normal)
             tabBarController?.navigationItem.rightBarButtonItem = nil
         }
 
@@ -162,7 +162,7 @@ class HomeViewController: UIViewController {
         AppConstants.authUser = AppUser()
      
         tabBarController?.navigationItem.rightBarButtonItem = nil
-        btnReportPothole.setTitle("Report a pothole", for: .normal)
+        btnReportPothole.setTitle("Report a Pothole", for: .normal)
     }
     
     @objc func runTimedCode() {

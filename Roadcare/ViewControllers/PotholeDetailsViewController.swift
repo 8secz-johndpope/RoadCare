@@ -10,6 +10,7 @@ import UIKit
 import SDWebImage
 import MapKit
 import AVFoundation
+import Alamofire
 
 class PotholeDetailsViewController: UIViewController {
 
@@ -36,8 +37,8 @@ class PotholeDetailsViewController: UIViewController {
         navigationItem.title = navTitle ?? ""
         
         if selPothole?.metaBox?.audio != "" {
-//            let url = URL(string: (selPothole?.metaBox!.audio)!)
-                    let url = URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")
+            let url = URL(string: (selPothole?.metaBox!.audio)!)
+//                    let url = URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")
             let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
             player = AVPlayer(playerItem: playerItem)
             
@@ -45,7 +46,7 @@ class PotholeDetailsViewController: UIViewController {
             playerLayer.frame = CGRect(x:0, y:0, width:10, height:50)
             self.view.layer.addSublayer(playerLayer)
         }
-
+        
         setupMapLocation()
         setupViews()
     }
@@ -75,25 +76,37 @@ class PotholeDetailsViewController: UIViewController {
         lblDateTime.text = selPothole?.modified ?? ""
         lblPhoneNumber.text = selPothole?.metaBox?.phone_number
         let status = selPothole?.metaBox?.repaired_status ?? ""
+        var url: String?
         if status.lowercased() == REPAIRED.lowercased() {
             fixPotholeConstraint.constant = 0
             lblStatus.text = REPAIRED
             imgStatus.image = UIImage(named: "ic_plus")
+
+            url = selPothole?.metaBox?.fixed_photo ?? ""
+            imgPhoto.sd_setImage(with: URL(string: url!),
+                                 placeholderImage: UIImage(named: ""))
         } else {
             fixPotholeConstraint.constant = 50
             lblStatus.text = NOT_REPAIRED
             imgStatus.image = UIImage(named: "ic_minus")
+            
+            url = selPothole?.metaBox?.pothole_photo ?? ""
+            imgPhoto.sd_setImage(with: URL(string: url!),
+                                 placeholderImage: UIImage(named: ""))
         }
         if !AppUser.isLogin() {
             fixPotholeConstraint.constant = 0
         }
-        let url = selPothole?.metaBox?.pothole_photo ?? ""
-        imgPhoto.sd_setImage(with: URL(string: url),
-                             placeholderImage: UIImage(named: "img_advertising_01"))
-        SELECTED_POTHOLE_PHOTO = url
+//        let url = selPothole?.metaBox?.pothole_photo ?? ""
+//        imgPhoto.sd_setImage(with: URL(string: url),
+//                             placeholderImage: UIImage(named: "img_advertising_01"))
+        SELECTED_POTHOLE_PHOTO = url!
         
         lblPlayerTimer.isHidden = true
     }
+    
+    
+    // MARK : Button click events.
     
     @IBAction func fixPothole(_ sender: SimpleButton) {
         let viewController = FixPotholesViewController(nibName: "FixPotholesViewController", bundle: nil)
@@ -122,5 +135,8 @@ class PotholeDetailsViewController: UIViewController {
             player!.pause()
             lblPlayerTimer.isHidden = true
         }
+    }
+    
+    @IBAction func photoTapped(_ sender: Any) {
     }
 }

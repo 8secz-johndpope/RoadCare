@@ -255,6 +255,26 @@
                                         <action selector="signupTapped:" destination="-1" eventType="touchUpInside" id="Jns-rA-9Qj"/>
                                     </connections>
                                 </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFP-AK-3wb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="640"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please contact us at info@skyconst.com to register an account." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQu-2S-LVT" userLabel="Please contact us at  info@skyconst.com to register an account.">
+                                            <rect key="frame" x="18.666666666666657" y="295" width="337.66666666666674" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="fEG-ye-1rG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="TQu-2S-LVT" firstAttribute="width" secondItem="gFP-AK-3wb" secondAttribute="width" multiplier="0.9" id="3Rj-EV-Tgs"/>
+                                        <constraint firstItem="TQu-2S-LVT" firstAttribute="centerX" secondItem="gFP-AK-3wb" secondAttribute="centerX" id="kjr-QJ-VTc"/>
+                                        <constraint firstItem="TQu-2S-LVT" firstAttribute="centerY" secondItem="gFP-AK-3wb" secondAttribute="centerY" id="uAL-Ar-t05"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -263,6 +283,7 @@
                                 <constraint firstItem="ryZ-vR-UFl" firstAttribute="top" secondItem="uYC-wm-IK1" secondAttribute="bottom" constant="15" id="1sW-X9-LNJ"/>
                                 <constraint firstItem="W7J-aL-zvK" firstAttribute="top" secondItem="ryZ-vR-UFl" secondAttribute="bottom" constant="15" id="4gE-jT-62x"/>
                                 <constraint firstItem="4LQ-83-UxN" firstAttribute="trailing" secondItem="OZn-Vs-lEd" secondAttribute="trailing" id="5oj-tp-sXq"/>
+                                <constraint firstAttribute="bottom" secondItem="gFP-AK-3wb" secondAttribute="bottom" id="6rx-kd-0N3"/>
                                 <constraint firstItem="4LQ-83-UxN" firstAttribute="top" secondItem="OZn-Vs-lEd" secondAttribute="bottom" constant="20" id="8Bi-x4-oOO"/>
                                 <constraint firstItem="uYC-wm-IK1" firstAttribute="leading" secondItem="YXn-vi-V8v" secondAttribute="leading" id="9VI-CR-kHT"/>
                                 <constraint firstItem="OZn-Vs-lEd" firstAttribute="top" secondItem="W7J-aL-zvK" secondAttribute="bottom" constant="15" id="HOF-Ah-avs"/>
@@ -272,7 +293,10 @@
                                 <constraint firstItem="Mu1-db-O0C" firstAttribute="top" secondItem="oxq-A0-DJo" secondAttribute="top" constant="16" id="TvK-NS-FlE"/>
                                 <constraint firstItem="OZn-Vs-lEd" firstAttribute="leading" secondItem="W7J-aL-zvK" secondAttribute="leading" id="UFa-vC-5ei"/>
                                 <constraint firstItem="uYC-wm-IK1" firstAttribute="trailing" secondItem="YXn-vi-V8v" secondAttribute="trailing" id="V1P-l4-8ae"/>
+                                <constraint firstItem="gFP-AK-3wb" firstAttribute="leading" secondItem="oxq-A0-DJo" secondAttribute="leading" id="V3j-KC-ZKd"/>
+                                <constraint firstAttribute="trailing" secondItem="gFP-AK-3wb" secondAttribute="trailing" id="Vnp-WJ-Ssv"/>
                                 <constraint firstItem="W7J-aL-zvK" firstAttribute="trailing" secondItem="ryZ-vR-UFl" secondAttribute="trailing" id="ZAr-tJ-cjd"/>
+                                <constraint firstItem="gFP-AK-3wb" firstAttribute="top" secondItem="oxq-A0-DJo" secondAttribute="top" id="Zqh-3d-t69"/>
                                 <constraint firstItem="OZn-Vs-lEd" firstAttribute="trailing" secondItem="W7J-aL-zvK" secondAttribute="trailing" id="agy-j7-R63"/>
                                 <constraint firstItem="uYC-wm-IK1" firstAttribute="top" secondItem="YXn-vi-V8v" secondAttribute="bottom" constant="15" id="bca-O2-50n"/>
                                 <constraint firstItem="YXn-vi-V8v" firstAttribute="leading" secondItem="quu-we-Ime" secondAttribute="leading" id="c4o-ry-qru"/>

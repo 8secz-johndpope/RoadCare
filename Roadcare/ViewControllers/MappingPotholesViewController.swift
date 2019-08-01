@@ -126,7 +126,9 @@ class MappingPotholesViewController: UIViewController, MKMapViewDelegate, CLLoca
     
     private func gotoNextPage() {
         let viewController = PhotoPotholeViewController(nibName: "PhotoPotholeViewController", bundle: nil)
+        viewController.fixing_flag = false
         viewController.id = self.id
+        viewController.materials = ""
         navigationController!.pushViewController(viewController, animated: true)
     }
 }

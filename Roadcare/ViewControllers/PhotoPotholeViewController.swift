@@ -12,6 +12,7 @@ import Alamofire
 class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var ivPothole: UIImageView!
+    @IBOutlet weak var btnSkip: SimpleButton!
     
     var imagePicker: UIImagePickerController!
     
@@ -19,7 +20,9 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
     var requestPhotoUpdate: DataRequest?
     
     var id: Int! = 0
-    
+    var fixing_flag: Bool = false
+    var materials: String?
+
     enum ImageSource {
         case photoLibrary
         case camera
@@ -34,6 +37,12 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
         imagePicker.delegate = self
         
         ivPothole.tag = 0
+        
+        if fixing_flag {
+            btnSkip.isHidden = true
+        } else {
+            btnSkip.isHidden = false
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -103,29 +112,15 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
         })
     }
     
-    private func uploadPotholePotho() {
-        showProgress(message: "")
-        
-        requestFileUpload = APIClient.uploadNewFile(file: getBase64Code()!, handler: { (success, error, data) in
-            self.dismissProgress()
-            guard success, data != nil, let json = data as? [String: Any] else {
-                self.showSimpleAlert(message: "Failed to upload file. Please try again")
-                return
-            }
-
-            let response = MediaDetails(json)
-            if response.url != nil {
-                self.saveFilePath(path: response.url!);
-            }
-        })
-    }
-    
     private func saveFilePath(path: String) {
         showProgress(message: "")
         
-        let metaBox: [String: Any] = [
+        var metaBox: [String: Any] = [
             "pothole_photo": path
         ]
+        if fixing_flag {
+            metaBox = ["fixed_photo": path]
+        }
         let params: [String: Any] = [
             "meta_box": metaBox
         ]
@@ -136,14 +131,26 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
                 self.showSimpleAlert(message: "Request failed. Please try again")
                 return
             }
+            
+            SELECTED_POTHOLE_PHOTO = path
 
-            self.gotoThanksPage()
+            if self.fixing_flag {
+                self.gotoFixedPotholePage()
+            } else {
+                self.gotoThanksPage()
+            }
         })
     }
     
     private func gotoThanksPage() {
         let viewController = ThanksReportViewController(nibName: "ThanksReportViewController", bundle: nil)
         navigationController!.pushViewController(viewController, animated: true)
+    }
+    
+    private func gotoFixedPotholePage() {
+        let viewcontroller = SubmitFixedPotholesViewController(nibName: "SubmitFixedPotholesViewController", bundle: nil)
+        viewcontroller.materials = materials
+        navigationController?.pushViewController(viewcontroller, animated: true)
     }
 
     // MARK: Button click actions
@@ -173,7 +180,7 @@ class PhotoPotholeViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     // MARK: UIImagePickerController Delegate Method
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // Local variable inserted by Swift 4.2 migrator.
         let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)

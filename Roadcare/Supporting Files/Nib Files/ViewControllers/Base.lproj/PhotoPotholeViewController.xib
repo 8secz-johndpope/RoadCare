@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoPotholeViewController" customModule="Roadcare" customModuleProvider="target">
             <connections>
+                <outlet property="btnSkip" destination="wvU-sE-9Qb" id="ZVU-p2-FHt"/>
                 <outlet property="ivPothole" destination="EWZ-5T-GYY" id="s14-gN-kr1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

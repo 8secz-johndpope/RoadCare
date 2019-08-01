@@ -183,14 +183,25 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_advertising_01" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiC-XF-wSR">
                                             <rect key="frame" x="0.0" y="36.5" width="374" height="73.5"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCc-6X-wTa">
+                                            <rect key="frame" x="164" y="40" width="46" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="photoTapped:" destination="-1" eventType="touchUpInside" id="CSl-bg-Hec"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="gCc-6X-wTa" firstAttribute="centerX" secondItem="BiC-XF-wSR" secondAttribute="centerX" id="05s-39-LIK"/>
                                         <constraint firstItem="1kN-dZ-ZAN" firstAttribute="top" secondItem="hTJ-cN-e4d" secondAttribute="top" constant="6" id="IcT-Cv-IIt"/>
+                                        <constraint firstItem="gCc-6X-wTa" firstAttribute="centerY" secondItem="BiC-XF-wSR" secondAttribute="centerY" id="Jqk-Oz-AMH"/>
                                         <constraint firstItem="BiC-XF-wSR" firstAttribute="top" secondItem="1kN-dZ-ZAN" secondAttribute="bottom" constant="16" id="Osd-mr-fop"/>
                                         <constraint firstItem="BiC-XF-wSR" firstAttribute="leading" secondItem="hTJ-cN-e4d" secondAttribute="leading" id="QbQ-ba-npB"/>
                                         <constraint firstItem="1kN-dZ-ZAN" firstAttribute="leading" secondItem="hTJ-cN-e4d" secondAttribute="leading" id="ndc-CI-enW"/>
                                         <constraint firstAttribute="trailing" secondItem="BiC-XF-wSR" secondAttribute="trailing" id="phh-qI-yZC"/>
+                                        <constraint firstItem="gCc-6X-wTa" firstAttribute="height" secondItem="BiC-XF-wSR" secondAttribute="height" id="qy8-3t-ilV"/>
+                                        <constraint firstItem="gCc-6X-wTa" firstAttribute="width" secondItem="BiC-XF-wSR" secondAttribute="width" id="sCE-Ya-nBl"/>
                                         <constraint firstAttribute="height" constant="110" id="wEe-rk-esy"/>
                                         <constraint firstAttribute="bottom" secondItem="BiC-XF-wSR" secondAttribute="bottom" id="y9C-i9-Zl9"/>
                                     </constraints>

@@ -28,7 +28,7 @@ class SubmitFixedPotholesViewController: UIViewController {
         
         if SELECTED_POTHOLE_PHOTO != "" {
             ivPothole.sd_setImage(with: URL(string: SELECTED_POTHOLE_PHOTO),
-                                 placeholderImage: UIImage(named: "img_repaired_pothole"))
+                                 placeholderImage: UIImage(named: ""))
         }
     }
     

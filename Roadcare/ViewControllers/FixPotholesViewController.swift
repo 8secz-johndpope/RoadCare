@@ -100,9 +100,15 @@ class FixPotholesViewController: UIViewController {
     }
     
     @IBAction func nextBtnTapped(_ sender: Any) {
-        let viewcontroller = SubmitFixedPotholesViewController(nibName: "SubmitFixedPotholesViewController", bundle: nil)
-        viewcontroller.materials = materials.description
-        navigationController?.pushViewController(viewcontroller, animated: true)
+        let viewController = PhotoPotholeViewController(nibName: "PhotoPotholeViewController", bundle: nil)
+        viewController.fixing_flag = true
+        viewController.id = POTHOLE_ID
+        viewController.materials = materials.description
+        navigationController!.pushViewController(viewController, animated: true)
+
+//        let viewcontroller = SubmitFixedPotholesViewController(nibName: "SubmitFixedPotholesViewController", bundle: nil)
+//        viewcontroller.materials = materials.description
+//        navigationController?.pushViewController(viewcontroller, animated: true)
     }
     
     @IBAction func signoutTapped(_ sender: Any) {

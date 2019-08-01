@@ -19,50 +19,51 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in StatisticsViewController.setupChat():StatisticsViewController.swift">
+         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "GroupedPotholes(city: report.metaBox!.city, country: report.metaBox!.country ?? &quot;&quot;)">
+               value = "annotation.coordinate.latitude">
+            </PersistentString>
+            <PersistentString
+               value = "lat">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "static DateUtils.getDateDistance(s1:s2:):DateUtils.swift">
+         contextName = "AddUserViewController.dontBtnTapped(_:):AddUserViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "s1">
+               value = "DateUtils.getTimeStampe()">
             </PersistentString>
             <PersistentString
-               value = "convertStrToDate(string: s2, format: &quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)">
+               value = "Date.timeIntervalBetween1970AndReferenceDate">
             </PersistentString>
             <PersistentString
-               value = "calendar.dateComponents([.calendar], from: date1!, to: date2!).day">
+               value = "DateUtils.getCurrentTimeStampWOMiliseconds(dateToConvert: DateUtils.getCurrentScheduleTime()! as NSDate)">
             </PersistentString>
             <PersistentString
-               value = "s2">
-            </PersistentString>
-            <PersistentString
-               value = "Double(day!) + Double(hour!)/24">
-            </PersistentString>
-            <PersistentString
-               value = "Double(4)/24">
-            </PersistentString>
-            <PersistentString
-               value = "Float(hour!/24)">
-            </PersistentString>
-            <PersistentString
-               value = "convertStrToDate(string: s1, format: &quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)">
-            </PersistentString>
-            <PersistentString
-               value = "components.day">
+               value = "Int64(TimeInterval(NSDate().timeIntervalSince1970))">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
+         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.allPotholes">
+            </PersistentString>
+            <PersistentString
+               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "StatisticsViewController.seePrrtTapped(_:):StatisticsViewController.swift">
+         contextName = "SelectCityViewController.showCitiesPopup():SelectCityViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppConstants.cities">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in APIService.get(path:params:handler:):APIService.swift">
@@ -87,13 +88,13 @@
          contextName = "StatisticsViewController.tableView(_:cellForRowAt:):StatisticsViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "self.groupedPrrts[indexPath.row]">
+            </PersistentString>
+            <PersistentString
                value = "&quot;\(String(describing: self.groupedPrrts[indexPath.row].reported_count))&quot;">
             </PersistentString>
             <PersistentString
                value = "String(format: &quot;%d&quot;, self.groupedPrrts[indexPath.row].reported_count)">
-            </PersistentString>
-            <PersistentString
-               value = "self.groupedPrrts[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -125,7 +126,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
+         contextName = "closure #1 in StatisticPotholesChartViewController.setChartData(count:range:):StatisticPotholesChartViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "groupedPrrts[i-1].reported_count">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "PotholeDetailsViewController.setupViews():PotholeDetailsViewController.swift">
@@ -185,12 +191,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in StatisticPotholesChartViewController.setChartData(count:range:):StatisticPotholesChartViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "groupedPrrts[i-1].reported_count">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "APIService.post(path:params:encoding:responseString:handler:):APIService.swift">
       </ContextState>
       <ContextState
          contextName = "PotholeDetailsViewController.setupMapLocation():PotholeDetailsViewController.swift">
@@ -204,13 +205,13 @@
          contextName = "HomeViewController.displayLocationInfo(_:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "Location">
+               value = "Location.city">
             </PersistentString>
             <PersistentString
                value = "containsPlacemark.subLocality">
             </PersistentString>
             <PersistentString
-               value = "Location.city">
+               value = "Location">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -292,24 +293,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
+         contextName = "HomeViewController.reportAgain(notification:):HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "AppConstants.language">
+               value = "tabBarController.selectedIndex">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController?.topViewController as? UITabBarController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ListPotholesViewController.seeDetails(sender:):ListPotholesViewController.swift">
+         contextName = "MainNavigationController.didChangeLanguage(lang:):MainNavigationController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "sender.tag">
-            </PersistentString>
-            <PersistentString
-               value = "POTHOLE_ID">
-            </PersistentString>
-            <PersistentString
-               value = "viewController.selPothole">
+               value = "AppConstants.language">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -322,13 +320,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "HomeViewController.reportAgain(notification:):HomeViewController.swift">
+         contextName = "ListPotholesViewController.seeDetails(sender:):ListPotholesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "tabBarController.selectedIndex">
+               value = "viewController.selPothole">
             </PersistentString>
             <PersistentString
-               value = "self.navigationController?.topViewController as? UITabBarController">
+               value = "POTHOLE_ID">
+            </PersistentString>
+            <PersistentString
+               value = "sender.tag">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -345,6 +346,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SubmitFixedPotholesViewController.viewDidLoad():SubmitFixedPotholesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SELECTED_POTHOLE_PHOTO">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -406,54 +415,53 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "StatisticsViewController.seePrrtTapped(_:):StatisticsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in StatisticsViewController.setupChat():StatisticsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "GroupedPotholes(city: report.metaBox!.city, country: report.metaBox!.country ?? &quot;&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in SigninViewController.submitLogin(nonce:email:password:):SigninViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "MappingPotholesViewController.handleTap(gestureReconizer:):MappingPotholesViewController.swift">
+         contextName = "static DateUtils.getDateDistance(s1:s2:):DateUtils.swift">
          <PersistentStrings>
             <PersistentString
-               value = "annotation.coordinate.latitude">
+               value = "s1">
             </PersistentString>
             <PersistentString
-               value = "lat">
+               value = "convertStrToDate(string: s2, format: &quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "calendar.dateComponents([.calendar], from: date1!, to: date2!).day">
+            </PersistentString>
+            <PersistentString
+               value = "s2">
+            </PersistentString>
+            <PersistentString
+               value = "Double(day!) + Double(hour!)/24">
+            </PersistentString>
+            <PersistentString
+               value = "Double(4)/24">
+            </PersistentString>
+            <PersistentString
+               value = "Float(hour!/24)">
+            </PersistentString>
+            <PersistentString
+               value = "convertStrToDate(string: s1, format: &quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "components.day">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AddUserViewController.dontBtnTapped(_:):AddUserViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "DateUtils.getTimeStampe()">
-            </PersistentString>
-            <PersistentString
-               value = "Date.timeIntervalBetween1970AndReferenceDate">
-            </PersistentString>
-            <PersistentString
-               value = "DateUtils.getCurrentTimeStampWOMiliseconds(dateToConvert: DateUtils.getCurrentScheduleTime()! as NSDate)">
-            </PersistentString>
-            <PersistentString
-               value = "Int64(TimeInterval(NSDate().timeIntervalSince1970))">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "StatisticsViewController.setupChat():StatisticsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.allPotholes">
-            </PersistentString>
-            <PersistentString
-               value = "Dictionary(grouping: self.allPotholes) { $0[&quot;name&quot;] as! String }">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SelectCityViewController.showCitiesPopup():SelectCityViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "AppConstants.cities">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "closure #2 in PhotoPotholeViewController.uploadWithAlamofire():PhotoPotholeViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
